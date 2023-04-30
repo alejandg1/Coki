@@ -1,0 +1,14 @@
+{
+  "name": "coki",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Coki.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Milca Toledo, Alejandro Gómez",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^24.1.3"
+  }
+}
