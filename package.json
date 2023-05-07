@@ -2,13 +2,15 @@
   "name": "coki",
   "version": "1.0.0",
   "description": "",
-  "main": "Coki.js",
+  "main": "src/Coki.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "coki": "electron ."
   },
   "author": "Milca Toledo, Alejandro Gómez",
   "license": "ISC",
   "dependencies": {
-    "electron": "^24.1.3"
+    "electron": "^24.1.3",
+    "electron-reload": "^2.0.0-alpha.1"
   }
 }
