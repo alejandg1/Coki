@@ -3,21 +3,23 @@
   <head>
     <title></title>
     <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../styles/bootstrap.min.css" />
   </head>
+  <h2 class="navbar-brand" href="../pages/index.html">Coki</h2>
   <body class="" id="contenedor">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-     <a class="navbar-brand" href="../pages/index.html" >Coki</a>
-     </div>
-   </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black"></nav>
     <main class="container-fluid">
-      <table class="table-borderless" >
-
-      </table>
-      <button class="btn btn-dark">new activity</button>
-
+      <table class="table-borderless"></table>
+      <button id="newact" class="btn btn-dark">nueva actividad</button>
+      <button id="show" class="btn btn-dark">mostrar actividades</button>
     </main>
   </body>
 </html>
