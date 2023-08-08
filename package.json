@@ -1,16 +1,16 @@
 {
   "name": "coki",
   "version": "1.0.0",
-  "description": "",
-  "main": "src/Coki.js",
+  "description": "## resumen requerimientos establecidos por Milca",
+  "main": "coki.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "coki": "electron ."
+  "coki": "electron ./src/Coki.js"
   },
-  "author": "Milca Toledo, Alejandro Gómez",
+  "author": "Alejandro, Milca",
   "license": "ISC",
   "dependencies": {
-    "electron": "^24.7.0",
+    "electron": "^25.4.0",
     "electron-reload": "^2.0.0-alpha.1"
   }
 }
