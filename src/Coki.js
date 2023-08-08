@@ -10,7 +10,7 @@ const newWindow = () => {
       nodeIntegration: true,
     },
   });
-  win.loadFile("index.html");
+  win.loadFile("../index.html");
 };
 
 // recargar en cambios
