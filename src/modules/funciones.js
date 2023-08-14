@@ -73,42 +73,9 @@ function write_json(ruta, contenido = "") {
     }
   });
 }
-/* function delete_list(ruta) {
-  ruta += "/actividades.json";
-  fs.unlink(ruta, (error) => {
-    alert(
-      "Se produjo un error al eliminar el archivo de actividades existente " +
-        error
-    );
-  });
-} */
-
-function add_activity(array = [], nombre, inicio, fin, desc = "") {
-  //NOTE: añadir actividades al json obtenido
-  array.push({
-    nombre: nombre,
-    "hora-inicio": inicio,
-    "hora-fin": fin,
-    descripción: desc,
-  });
-}
-function delete_activity(array, nombre) {
-  //NOTE: crear nuevo array sin el elemento a eliminar
-  let LArray_newdata = [];
-  if (array) {
-    array.forEach((element) => {
-      if (element.nombre != nombre) {
-        LArray_newdata.push(element);
-      }
-    });
-  }
-  return LArray_newdata;
-}
 
 module.exports = {
   comprobar_json: comprobar_json,
-  add_act: add_activity,
-  del_act: delete_activity,
   write_json: write_json,
   rutas: rutas,
   dir: directory,

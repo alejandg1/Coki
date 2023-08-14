@@ -1,6 +1,6 @@
 # Coki
 
-## resumen requerimientos establecidos por Milca
+#k resumen requerimientos establecidos por Milca
 
 - Al inicial la aplicación se debe contar con la opción de crear cronograma y
   registrar actividades
