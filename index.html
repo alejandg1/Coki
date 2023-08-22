@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      rel="stylesheet"
+      type=""
+      href="https://bootswatch.com/5/morph/bootstrap.min.css"
+    />
     <title></title>
     <meta charset="UTF-8" />
     <meta
@@ -13,13 +18,19 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <h2 class="navbar-brand" href="../pages/index.html">Coki</h2>
-  <body class="" id="contenedor">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black"></nav>
-    <main class="container-fluid">
-      <table class="table-borderless"></table>
-      <button id="newact" class="btn btn-dark">nueva actividad</button>
-      <button id="show" class="btn btn-dark">mostrar actividades</button>
-    </main>
+  <body class="" id="container p-4">
+    <div class="container p-4">
+      <h2 class="navbar-brand">Coki</h2>
+      <p>tabla de actividades</p>
+      <table class="table table-hover" id="table">
+        <th>Nombre</th>
+        <th>Duracion</th>
+        <th>descripción</th>
+      </table>
+      <button type="button" class="btn btn-outline-primary">
+        guardar cronograma
+      </button>
+    </div>
+    <script src="./src/modules/main_page.js"></script>
   </body>
 </html>

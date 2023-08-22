@@ -1,5 +1,6 @@
 const os = require("os");
 const fs = require("fs");
+const { BrowserWindow } = require("electron");
 
 function rutas() {
   // devolver ruta segun el sistema
@@ -31,7 +32,7 @@ function comprobar_json(ruta) {
   fs.access(ruta, fs.constants.F_OK, (err) => {
     if (err) {
       console.log("creando archivo..");
-      new_list(ruta);
+      write_json(ruta);
     } else {
       console.log("archivo validado correctamente");
     }
@@ -54,19 +55,14 @@ function datosjson(ruta) {
       "Error al obtener datos del cronograma, contacte al equipo de desarrollo {datosjson} " +
         error
     );
+    return false;
   }
 }
-/*
- - new_list crea un nuevo json vacio si se quiere ingresar datos desde 0  - delete_list elimina el json anterios al ingresar datos desde 0 o cuando el json anterior lleva mucho tiempo (3 dias aprox)
-
- */
-
 function write_json(ruta, contenido = "") {
-  ruta += "/actividades.json";
   console.log(ruta);
   fs.writeFile(ruta, contenido, (error) => {
     if (error) {
-      alert(
+      console.log(
         "Se produjo un problema al escribir en el archivo de actividades {write_json}" +
           error
       );

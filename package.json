@@ -5,7 +5,7 @@
   "main": "coki.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-  "coki": "electron ./src/Coki.js"
+    "coki": "electron ./src/Coki.js"
   },
   "author": "Alejandro, Milca",
   "license": "ISC",

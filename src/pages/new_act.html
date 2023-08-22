@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type=""
+      href="https://bootswatch.com/5/morph/bootstrap.min.css"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+  </head>
+  <title>Coki</title>
+  <script defer scr="../modules/calls.js"></script>
+  <body>
+    <div class="container">
+      <h2>Ingrese información de la nueva actividad</h2>
+      <form id="form_add" class="p-4">
+        <div id="nombre_div" class="form-group">
+          <label for="nombre" class="form-label mt-4"
+            >nombre de la nueva actividad</label
+          >
+          <input type="text" name="nombre" id="nombre" class="form-control" />
+        </div>
+        <hr />
+
+        <div id="time_div" class="form-group">
+          <label for="inicio" class="form-label mt-4"
+            >tiempo de duración de la actividad</label
+          >
+          <input type="time" name="time" id="time" class="form-control" />
+        </div>
+        <hr />
+        <div id="desc_div" class="form-group"></div>
+        <label for="desc" class="form-label mt-4"
+          >descripción de la actividad</label
+        >
+        <input type="text" name="desc" id="desc" class="form-control" />
+        <hr />
+        <button id="addact" class="btn btn-outline-primary">
+          guardar datos
+        </button>
+      </form>
+    </div>
+    <script src="../modules/new_act.js"></script>
+  </body>
+</html>

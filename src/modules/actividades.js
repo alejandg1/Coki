@@ -1,3 +1,11 @@
+class actividad {
+  constructor(nombre, desc) {
+    this.nombre = nombre;
+    this.desc = desc;
+  }
+  comprobar(array) {}
+}
+
 function add_activity(array, nombre, inicio, fin, desc = "") {
   //NOTE: añadir actividades al json obtenido
   array.push({
