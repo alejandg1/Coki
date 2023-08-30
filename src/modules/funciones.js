@@ -1,12 +1,19 @@
 const os = require("os");
 const fs = require("fs");
-const { BrowserWindow } = require("electron");
+const path = require("path");
 
 function rutas() {
   // devolver ruta segun el sistema
   const Systempath = os.homedir() + "/Coki";
   //const Systempath = require("os").homedir() + "/Coki";
-  return Systempath;
+  let directorios = {
+    carpeta: Systempath,
+    actividades: path.join(Systempath, "actividades.json"),
+    data_act: path.join(Systempath, "datos_actividades.json"),
+    datos_temporales: path.join(Systempath, "datos_consulta.json"),
+    act_edit: path.join(Systempath, "datos_edit.json"),
+  };
+  return directorios;
 }
 
 function directory(dir) {
@@ -27,27 +34,30 @@ function directory(dir) {
   }
 }
 
-function comprobar_json(ruta) {
-  ruta += "/actividades.json";
+function comprobar_json(ruta, nombre = "", contenido = "") {
+  if (nombre != "") {
+    ruta += "/" + nombre + ".json";
+  }
   fs.access(ruta, fs.constants.F_OK, (err) => {
     if (err) {
       console.log("creando archivo..");
-      write_json(ruta);
+      write_json(ruta, contenido);
     } else {
       console.log("archivo validado correctamente");
     }
   });
 }
-function datosjson(ruta) {
+function datosjson(ruta, nombre = "") {
   //NOTE: obtener datos del json guardado
-  ruta += "/actividades.json";
+  if (nombre != "") {
+    ruta += "/" + nombre + ".json";
+  }
   try {
     const jsondata = fs.readFileSync(ruta, "utf8");
     // NOTE: comprobar si está vaio el archivo
     if (jsondata != "") {
       // NOTE: convertir datos a obtejo js
       const data = JSON.parse(jsondata);
-      console.log(data);
       return data;
     }
   } catch (error) {

@@ -1,4 +1,5 @@
 const { ipcRenderer } = require("electron");
+
 const form = document.querySelector("form");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -6,10 +7,9 @@ form.addEventListener("submit", (event) => {
   let time_act = document.querySelector("#time").value;
   let desc_act = document.querySelector("#desc").value;
 
-  console.log(document.querySelector("#nombre"));
   let act_data = {
     nombre: name_act,
-    time: time_act,
+    duracion: time_act,
     desc: desc_act,
   };
   ipcRenderer.send("new_act", act_data);

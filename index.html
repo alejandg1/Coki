@@ -6,6 +6,7 @@
       type=""
       href="https://bootswatch.com/5/morph/bootstrap.min.css"
     />
+    <link rel="stylesheet" type="" href="./src/extra.css" />
     <title></title>
     <meta charset="UTF-8" />
     <meta
@@ -18,19 +19,35 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <body class="" id="container p-4">
-    <div class="container p-4">
-      <h2 class="navbar-brand">Coki</h2>
-      <p>tabla de actividades</p>
-      <table class="table table-hover" id="table">
-        <th>Nombre</th>
-        <th>Duracion</th>
-        <th>descripción</th>
-      </table>
-      <button type="button" class="btn btn-outline-primary">
-        guardar cronograma
-      </button>
-    </div>
-    <script src="./src/modules/main_page.js"></script>
+  <body>
+    <form id="container p-4">
+      <div class="container p-4">
+        <h2>ActioMeta</h2>
+        <div class="form-group">
+          <label class="form-label mt-4" for="nombre">Nombre del grupo</label>
+          <input
+            type="text"
+            class="form-input"
+            id="nombre"
+            name="nombre"
+            value=""
+          />
+        </div>
+        <div class="form-group">
+          <label class="form-label mt-4">Unidad</label>
+          <select id="unidad" class="form-select">
+            <option value=""></option>
+            <option class="rojo" value="Clan">Clan</option>
+            <option class="verde" value="Tropa">Tropa</option>
+            <option class="amarillo" value="Manada">Manada</option>
+            <option class="azul" value="Familia">Familia</option>
+          </select>
+          <button class="btn btn-primary" id="search" type="submit">
+            Buscar
+          </button>
+        </div>
+      </div>
+    </form>
+    <script src="./src/modules/index.js"></script>
   </body>
 </html>

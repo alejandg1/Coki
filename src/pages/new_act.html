@@ -24,6 +24,12 @@
     <div class="container">
       <h2>Ingrese información de la nueva actividad</h2>
       <form id="form_add" class="p-4">
+        <div id="time_div" class="form-group">
+          <label for="inicio" class="form-label mt-4"
+            >tiempo de duración de la actividad</label
+          >
+          <input type="time" name="time" id="time" class="form-control" />
+        </div>
         <div id="nombre_div" class="form-group">
           <label for="nombre" class="form-label mt-4"
             >nombre de la nueva actividad</label
@@ -31,20 +37,25 @@
           <input type="text" name="nombre" id="nombre" class="form-control" />
         </div>
         <hr />
-
-        <div id="time_div" class="form-group">
-          <label for="inicio" class="form-label mt-4"
-            >tiempo de duración de la actividad</label
-          >
-          <input type="time" name="time" id="time" class="form-control" />
+        <div id="Mision_div" class="form-group">
+          <label for="mision">Misión de la actividad</label>
+          <select id="mision" name="mision"></select>
         </div>
         <hr />
-        <div id="desc_div" class="form-group"></div>
-        <label for="desc" class="form-label mt-4"
-          >descripción de la actividad</label
-        >
-        <input type="text" name="desc" id="desc" class="form-control" />
+        <div id="Objetivo_div">
+          <label for="objetivo">Objetivo de la actividad</label>
+          <select id="objetivo" name="objetivo"></select>
+        </div>
         <hr />
+        <div id="tipo_div">
+          <label for="tipo">Tipo de actividad</label>
+          <select name="tipo" id="tipo"></select>
+        </div>
+        <hr />
+        <div>
+          <label for="necesidades">necesidades de la actividad</label>
+          <input type="text" name="necesidades" id="necesidades" value="" />
+        </div>
         <button id="addact" class="btn btn-outline-primary">
           guardar datos
         </button>
