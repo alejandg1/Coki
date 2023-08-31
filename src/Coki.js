@@ -77,7 +77,7 @@ app.on("ready", () => {
     ipcMain.on("redir_new", () => {
       win.loadFile("./pages/act_new.html");
     });
-    ipcMain.on("consulta", (evento) => {
+    ipcMain.on("agregar", (evento) => {
       win.loadFile("./pages/act_list.html");
     });
   });

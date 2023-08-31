@@ -1,6 +1,4 @@
-const { ipcRenderer, dialog } = require("electron");
 const { data, rutas } = require("../modules/funciones.js");
-const { default: electronReload } = require("electron-reload");
 const funciones = require("../modules/funciones.js");
 
 const form = document.querySelector("form");
