@@ -12,8 +12,8 @@ if (process.env.NODE_ENV !== "production") {
   });
 }
 
-// generar ventana
 app.on("ready", () => {
+  // instancia de ventana
   let win = new BrowserWindow({
     width: 900,
     height: 700,
@@ -27,20 +27,20 @@ app.on("ready", () => {
   const json_exist = funciones.comprobar_json(ruta.actividades);
   funciones.comprobar_json(ruta.data_act);
   if (!json_exist) {
+    // generar ventana
     win.loadFile("../index.html");
   } else {
     dialog.showErrorBox(
       "Error interno",
       "contactar con el equipo de desarrollo"
     );
-    console.log("error interno");
   }
   setMenu();
   //cerrar toda ventana
   win.on("closed", () => {
     app.quit();
     let directorios = funciones.rutas();
-    //NOTE: elimiar archivos temporales
+    // elimiar archivos temporales
     if (fs.existsSync(directorios.datos_temporales)) {
       fs.unlinkSync(directorios.datos_temporales);
     }
@@ -48,42 +48,38 @@ app.on("ready", () => {
       fs.unlinkSync(directorios.act_edit);
     }
   });
-  //NOTE: ipc
+  // actividad nueva
   ipcMain.on("new_act", (evento, new_act) => {
     let act = new actividad(new_act);
-    console.log(act);
   });
-  //NOTE: para regresar a la pagina principal
+  // regresar a la pagina principal
   ipcMain.on("return", (evento, data) => {
     win.loadFile("../index.html");
   });
-  //NOTE: realizar consulta de las actividades
-  let act_win;
-  ipcMain.on("consulta", (evento, data) => {
+  //realizar consulta de las actividades
+  ipcMain.on("acts_list", (evento, data) => {
     if (data != null) {
-      /* act_win = new BrowserWindow({
-        width: 800,
-        height: 700,
-        title: "Coki_actividades",
-        webPreferences: {
-          nodeIntegration: true,
-          contextIsolation: false,
-        },
-      }); */
-      win.loadFile("./pages/act_list.html");
-      //NOTE: editar actividad
-      ipcMain.on("editar", (evento, id_elemento) => {
-        id_elemento = { nombre: id_elemento };
-        funciones.write_json(ruta.act_edit, JSON.stringify(id_elemento));
-        win.loadFile("./pages/act_edit.html");
-      });
-      ipcMain.on("cancel_edit", (evento, data) => {
-        win.loadFile("./pages/act_list.html");
-      });
+      win.loadFile("./pages/cronograma.html");
+      // editar actividad
     } else {
       dialog.showErrorBox("Falta información", "debe llenar todos los campos");
       console.log("datos de consulta nulos coki.js");
     }
+    ipcMain.on("editar", (evento, id_elemento) => {
+      id_elemento = { nombre: id_elemento };
+      funciones.write_json(ruta.act_edit, JSON.stringify(id_elemento));
+      win.loadFile("./pages/act_edit.html");
+    });
+    // cancelar edición
+    ipcMain.on("cancel_edit", (evento, data) => {
+      win.loadFile("./pages/act_list.html");
+    });
+    ipcMain.on("redir_new", () => {
+      win.loadFile("./pages/act_new.html");
+    });
+    ipcMain.on("consulta", (evento) => {
+      win.loadFile("./pages/act_list.html");
+    });
   });
 
   // si no existen ventanas abiertas crea una

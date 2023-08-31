@@ -1,5 +1,6 @@
 const { ipcRenderer } = require("electron");
 const { rutas, data, write_json } = require("../modules/funciones.js");
+const funciones = require("../modules/funciones.js");
 const dirs = rutas();
 const actividades = data(dirs.actividades);
 const Table = document.querySelector("Table");
@@ -19,7 +20,9 @@ actividades.forEach((actividad) => {
       actividad.objetivo +
       "</td><td>" +
       actividad.necesidades +
-      "</td><td><button class='edit' id=" +
+      "</td><td><button class='agregar' id=" +
+      actividad.nombre +
+      " >añadir</button></td><td><button class='edit' id=" +
       actividad.nombre +
       ">Editar actividad</button></td></tr>";
     Table.insertAdjacentHTML("beforeend", linea);
@@ -42,5 +45,20 @@ btn_edit.forEach((boton) => {
     event.preventDefault();
     let id_element = boton.id;
     ipcRenderer.send("editar", id_element);
+  });
+});
+const btn_new_act = document.querySelector("#new_act");
+btn_new_act.addEventListener("click", (event) => {
+  event.preventDefault();
+  console.log("creando..");
+  ipcRenderer.send("redir_new");
+});
+const btn_push_act = document.querySelectorAll("#agregar");
+btn_push_act.forEach((boton) => {
+  boton.addEventListener("click", (event) => {
+    event.preventDefault();
+    console.log("añadiendo");
+    let actividad = funciones.obtener_act(boton.id);
+    //NOTE debe crear un archivo o añadir a ese archivo la actividad obtenida
   });
 });

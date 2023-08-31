@@ -69,7 +69,6 @@ function datosjson(ruta, nombre = "") {
   }
 }
 function write_json(ruta, contenido = "") {
-  console.log(ruta);
   fs.writeFile(ruta, contenido, (error) => {
     if (error) {
       console.log(
@@ -80,10 +79,21 @@ function write_json(ruta, contenido = "") {
   });
 }
 
+function obtener_act(id) {
+  let path = rutas();
+  let actividades = data(path.actividades);
+  actividades.forEach((actividad) => {
+    if (actividad.nombre == id) {
+      return actividad;
+    }
+  });
+}
+
 module.exports = {
   comprobar_json: comprobar_json,
   write_json: write_json,
   rutas: rutas,
   dir: directory,
   data: datosjson,
+  obtener_act: obtener_act,
 };
