@@ -1,33 +1,37 @@
-const { ipcRenderer } = require("electron");
+const { ipcRenderer, dialog } = require("electron");
 const { rutas, data, write_json } = require("../modules/funciones.js");
 const funciones = require("../modules/funciones.js");
 const dirs = rutas();
 const actividades = data(dirs.actividades);
 const Table = document.querySelector("Table");
 const datos_consulta = data(dirs.datos_temporales);
-actividades.forEach((actividad) => {
-  if (actividad.unidad == datos_consulta.unidad) {
-    let linea =
-      "<tr> <td>" +
-      actividad.duracion +
-      "</td><td>" +
-      actividad.nombre +
-      "</td><td>" +
-      actividad.mision +
-      "</td><td>" +
-      actividad.tipo +
-      "</td><td>" +
-      actividad.objetivo +
-      "</td><td>" +
-      actividad.necesidades +
-      "</td><td><button class='agregar' id=" +
-      actividad.nombre +
-      " >añadir</button></td><td><button class='edit' id=" +
-      actividad.nombre +
-      ">Editar actividad</button></td></tr>";
-    Table.insertAdjacentHTML("beforeend", linea);
-  }
-});
+if (actividades != undefined) {
+  actividades.forEach((actividad) => {
+    if (actividad.unidad == datos_consulta.unidad) {
+      let linea =
+        "<tr> <td>" +
+        actividad.duracion +
+        "</td><td>" +
+        actividad.nombre +
+        "</td><td>" +
+        actividad.mision +
+        "</td><td>" +
+        actividad.tipo +
+        "</td><td>" +
+        actividad.objetivo +
+        "</td><td>" +
+        actividad.necesidades +
+        "</td><td><button class='agregar' id=" +
+        actividad.nombre +
+        " >añadir</button></td><td><button class='edit' id=" +
+        actividad.nombre +
+        ">Editar actividad</button></td></tr>";
+      Table.insertAdjacentHTML("beforeend", linea);
+    }
+  });
+} else {
+  Table.insertAdjacentHTML("beforeend", "No existen actividades guardadas");
+}
 const p = document.querySelector("p");
 p.insertAdjacentHTML(
   "afterend",
