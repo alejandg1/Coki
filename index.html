@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link
-      rel="stylesheet"
-      type=""
-      href="https://bootswatch.com/5/morph/bootstrap.min.css"
-    />
     <link rel="stylesheet" type="" href="./src/extra.css" />
+    <link rel="stylesheet" type="" href="index.css" />
     <title></title>
     <meta charset="UTF-8" />
     <meta
@@ -19,35 +15,41 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <body>
-    <form id="container p-4">
-      <div class="container p-4">
-        <h2>ActioMeta</h2>
-        <div class="form-group">
-          <label class="form-label mt-4" for="nombre">Nombre del grupo</label>
-          <input
-            type="text"
-            class="form-input"
-            id="nombre"
-            name="nombre"
-            value=""
-          />
+  <body class="fondo">
+    
+    <div class="login-box">
+      <div class="titulop"><h2>ActioMeta</h2></div>
+      <form id="container p-4">
+        <div class="container p-4">
+          <div class="user-box">
+            <input type="text" name="nombre" class="form-input" id="nombre" required="required">
+            <label class="form-label mt-4" for="nombre">Nombre del grupo</label>
+          </div>
+          <div class="Color">
+            <label class="form-label mt-4" >Unidad</label>
+            <select id="unidad" class="form-select" >
+                <option value=""></option>
+                <option value="Clan">Clan</option>
+                <option value="Tropa">Tropa</option>
+                <option value="Manada">Manada</option>
+                <option value="Familia">Familia</option>
+            </select>
+        </div class="center"> 
+          <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Continuar
+            <!-- <button class="btn btn-primary" id="search" type="submit">
+              Buscar
+            </button> -->
+          </a>
         </div>
-        <div class="form-group">
-          <label class="form-label mt-4">Unidad</label>
-          <select id="unidad" class="form-select">
-            <option value=""></option>
-            <option class="rojo" value="Clan">Clan</option>
-            <option class="verde" value="Tropa">Tropa</option>
-            <option class="amarillo" value="Manada">Manada</option>
-            <option class="azul" value="Familia">Familia</option>
-          </select>
-          <button class="btn btn-primary" id="search" type="submit">
-            Buscar
-          </button>
-        </div>
-      </div>
-    </form>
-    <script src="./src/modules/index.js"></script>
+      </form>
+    </div>
+  <script src="./src/modules/index.js"></script>
   </body>
 </html>
