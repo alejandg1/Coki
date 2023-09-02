@@ -3,18 +3,13 @@ const path = require("path");
 const { app, BrowserWindow, dialog, ipcMain } = require("electron");
 const funciones = require("./modules/funciones.js");
 const { setMenu } = require("./modules/menu.js");
-const { actividad } = require("./modules/actividades");
 // recargar en cambios
-console.log(process.env.NODE_ENV);
-if (process.env.NODE_ENV !== "production") {
-  require("electron-reload")(__dirname, {
-    electron: path.join(__dirname, "../node_modules", ".bin", "electron"),
-  });
-}
+require("electron-reload")(__dirname, {
+  electron: path.join(__dirname, "../node_modules", ".bin", "electron"),
+});
 
 app.on("ready", () => {
-  // instancia de ventana
-  let win = new BrowserWindow({
+  let main_window = new BrowserWindow({
     width: 900,
     height: 700,
     title: "Coki",
@@ -23,14 +18,16 @@ app.on("ready", () => {
       contextIsolation: false,
     },
   });
-  let ruta = funciones.rutas();
+  let paths_array = funciones.rutas();
   // crear la carpeta coki
-  funciones.dir(ruta.carpeta);
-  const json_exist = funciones.comprobar_json(ruta.actividades);
-  funciones.comprobar_json(ruta.data_act);
-  if (!json_exist) {
+  funciones.dir(paths_array.carpeta_coki);
+  const json_actividades_exist =
+    funciones.comprobar_json(paths_array.json_actividades) &&
+    funciones.comprobar_json(paths_array.mision_tipo);
+  //NOTE: si funciona borrar linea  funciones.comprobar_json(paths_array.mision_tipo);
+  if (!json_actividades_exist) {
     // generar ventana
-    win.loadFile("./index.html");
+    main_window.loadFile("./index.html");
   } else {
     dialog.showErrorBox(
       "Error interno",
@@ -39,48 +36,59 @@ app.on("ready", () => {
   }
   setMenu();
   //cerrar toda ventana
-  win.on("closed", () => {
+  main_window.on("closed", () => {
     app.quit();
-    let directorios = funciones.rutas();
-    // elimiar archivos temporales
-    if (fs.existsSync(directorios.datos_temporales)) {
-      fs.unlinkSync(directorios.datos_temporales);
+    //NOTE: SI FUNCIONA ELIMINA ESTA LINEA   let paths_array = funciones.rutas();
+    // eliminar archivos temporales
+    if (fs.existsSync(paths_array.datos_unidad_nombre)) {
+      fs.unlinkSync(paths_array.datos_unidad_nombre);
     }
-    if (fs.existsSync(directorios.act_edit)) {
-      fs.unlinkSync(directorios.act_edit);
+    if (fs.existsSync(paths_array.actividad_a_editar)) {
+      fs.unlinkSync(paths_array.actividad_a_editar);
     }
   });
-  // actividad nueva
-  ipcMain.on("new_act", (evento, new_act) => {
-    let act = new actividad(new_act);
-  });
+  //NOTE: por ahora esto no lo uso
+  /* ipcMain.on("new_act", (evento, nueva_actividad) => {
+    let datos_new_act = new actividad(nueva_actividad);
+  }); */
   // regresar a la pagina principal
   ipcMain.on("return", (evento, data) => {
-    win.loadFile("./index.html");
+    main_window.loadFile("./index.html");
   });
   //realizar consulta de las actividades
   ipcMain.on("acts_list", (evento, data) => {
     if (data != null) {
-      win.loadFile("./src/pages/cronograma.html");
+      main_window.loadFile("./src/pages/cronograma.html");
       // editar actividad
     } else {
       dialog.showErrorBox("Falta información", "debe llenar todos los campos");
-      console.log("datos de consulta nulos coki.js");
     }
     ipcMain.on("editar", (evento, id_elemento) => {
       id_elemento = { nombre: id_elemento };
-      funciones.write_json(ruta.act_edit, JSON.stringify(id_elemento));
-      win.loadFile("./src/pages/act_edit.html");
+      funciones.write_json(
+        paths_array.actividad_a_editar,
+        JSON.stringify(id_elemento)
+      );
+      main_window.loadFile("./src/pages/act_edit.html");
     });
     // cancelar edición
     ipcMain.on("cancel_edit", (evento, data) => {
-      win.loadFile("./src/pages/act_list.html");
+      main_window.loadFile("./src/pages/act_list.html");
+    });
+    ipcMain.on("nombre_vacio", () => {
+      dialog.showErrorBox("error", "no puede dejar el nombre vacío");
+    });
+    ipcMain.on("nombre_repetido", () => {
+      dialog.showErrorBox(
+        "error",
+        "la actividad ingresada tiene nombre repetido"
+      );
     });
     ipcMain.on("redir_new", () => {
-      win.loadFile("./src/pages/act_new.html");
+      main_window.loadFile("./src/pages/act_new.html");
     });
     ipcMain.on("agregar", (evento) => {
-      win.loadFile("./src/pages/act_list.html");
+      main_window.loadFile("./src/pages/act_list.html");
     });
   });
 
