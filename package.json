@@ -1,16 +1,33 @@
 {
   "name": "coki",
+  "productName": "coki",
   "version": "1.0.0",
-  "description": "## resumen requerimientos establecidos por Milca",
-  "main": "coki.js",
+  "description": "scout app",
+  "main": "./src/Coki.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "coki": "electron ./src/Coki.js"
+    "start": "electron-forge  start ./src/Coki.js",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
   },
-  "author": "Alejandro, Milca",
-  "license": "ISC",
+  "keywords": [],
+  "author": {
+    "name": "Alejandro, Milca",
+    "email": "josealejandrogomezparedes@gmail.com"
+  },
+  "license": "MIT",
   "dependencies": {
-    "electron": "^25.4.0",
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.4.1",
+    "@electron-forge/maker-deb": "^6.4.1",
+    "@electron-forge/maker-rpm": "^6.4.1",
+    "@electron-forge/maker-squirrel": "^6.4.1",
+    "@electron-forge/maker-zip": "^6.4.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.4.1",
+    "electron": "26.1.0",
     "electron-reload": "^2.0.0-alpha.1"
   }
 }

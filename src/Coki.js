@@ -24,11 +24,13 @@ app.on("ready", () => {
     },
   });
   let ruta = funciones.rutas();
+  // crear la carpeta coki
+  funciones.dir(ruta.carpeta);
   const json_exist = funciones.comprobar_json(ruta.actividades);
   funciones.comprobar_json(ruta.data_act);
   if (!json_exist) {
     // generar ventana
-    win.loadFile("../index.html");
+    win.loadFile("./index.html");
   } else {
     dialog.showErrorBox(
       "Error interno",
@@ -54,12 +56,12 @@ app.on("ready", () => {
   });
   // regresar a la pagina principal
   ipcMain.on("return", (evento, data) => {
-    win.loadFile("../index.html");
+    win.loadFile("./index.html");
   });
   //realizar consulta de las actividades
   ipcMain.on("acts_list", (evento, data) => {
     if (data != null) {
-      win.loadFile("./pages/cronograma.html");
+      win.loadFile("./src/pages/cronograma.html");
       // editar actividad
     } else {
       dialog.showErrorBox("Falta información", "debe llenar todos los campos");
@@ -68,17 +70,17 @@ app.on("ready", () => {
     ipcMain.on("editar", (evento, id_elemento) => {
       id_elemento = { nombre: id_elemento };
       funciones.write_json(ruta.act_edit, JSON.stringify(id_elemento));
-      win.loadFile("./pages/act_edit.html");
+      win.loadFile("./src/pages/act_edit.html");
     });
     // cancelar edición
     ipcMain.on("cancel_edit", (evento, data) => {
-      win.loadFile("./pages/act_list.html");
+      win.loadFile("./src/pages/act_list.html");
     });
     ipcMain.on("redir_new", () => {
-      win.loadFile("./pages/act_new.html");
+      win.loadFile("./src/pages/act_new.html");
     });
     ipcMain.on("agregar", (evento) => {
-      win.loadFile("./pages/act_list.html");
+      win.loadFile("./src/pages/act_list.html");
     });
   });
 
