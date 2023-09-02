@@ -1,13 +1,13 @@
-const { ipcRenderer, dialog } = require("electron");
-const { rutas, data, write_json } = require("../modules/funciones.js");
+const { ipcRenderer } = require("electron");
+const { rutas, data } = require("../modules/funciones.js");
 const funciones = require("../modules/funciones.js");
-const dirs = rutas();
-const actividades = data(dirs.actividades);
+const paths_array = rutas();
+const actividades_json = data(paths_array.json_actividades);
 const Table = document.querySelector("Table");
-const datos_consulta = data(dirs.datos_temporales);
-if (actividades != undefined) {
-  actividades.forEach((actividad) => {
-    if (actividad.unidad == datos_consulta.unidad) {
+const datos_unidad_nombre = data(paths_array.datos_unidad_nombre);
+if (actividades_json != undefined) {
+  actividades_json.forEach((actividad) => {
+    if (actividad.unidad == datos_unidad_nombre.unidad) {
       let linea =
         "<tr> <td>" +
         actividad.duracion +
@@ -35,7 +35,7 @@ if (actividades != undefined) {
 const p = document.querySelector("p");
 p.insertAdjacentHTML(
   "afterend",
-  "Tabla de actividades de " + datos_consulta.nombre
+  "Tabla de actividades de " + datos_unidad_nombre.nombre
 );
 const btn = document.querySelector("#return");
 btn.addEventListener("click", (event) => {

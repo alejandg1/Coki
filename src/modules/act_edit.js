@@ -3,10 +3,10 @@ const btn_cancel = document.querySelector("#cancelar");
 const btn_acep = document.querySelector("#aceptar");
 const inpt_nombre = document.querySelector("#nombre");
 const inpt_duracion = document.querySelector("#duracion");
-const slt_mision = document.querySelector("#mision");
-const slt_tipo = document.querySelector("#tipo");
+const slct_mision = document.querySelector("#mision");
+const slct_tipo = document.querySelector("#tipo");
 const { rutas, data } = require("../modules/funciones.js");
-let direcorios = rutas();
+let paths_array = rutas();
 
 btn_cancel.addEventListener("click", (event) => {
   event.preventDefault();
@@ -15,9 +15,9 @@ btn_cancel.addEventListener("click", (event) => {
 });
 
 // datos de actividad en los inputs
-let actividad_actual = data(direcorios.act_edit);
-let actividades = data(direcorios.actividades);
-let datos_d_actividades = data(direcorios.data_act);
+let actividad_actual = data(paths_array.actividad_a_editar);
+let actividades = data(paths_array.json_actividades);
+let datos_d_actividades = data(paths_array.mision_tipo);
 actividades.forEach((actividad) => {
   if (actividad.nombre == actividad_actual.nombre) {
     inpt_nombre.value = actividad.nombre;
@@ -28,13 +28,13 @@ datos_d_actividades.misiones.forEach((mision) => {
   let option = document.createElement("option");
   option.textContent = mision;
   option.value = mision;
-  slt_mision.appendChild(option);
+  slct_mision.appendChild(option);
 });
 datos_d_actividades.tipos.forEach((tipo) => {
   let option = document.createElement("option");
   option.textContent = tipo;
   option.value = tipo;
-  slt_tipo.appendChild(option);
+  slct_tipo.appendChild(option);
 });
 // escribir lo editado
 btn_acep.addEventListener("click", (event) => {

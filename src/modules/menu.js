@@ -1,5 +1,4 @@
-const { Menu, app, BrowserWindow } = require("electron");
-const funciones = require("./funciones");
+const { Menu } = require("electron");
 function setMenu() {
   let template = [
     {

@@ -7,11 +7,11 @@ function rutas() {
   const Systempath = os.homedir() + "/Coki";
   //const Systempath = require("os").homedir() + "/Coki";
   let directorios = {
-    carpeta: Systempath,
-    actividades: path.join(Systempath, "actividades.json"),
-    data_act: path.join(Systempath, "datos_actividades.json"),
-    datos_temporales: path.join(Systempath, "datos_consulta.json"),
-    act_edit: path.join(Systempath, "datos_edit.json"),
+    carpeta_coki: Systempath,
+    json_actividades: path.join(Systempath, "actividades.json"),
+    mision_tipo: path.join(Systempath, "datos_actividades.json"),
+    datos_unidad_nombre: path.join(Systempath, "datos_consulta.json"),
+    actividad_a_editar: path.join(Systempath, "datos_edit.json"),
   };
   return directorios;
 }
