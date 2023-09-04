@@ -1,7 +1,11 @@
 const { ipcRenderer } = require("electron");
-const { data, rutas } = require("../modules/funciones.js");
+const { data, rutas, formato_string } = require("../modules/funciones.js");
+const {
+  datos_incompletos,
+  actividad_existe,
+} = require("../modules/actividades.js");
 
-const form = document.querySelector("form");
+const form = document.querySelector("#form_add");
 let paths_array = rutas();
 let actividades_json = data(paths_array.json_actividades);
 form.addEventListener("submit", (event) => {
@@ -13,33 +17,49 @@ form.addEventListener("submit", (event) => {
   let tipo_act = document.querySelector("#tipo").value;
 
   let nueva_actividad = {
-    nombre: name_act,
+    nombre: formato_string(name_act, "reverse"),
+    //NOTE: agregar unidad a esto xd
+    unidad: (unidad = ""),
     duracion: time_act,
     necesidades: necesidades_act,
     tipo: tipo_act,
     mision: mision_act,
   };
-  // comprobar no existencia
-  let actividad_existe = false;
-  if (actividades_json != undefined && actividades_json != []) {
-    actividades_json.forEach((actividad) => {
-      if (actividad.nombre == nueva_actividad.nombre) {
-        actividad_existe = true;
-        ipcRenderer.send("nombre_repetido", nueva_actividad.nombre);
+  console.log(actividades_json);
+  if (actividades_json != undefined && actividades_json != "[]") {
+    if (actividad_existe(nueva_actividad.nombre, actividades_json)) {
+      ipcRenderer.send("nombre_repetido");
+    } else {
+      if (
+        datos_incompletos([
+          nueva_actividad.nombre,
+          nueva_actividad.tipo,
+          nueva_actividad.mision,
+          nueva_actividad.duracion,
+        ])
+      ) {
+        ipcRenderer.send("datos_incompletos");
+      } else {
+        actividades_json.push(nueva_actividad);
+
+        ipcRenderer.send("nueva_actividad", actividades_json);
       }
-    });
+    }
   } else {
     actividades_json = [];
-  }
-  if (!actividad_existe) {
-    if (nueva_actividad.nombre != null) {
-      actividades_json.push(nueva_actividad);
-      console.log(actividades_json);
+    if (
+      datos_incompletos([
+        nueva_actividad.nombre,
+        nueva_actividad.tipo,
+        nueva_actividad.mision,
+        nueva_actividad.duracion,
+      ])
+    ) {
+      ipcRenderer.send("datos_incompletos");
     } else {
-      ipcRenderer.send("nombre_vacio");
+      actividades_json.push(nueva_actividad);
+      ipcRenderer.send("nueva_actividad", actividades_json);
     }
-    //escribir json
-    //funciones.write_json(directorios.actividades, actividades);
   }
 });
 let datos_d_actividades = data(paths_array.mision_tipo);

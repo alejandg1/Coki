@@ -14,9 +14,6 @@ form.addEventListener("submit", (event) => {
     };
   }
   let paths_array = funciones.rutas();
-  funciones.write_json(
-    paths_array.datos_unidad_nombre,
-    JSON.stringify(datos_unidad_nombre)
-  );
+  funciones.write_json(paths_array.datos_unidad_nombre, datos_unidad_nombre);
   ipcRenderer.send("acts_list", datos_unidad_nombre);
 });

@@ -1,30 +1,23 @@
-class actividad {
-  constructor(actividad) {
-    this.duracion = actividad.duracion;
-    this.nombre = actividad.nombre;
-  }
-  comprobar() {}
+function actividad_existe(nombre, actividades) {
+  let existe = false;
+  actividades.forEach((actividad) => {
+    if (nombre == actividad.nombre) {
+      existe = true;
+    }
+  });
+  return existe;
 }
-
-function add_activity(array, nombre, inicio, fin, desc = "") {
-  //NOTE: añadir actividades al json obtenido
-  array.push({});
-}
-function delete_activity(array, nombre) {
-  //NOTE: crear nuevo array sin el elemento a eliminar
-  let LArray_newdata = [];
-  if (array) {
-    array.forEach((element) => {
-      if (element.nombre != nombre) {
-        LArray_newdata.push(element);
-      }
-    });
-  }
-  return LArray_newdata;
+function datos_incompletos(array_act) {
+  let dato_vacio = false;
+  array_act.forEach((dato) => {
+    if (dato == "") {
+      dato_vacio = true;
+    }
+  });
+  return dato_vacio;
 }
 
 module.exports = {
-  new_actividad: add_activity,
-  del_actividad: delete_activity,
-  actividad,
+  actividad_existe: actividad_existe,
+  datos_incompletos: datos_incompletos,
 };

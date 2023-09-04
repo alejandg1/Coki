@@ -1,18 +1,18 @@
 const { ipcRenderer } = require("electron");
-const { rutas, data } = require("../modules/funciones.js");
 const funciones = require("../modules/funciones.js");
-const paths_array = rutas();
-const actividades_json = data(paths_array.json_actividades);
+const actividades_funcs = require("../modules/actividades.js");
+const paths_array = funciones.rutas();
+let actividades_json = funciones.data(paths_array.json_actividades);
 const Table = document.querySelector("Table");
-const datos_unidad_nombre = data(paths_array.datos_unidad_nombre);
-if (actividades_json != undefined) {
+const datos_unidad_nombre = funciones.data(paths_array.datos_unidad_nombre);
+if (actividades_json != undefined && actividades_json != "[]") {
   actividades_json.forEach((actividad) => {
     if (actividad.unidad == datos_unidad_nombre.unidad) {
       let linea =
         "<tr> <td>" +
         actividad.duracion +
         "</td><td>" +
-        actividad.nombre +
+        funciones.formato_string(actividad.nombre) +
         "</td><td>" +
         actividad.mision +
         "</td><td>" +
@@ -22,9 +22,9 @@ if (actividades_json != undefined) {
         "</td><td>" +
         actividad.necesidades +
         "</td><td><button class='agregar' id=" +
-        actividad.nombre +
+        funciones.formato_string(actividad.nombre, "reverse") +
         " >añadir</button></td><td><button class='edit' id=" +
-        actividad.nombre +
+        funciones.formato_string(actividad.nombre, "reverse") +
         ">Editar actividad</button></td></tr>";
       Table.insertAdjacentHTML("beforeend", linea);
     }
@@ -37,6 +37,7 @@ p.insertAdjacentHTML(
   "afterend",
   "Tabla de actividades de " + datos_unidad_nombre.nombre
 );
+//NOTE: regresar pagina principal
 const btn = document.querySelector("#return");
 btn.addEventListener("click", (event) => {
   event.preventDefault();
@@ -51,18 +52,30 @@ btn_edit.forEach((boton) => {
     ipcRenderer.send("editar", id_element);
   });
 });
+//NOTE: mueva actividad
 const btn_new_act = document.querySelector("#new_act");
 btn_new_act.addEventListener("click", (event) => {
   event.preventDefault();
   console.log("creando..");
   ipcRenderer.send("redir_new");
 });
-const btn_push_act = document.querySelectorAll("#agregar");
+//NOTE: añadir al cronograma
+const btn_push_act = document.querySelectorAll(".agregar");
 btn_push_act.forEach((boton) => {
   boton.addEventListener("click", (event) => {
     event.preventDefault();
-    console.log("añadiendo");
+    const ruta_cronograma = funciones.rutas().cronograma;
     let actividad = funciones.obtener_act(boton.id);
-    //NOTE debe crear un archivo o añadir a ese archivo la actividad obtenida
+    let cronograma = funciones.data(ruta_cronograma);
+    if (cronograma == "[]") {
+      cronograma = [];
+    }
+    if (actividades_funcs.actividad_existe(boton.id, cronograma)) {
+      ipcRenderer.send("repetida_cronograma", boton.id);
+    } else {
+      console.log("añadiendo");
+      cronograma.push(actividad);
+      funciones.write_json(ruta_cronograma, cronograma);
+    }
   });
 });

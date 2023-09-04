@@ -1,6 +1,12 @@
 const fs = require("fs");
 const path = require("path");
-const { app, BrowserWindow, dialog, ipcMain } = require("electron");
+const {
+  app,
+  BrowserWindow,
+  dialog,
+  ipcMain,
+  ipcRenderer,
+} = require("electron");
 const funciones = require("./modules/funciones.js");
 const { setMenu } = require("./modules/menu.js");
 // recargar en cambios
@@ -21,9 +27,10 @@ app.on("ready", () => {
   let paths_array = funciones.rutas();
   // crear la carpeta coki
   funciones.dir(paths_array.carpeta_coki);
-  const json_actividades_exist =
-    funciones.comprobar_json(paths_array.json_actividades) &&
-    funciones.comprobar_json(paths_array.mision_tipo);
+  const json_actividades_exist = funciones.comprobar_json(
+    paths_array.json_actividades
+  );
+  funciones.comprobar_json(paths_array.cronograma);
   //NOTE: si funciona borrar linea  funciones.comprobar_json(paths_array.mision_tipo);
   if (!json_actividades_exist) {
     // generar ventana
@@ -46,6 +53,7 @@ app.on("ready", () => {
     if (fs.existsSync(paths_array.actividad_a_editar)) {
       fs.unlinkSync(paths_array.actividad_a_editar);
     }
+    process.exit();
   });
   //NOTE: por ahora esto no lo uso
   /* ipcMain.on("new_act", (evento, nueva_actividad) => {
@@ -53,7 +61,7 @@ app.on("ready", () => {
   }); */
   // regresar a la pagina principal
   ipcMain.on("return", (evento, data) => {
-    main_window.loadFile("./index.html");
+    main_window.loadFile("./src/pages/cronograma.html");
   });
   //realizar consulta de las actividades
   ipcMain.on("acts_list", (evento, data) => {
@@ -75,14 +83,48 @@ app.on("ready", () => {
     ipcMain.on("cancel_edit", (evento, data) => {
       main_window.loadFile("./src/pages/act_list.html");
     });
-    ipcMain.on("nombre_vacio", () => {
-      dialog.showErrorBox("error", "no puede dejar el nombre vacío");
+    ipcMain.on("datos_incompletos", () => {
+      dialog.showErrorBox("error", "no puede dejar datos importantes vacíos");
     });
     ipcMain.on("nombre_repetido", () => {
       dialog.showErrorBox(
         "error",
         "la actividad ingresada tiene nombre repetido"
       );
+    });
+    ipcMain.on("repetida_cronograma", () => {
+      dialog.showErrorBox(
+        "",
+        "la actividad seleccionada ya está en su cronograma"
+      );
+    });
+    ipcMain.on("actividad_eliminada", () => {
+      main_window.reload();
+    });
+    ipcMain.on("nueva_actividad", (evento, array_editado) => {
+      console.log("new_act");
+      const respuesta = dialog.showMessageBoxSync({
+        type: "question",
+        buttons: ["Aceptar", "Cancelar"],
+        title: "",
+        message: "¿Está seguro de guardar la actividad ingresada?",
+      });
+      switch (respuesta) {
+        case 0:
+          //escribir json
+          console.log(array_editado);
+          funciones.write_json(paths_array.json_actividades, array_editado);
+          break;
+        case 1:
+          /* opc = dialog.showMessageBoxSync({
+            type: "info",
+            title: "Cancelado",
+            message: "Se canceló el proceso de guardado",
+            buttons: ["OK"],
+          }); */
+          console.log("cancelao");
+          break;
+      }
     });
     ipcMain.on("redir_new", () => {
       main_window.loadFile("./src/pages/act_new.html");

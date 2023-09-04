@@ -1,6 +1,7 @@
 const os = require("os");
 const fs = require("fs");
 const path = require("path");
+const { systemPreferences } = require("electron");
 
 function rutas() {
   // devolver ruta segun el sistema
@@ -9,9 +10,10 @@ function rutas() {
   let directorios = {
     carpeta_coki: Systempath,
     json_actividades: path.join(Systempath, "actividades.json"),
-    mision_tipo: path.join(Systempath, "datos_actividades.json"),
+    mision_tipo: path.join(Systempath, "mision_tipo.json"),
     datos_unidad_nombre: path.join(Systempath, "datos_consulta.json"),
     actividad_a_editar: path.join(Systempath, "datos_edit.json"),
+    cronograma: path.join(Systempath, "cronograma.json"),
   };
   return directorios;
 }
@@ -34,14 +36,11 @@ function directory(dir) {
   }
 }
 
-function comprobar_json(ruta, nombre = "", contenido = "") {
-  if (nombre != "") {
-    ruta += "/" + nombre + ".json";
-  }
+function comprobar_json(ruta, contenido = []) {
   fs.access(ruta, fs.constants.F_OK, (err) => {
     if (err) {
       console.log("creando archivo..");
-      write_json(ruta, contenido);
+      write_json(ruta, JSON.stringify(contenido));
     } else {
       console.log("archivo validado correctamente");
     }
@@ -68,8 +67,8 @@ function datosjson(ruta, nombre = "") {
     return false;
   }
 }
-function write_json(ruta, contenido = "") {
-  fs.writeFile(ruta, contenido, (error) => {
+function write_json(ruta, contenido = {}) {
+  fs.writeFile(ruta, JSON.stringify(contenido), (error) => {
     if (error) {
       console.log(
         "Se produjo un problema al escribir en el archivo de actividades {write_json}" +
@@ -81,14 +80,38 @@ function write_json(ruta, contenido = "") {
 
 function obtener_act(id) {
   let path = rutas();
-  let actividades = data(path.actividades);
+  let actividades = datosjson(path.json_actividades);
+  let encontrado;
   actividades.forEach((actividad) => {
     if (actividad.nombre == id) {
-      return actividad;
+      encontrado = actividad;
+    }
+  });
+  return encontrado;
+}
+
+function formato_string(palabra, modo) {
+  let nueva_palabra;
+  let eliminar = /_/g;
+  let agregar = " ";
+  if (modo == "reverse") {
+    eliminar = / /g;
+    agregar = "_";
+  }
+  nueva_palabra = palabra.replace(eliminar, agregar);
+
+  return nueva_palabra;
+}
+function eliminar_actividad() {
+  fs.writeFile(ruta, JSON.stringify(contenido), (error) => {
+    if (error) {
+      console.log(
+        "Se produjo un problema al escribir en el archivo de actividades {write_json}" +
+          error
+      );
     }
   });
 }
-
 module.exports = {
   comprobar_json: comprobar_json,
   write_json: write_json,
@@ -96,4 +119,5 @@ module.exports = {
   dir: directory,
   data: datosjson,
   obtener_act: obtener_act,
+  formato_string: formato_string,
 };
