@@ -20,10 +20,6 @@ module.exports = {
       config: {},
     },
     {
-      name: "@electron-forge/maker-appx",
-      config: {},
-    },
-    {
       name: "@electron-forge/maker-squirrel",
       config: {
         certificateFile: "./cert.pfx",

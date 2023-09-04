@@ -13,7 +13,10 @@
   },
   "keywords": [],
   "author": {
-    "name": "Alejandro, Milca",
+    "name": [
+      "Alejandro",
+      "Milca"
+    ],
     "email": "josealejandrogomezparedes@gmail.com"
   },
   "license": "MIT",
@@ -27,7 +30,6 @@
     "@electron-forge/maker-squirrel": "^6.4.1",
     "@electron-forge/maker-zip": "^6.4.1",
     "@electron-forge/plugin-auto-unpack-natives": "^6.4.1",
-    "electron": "26.1.0",
-    "electron-reload": "^2.0.0-alpha.1"
+    "electron": "26.1.0"
   }
 }

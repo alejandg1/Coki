@@ -9,11 +9,6 @@ const {
 } = require("electron");
 const funciones = require("./modules/funciones.js");
 const { setMenu } = require("./modules/menu.js");
-// recargar en cambios
-require("electron-reload")(__dirname, {
-  electron: path.join(__dirname, "../node_modules", ".bin", "electron"),
-});
-
 app.on("ready", () => {
   let main_window = new BrowserWindow({
     width: 900,
