@@ -5,7 +5,7 @@
     width: 500px;
     padding: 40px;
     transform: translate(-50%, -55%);
-    background:  #a3a1a859;
+    background:   #dce4f4 ;
     box-sizing: border-box;
     border-color: #000000;
     margin: 20px auto;
@@ -21,9 +21,9 @@
   .login-box .user-box input {
     width: 100%;
     padding: 10px 0;
-    font-size: 16px;
-    color: #ffffff;
-    margin-bottom: 40px;
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 50px;
     border: none;
     border-bottom: 1px solid #000000;
     outline: none;
@@ -35,8 +35,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    padding: 10px 0;
-    font-size: 16px;
+    padding: 5px 0;
+    font-size: 20px;
     color: #000000;
     pointer-events: none;
     transition: .5s;
@@ -173,11 +173,13 @@
 
 .Color {
     color: #000000;
+    font-size: 20px;
     text-decoration: none;
-    margin-bottom: 110px;
 }
-.center {
-    display: flex; justify-content: center;
+.center { 
+  margin-bottom: 50px;
+  display: flex; justify-content: center;
+  margin: 27%;
 }
 
 .titulop{
@@ -187,5 +189,40 @@
 }
 
 .fondo{
-    background: #a3a1a8;
+    background:  #dce4f4 ;
+}
+
+
+button {
+  position: relative;
+  background-color: rgb(89, 94, 112);
+  border-radius: 5px;
+  box-shadow: rgb(177, 168, 171) 0px 4px 0px 0px;
+  padding: 15px;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  width: 154px;
+  height: 49px;
+  color: #ffffff;
+  border: none;
+  font-size: 20px;
+  transition: all .3s ease-in-out;
+  z-index: 1;
+  overflow: hidden;
+}
+
+button::before {
+  content: "";
+  background-color: rgb(64, 70, 95);
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: width 700ms ease-in-out;
+  display: inline-block;
+}
+button:hover::before {
+  width: 100%;
 }

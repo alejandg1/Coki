@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" type="" href="./src/extra.css" />
     <link rel="stylesheet" type="" href="index.css" />
     <title></title>
     <meta charset="UTF-8" />
@@ -19,34 +18,24 @@
     
     <div class="login-box">
       <div class="titulop"><h2>ActioMeta</h2></div>
-      <form id="container p-4">
-        <div class="container p-4">
+      <form>
+        <div>
           <div class="user-box">
             <input type="text" name="nombre" class="form-input" id="nombre" required="required">
             <label class="form-label mt-4" for="nombre">Nombre del grupo</label>
           </div>
           <div class="Color">
-            <label class="form-label mt-4" >Unidad</label>
-            <select id="unidad" class="form-select" >
+            <label class="form-label mt-4">Unidad</label>
+            <select id="unidad" class="form-select" required="required">
                 <option value=""></option>
                 <option value="Clan">Clan</option>
                 <option value="Tropa">Tropa</option>
                 <option value="Manada">Manada</option>
                 <option value="Familia">Familia</option>
             </select>
-        </div class="center"> 
-          <a href="#">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Continuar
-            <!-- <button class="btn btn-primary" id="search" type="submit">
-              Buscar
-            </button> -->
-          </a>
+          </div>
+        <div class="center"> 
+          <button id="search" type="submit">Continuar</button>
         </div>
       </form>
     </div>

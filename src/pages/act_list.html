@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      rel="stylesheet"
+      type=""
+      href="https://bootswatch.com/5/morph/bootstrap.min.css"
+    />
     <link rel="stylesheet" type="" href="/index.css" />
     <link rel="stylesheet" type="" href="../css/act_list.css" />
     <title></title>
@@ -15,9 +20,17 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <body class="fondo" id="container p-4">
+  <body class="" id="container p-4">
     <div class="container p-4">
-      <div class="titulop"><h2>Coki</h2></div>
+      <div class="titulop"><h2>Actividades</h2></div>
+      <h4>Filtro de actividades</h4>
+      <select id="filtro" class="form-select">
+        <option value=""></option>
+        <option value="Otros">Otros</option>
+        <option value="Canciones">Canciones</option>
+        <option value="Dinámicas">Dinámicas</option>
+        <option value="Juegos">Juegos de salon</option>
+    </select>
       <p class="lead"></p>
       <table class="table table-hover" id="table">
         <th>Duración</th>
@@ -27,8 +40,9 @@
         <th>Objetivo</th>
         <th>Necesidades</th>
       </table>
-      <button id="new_act" type="button">Regresar</button>
-      <button id="return" type="button" onclick class="btn btn-outline-primary">Siguiente</button>
+      
+      <button id="return" type="button">Regresar</button>
+      <button id="" type="button" onclick >Siguiente</button>
     </div>
     <script src="../modules/act_list.js"></script>
   </body>
