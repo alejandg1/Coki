@@ -1,11 +1,12 @@
 const { ipcRenderer } = require("electron");
+const fs = require("fs");
 const btn_cancel = document.querySelector("#cancelar");
 const btn_acep = document.querySelector("#aceptar");
 const inpt_nombre = document.querySelector("#nombre");
 const inpt_duracion = document.querySelector("#duracion");
 const slct_mision = document.querySelector("#mision");
 const slct_tipo = document.querySelector("#tipo");
-const { rutas, data } = require("../modules/funciones.js");
+const { rutas, data, obtener_act } = require("../modules/funciones.js");
 let paths_array = rutas();
 
 btn_cancel.addEventListener("click", (event) => {
@@ -16,14 +17,11 @@ btn_cancel.addEventListener("click", (event) => {
 
 // datos de actividad en los inputs
 let actividad_actual = data(paths_array.actividad_a_editar);
-let actividades = data(paths_array.json_actividades);
+let info = obtener_act(actividad_actual.nombre);
+console.log(info);
+inpt_nombre.value = info.nombre;
+inpt_nombre.duracion = info.duracion;
 let datos_d_actividades = data(paths_array.mision_tipo);
-actividades.forEach((actividad) => {
-  if (actividad.nombre == actividad_actual.nombre) {
-    inpt_nombre.value = actividad.nombre;
-    inpt_duracion.value = actividad.duracion;
-  }
-});
 datos_d_actividades.misiones.forEach((mision) => {
   let option = document.createElement("option");
   option.textContent = mision;

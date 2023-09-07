@@ -9,6 +9,9 @@ const {
 } = require("electron");
 const funciones = require("./modules/funciones.js");
 const { setMenu } = require("./modules/menu.js");
+// datos guardados
+const mision_tipo = funciones.data("./data/mision_tipo.json");
+const actividades = funciones.data("./data/actividades.json");
 app.on("ready", () => {
   let main_window = new BrowserWindow({
     width: 900,
@@ -23,10 +26,11 @@ app.on("ready", () => {
   // crear la carpeta coki
   funciones.dir(paths_array.carpeta_coki);
   const json_actividades_exist = funciones.comprobar_json(
-    paths_array.json_actividades
+    paths_array.json_actividades,
+    actividades
   );
   funciones.comprobar_json(paths_array.cronograma);
-  //NOTE: si funciona borrar linea  funciones.comprobar_json(paths_array.mision_tipo);
+  funciones.comprobar_json(paths_array.mision_tipo, mision_tipo);
   if (!json_actividades_exist) {
     // generar ventana
     main_window.loadFile("./index.html");
@@ -67,11 +71,9 @@ app.on("ready", () => {
       dialog.showErrorBox("Falta información", "debe llenar todos los campos");
     }
     ipcMain.on("editar", (evento, id_elemento) => {
-      id_elemento = { nombre: id_elemento };
-      funciones.write_json(
-        paths_array.actividad_a_editar,
-        JSON.stringify(id_elemento)
-      );
+      funciones.write_json(paths_array.actividad_a_editar, {
+        nombre: id_elemento,
+      });
       main_window.loadFile("./src/pages/act_edit.html");
     });
     // cancelar edición
@@ -98,34 +100,25 @@ app.on("ready", () => {
     });
     ipcMain.on("nueva_actividad", (evento, array_editado) => {
       console.log("new_act");
-      const respuesta = dialog.showMessageBoxSync({
-        type: "question",
-        buttons: ["Aceptar", "Cancelar"],
-        title: "",
-        message: "¿Está seguro de guardar la actividad ingresada?",
-      });
-      switch (respuesta) {
-        case 0:
-          //escribir json
-          console.log(array_editado);
-          funciones.write_json(paths_array.json_actividades, array_editado);
-          break;
-        case 1:
-          /* opc = dialog.showMessageBoxSync({
-            type: "info",
-            title: "Cancelado",
-            message: "Se canceló el proceso de guardado",
-            buttons: ["OK"],
-          }); */
-          console.log("cancelao");
-          break;
-      }
+      funciones.write_json(paths_array.json_actividades, array_editado);
+    });
+    ipcMain.on("cancelar_new_act", (evento) => {
+      console.log("calcelao");
+      main_window.loadFile("./src/pages/cronograma.html");
     });
     ipcMain.on("redir_new", () => {
       main_window.loadFile("./src/pages/act_new.html");
     });
     ipcMain.on("agregar", (evento) => {
       main_window.loadFile("./src/pages/act_list.html");
+    });
+    ipcMain.on("agregada_crono", () => {
+      dialog.showMessageBox({
+        type: "info",
+        title: "",
+        message: "actividad agregada",
+        buttons: ["ok"],
+      });
     });
   });
 

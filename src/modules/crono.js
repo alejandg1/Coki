@@ -3,8 +3,13 @@ const funciones = require("../modules/funciones.js");
 const actividades_funcs = require("../modules/actividades.js");
 const paths_array = funciones.rutas();
 let actividades_json = funciones.data(paths_array.cronograma);
+console.log(actividades_json);
 const Table = document.querySelector("Table");
-if (actividades_json != undefined && actividades_json != "[]") {
+if (
+  actividades_json != undefined &&
+  actividades_json != "[]" &&
+  actividades_json.length > 0
+) {
   actividades_json.forEach((actividad) => {
     let linea =
       "<tr> <td>" +
@@ -34,6 +39,12 @@ btn_list.addEventListener("click", (event) => {
   ipcRenderer.send("agregar");
 });
 //NOTE: remover activida
+const btn_new_act = document.querySelector("#new_act");
+btn_new_act.addEventListener("click", (event) => {
+  event.preventDefault();
+  console.log("creando..");
+  ipcRenderer.send("redir_new");
+});
 
 const btn_delete_act = document.querySelectorAll(".quitar");
 btn_delete_act.forEach((boton) => {

@@ -5,6 +5,11 @@ const {
   actividad_existe,
 } = require("../modules/actividades.js");
 
+const cancel_btn = document.querySelector("#cancelar_act_new");
+cancel_btn.addEventListener("click", () => {
+  ipcRenderer.send("cancelar_new_act");
+});
+
 const form = document.querySelector("#form_add");
 let paths_array = rutas();
 let actividades_json = data(paths_array.json_actividades);

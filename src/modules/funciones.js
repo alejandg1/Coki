@@ -87,6 +87,7 @@ function obtener_act(id) {
       encontrado = actividad;
     }
   });
+  console.log(encontrado);
   return encontrado;
 }
 

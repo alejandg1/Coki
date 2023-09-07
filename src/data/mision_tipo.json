@@ -1,0 +1,15 @@
+{
+  "tipos": {
+    "canciones": [],
+    "dinamicas": [],
+    "juegosActivos": [],
+    "juegosSalon": [],
+    "pionerismo": []
+  },
+  "misiones": [
+    "integracion",
+    "reforzar los nudos",
+    "competitividad",
+    "reforzar el valor de la lealtad"
+  ]
+}

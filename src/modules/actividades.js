@@ -16,6 +16,7 @@ function datos_incompletos(array_act) {
   });
   return dato_vacio;
 }
+function filtrar_acts() {}
 
 module.exports = {
   actividad_existe: actividad_existe,

@@ -52,13 +52,6 @@ btn_edit.forEach((boton) => {
     ipcRenderer.send("editar", id_element);
   });
 });
-//NOTE: mueva actividad
-const btn_new_act = document.querySelector("#new_act");
-btn_new_act.addEventListener("click", (event) => {
-  event.preventDefault();
-  console.log("creando..");
-  ipcRenderer.send("redir_new");
-});
 //NOTE: añadir al cronograma
 const btn_push_act = document.querySelectorAll(".agregar");
 btn_push_act.forEach((boton) => {
@@ -76,6 +69,7 @@ btn_push_act.forEach((boton) => {
       console.log("añadiendo");
       cronograma.push(actividad);
       funciones.write_json(ruta_cronograma, cronograma);
+      ipcRenderer.send("agregada_crono");
     }
   });
 });
