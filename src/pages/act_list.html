@@ -6,10 +6,10 @@
       type=""
       href="https://bootswatch.com/5/morph/bootstrap.min.css"
     />
-    <link rel="stylesheet" type="" href="/index.css" />
+    <link rel="stylesheet" type="" href="../../index.css" />
     <link rel="stylesheet" type="" href="../css/act_list.css" />
     <link rel="stylesheet" type="" href="../css/select.css" />
-    <title> ActioMeta</title>
+    <title>ActioMeta</title>
     <meta charset="UTF-8" />
     <meta
       http-equiv="Content-Security-Policy"
@@ -22,7 +22,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-
     <header class="header">
       <div class="container">
         <div class="menu">
@@ -30,13 +29,13 @@
         </div>
       </div>
     </header>
-    <input type="checkbox" id="menu">
+    <input type="checkbox" id="menu" />
     <div class="container-menu">
       <div class="cont-menu">
         <nav>
           <div class="logo_items flex">
             <span class="nav_image">
-              <img src="/images/logo.png" alt="logo_img" />
+              <img src="../../images/logo.png" alt="logo_img" />
             </span>
             <span class="logo_name">ActioMeta</span>
             <div class="exit">
@@ -49,47 +48,46 @@
           <a href="#">Modificar actividades</a>
           <a href="#">Crear cronograma</a>
         </nav>
-        
       </div>
     </div>
 
-      <div class="container-table">
-        <div class="titulop"><h2>Actividades</h2></div>
-        
-        <div class="select-menu">
-          <div class="select-btn">
-              <span class="sBtn-text">Filtro de actividades</span>
-              <i class="bx bx-chevron-down"></i>
-          </div>
-          <ul class="options">
-              <li class="option">
-                  <span class="option-text">Juegos de salón</span>
-              </li>
-              <li class="option">
-                  <span class="option-text">Dinámicas</span>
-              </li>
-              <li class="option">
-                  <span class="option-text">Canciones</span>
-              </li>
-              <li class="option">
-                  <span class="option-text">Otros</span>
-              </li>
-          </ul>
+    <div class="container-table">
+      <div class="titulop"><h2>Actividades</h2></div>
+
+      <div class="select-menu">
+        <div class="select-btn">
+          <span class="sBtn-text">Filtro de actividades</span>
+          <i class="bx bx-chevron-down"></i>
+        </div>
+        <ul class="options">
+          <li class="option">
+            <span class="option-text">Juegos de salón</span>
+          </li>
+          <li class="option">
+            <span class="option-text">Dinámicas</span>
+          </li>
+          <li class="option">
+            <span class="option-text">Canciones</span>
+          </li>
+          <li class="option">
+            <span class="option-text">Otros</span>
+          </li>
+        </ul>
       </div>
 
-        <p class="lead"></p>
-        <table class="table table-hover" id="table">
-          <th>Duración</th>
-          <th>Nombre</th>
-          <th>Misión</th>
-          <th>Tipo</th>
-          <th>Objetivo</th>
-          <th>Necesidades</th>
-        </table>
-        
-        <button id="return" type="button">Regresar</button>
-        <button id="" type="button" onclick >Siguiente</button>
-      </div>
+      <p class="lead"></p>
+      <table class="table table-hover" id="table">
+        <th>Duración</th>
+        <th>Nombre</th>
+        <th>Misión</th>
+        <th>Tipo</th>
+        <th>Objetivo</th>
+        <th>Necesidades</th>
+      </table>
+
+      <button id="return" type="button">Regresar</button>
+      <button id="" type="button" onclick>Siguiente</button>
+    </div>
     <script src="../modules/act_list.js"></script>
     <script src="../modules/select.js"></script>
   </body>
