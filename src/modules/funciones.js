@@ -1,7 +1,9 @@
 const os = require("os");
+const excel = require("xlsx");
 const fs = require("fs");
 const path = require("path");
 const { systemPreferences } = require("electron");
+const { dir } = require("console");
 
 function rutas() {
   // devolver ruta segun el sistema
@@ -87,7 +89,6 @@ function obtener_act(id) {
       encontrado = actividad;
     }
   });
-  console.log(encontrado);
   return encontrado;
 }
 
@@ -113,6 +114,21 @@ function eliminar_actividad() {
     }
   });
 }
+function xlsx(array) {
+  let nombre_descargas = "Downloads";
+  if (navigator.language.includes("es")) {
+    nombre_descargas = "Descargas";
+  }
+  const dir_descargas = path.join(
+    os.homedir(),
+    nombre_descargas,
+    "Cronograma.xlsx"
+  );
+  const workbook = excel.utils.book_new();
+  const hoja = excel.utils.json_to_sheet(array);
+  excel.utils.book_append_sheet(workbook, hoja, "cronograma");
+  excel.writeFile(workbook, dir_descargas);
+}
 module.exports = {
   comprobar_json: comprobar_json,
   write_json: write_json,
@@ -121,4 +137,5 @@ module.exports = {
   data: datosjson,
   obtener_act: obtener_act,
   formato_string: formato_string,
+  crear_excel: xlsx,
 };

@@ -98,6 +98,14 @@ app.on("ready", () => {
     ipcMain.on("actividad_eliminada", () => {
       main_window.reload();
     });
+    ipcMain.on("cronograma_guardado", () => {
+      dialog.showMessageBox({
+        type: "info",
+        title: "",
+        message: "El cronograma ha sido guardado en su carpeta de descargas",
+        buttons: ["OK"],
+      });
+    });
     ipcMain.on("nueva_actividad", (evento, array_editado) => {
       console.log("new_act");
       funciones.write_json(paths_array.json_actividades, array_editado);
