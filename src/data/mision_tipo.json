@@ -1,15 +1,19 @@
 {
   "tipos": {
     "canciones": [],
-    "dinamicas": [],
+    "dinámicas": [],
     "juegosActivos": [],
     "juegosSalon": [],
-    "pionerismo": []
+    "pionerismo": [],
+    "mística": [],
+    "Charla": [],
+    "escultismo": []
   },
   "misiones": [
-    "integracion",
-    "reforzar los nudos",
-    "competitividad",
-    "reforzar el valor de la lealtad"
+    "Integración",
+    "Rforzar los nudos",
+    "Competitividad",
+    "Reforzar mística",
+    "Compañerismo"
   ]
 }

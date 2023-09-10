@@ -4,7 +4,7 @@
     "duracion": "",
     "mision": "",
     "tipo": "",
-    "objetivo": "Espiritualidad, mistica, instrucciones ",
+    "objetivo": "Espiritualidad, mistica, instrucciones",
     "necesidades": "Bandera, lugar de reunion",
     "responsables": "Jefe de Grupo",
     "observaciones": ""
@@ -14,7 +14,7 @@
     "duracion": "",
     "mision": "",
     "tipo": "",
-    "objetivo": "Juego activo",
+    "objetivo": "",
     "necesidades": "Espacio abierto, cañas",
     "responsables": "Coordinador de Clan",
     "observaciones": ""
@@ -24,7 +24,7 @@
     "duracion": "",
     "mision": "",
     "tipo": "",
-    "objetivo": "Escultismo",
+    "objetivo": "",
     "necesidades": "Impresiones, papelografo",
     "responsables": "subcoordinador de Clan",
     "observaciones": ""
@@ -34,7 +34,7 @@
     "duracion": "",
     "mision": "",
     "tipo": "",
-    "objetivo": "Juego de salon",
+    "objetivo": "",
     "necesidades": "formacion",
     "responsables": "Coordinador de Clan",
     "observaciones": ""
@@ -44,7 +44,7 @@
     "duracion": "",
     "mision": "",
     "tipo": "",
-    "objetivo": "Cancion",
+    "objetivo": "",
     "necesidades": "Impresiones",
     "responsables": "Subcoordinador de Clan",
     "observaciones": ""
@@ -54,9 +54,702 @@
     "duracion": "",
     "mision": "",
     "tipo": "",
-    "objetivo": "Nudos",
+    "objetivo": "",
     "necesidades": "Cuerda personal",
     "responsables": "Coordinador de Clan",
     "observaciones": ""
+  },
+  {
+    "nombre": "Honor",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Espacio cubierto",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Lealtad",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Espacio cubierto",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Ser Util",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Espacio cubierto",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "El Caracter",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Espacio cubierto",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Cortesia",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Espacio cubierto",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Bondad a los Animales",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Espacio cubierto",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Obediencia",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Espacio cubierto",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Jovialidad",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Espacio cubierto",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Economia",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Espacio cubierto",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Reverencia",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Espacio cubierto",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Valor",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Espacio cubierto",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Espiritu deportista",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Espacio cubierto",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "5 ultimos articulos",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Impresiones, papelografo",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Promesa Scout",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Espacio cubierto",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Historia del escultismo 1",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Espacio cubierto",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Historia del escultismo 2",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Espacio cubierto",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Principios Scouts",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Espacio cubierto",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Virtudes Scouts",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Espacio cubierto",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "3 Primeros nudos",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Cuerda personal",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "3 Siguientes nudos",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Cuerda personal",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "2 Ultimos nudos",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Cuerda personal",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Flor de lis significado",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Impresiones, papelografo",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Tipos de carpas",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Impresiones, papelografo / diversas Carpas, espacio abierto",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Armado de carpas",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Diversas carpas, espacio abierto",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Tipos de fogones",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Impresiones, papelografo / Leña, fuego, espacio donde prender fuego",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Armado de carpa",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Leña, fuego, espacio donde prender fuego",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Pan de leñador",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Leña, fuego, espacio donde prender fuego, harina, huevo, agua, queso",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "2 Primeros amarres",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Cuerda personal, cañas",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "2 Ultimos amarres",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Cuerda personal, cañas",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Taller de claves o cifrados",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Impresiones, papelografo",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Yo soy scout",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Impresiones",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Run run deri dera",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Impresiones",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Santa catalina",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Impresiones",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "A la vire",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Impresiones",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Viejo uniforme",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Impresiones",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Cosa vieja",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Impresiones",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Arant san san",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Impresiones",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Ani kuni",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Impresiones",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Flor de lis",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Impresiones",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Contar mentiras",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Impresiones",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Cuando se ven",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Impresiones",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Comprare",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "Impresiones",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Mi cosito",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Baile de la ensalada",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Sandia gorda",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "El pollito",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Unguento de iguana",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Tia jacinta",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Wantanchu",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Piston piston",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "La familia pato",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Hola soy curro",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Merequetengue",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Superman",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "El alacran",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Mono Banana",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "A molar cafe",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "En busca de un leon",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Cielo y panpa",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "El baile del kingkong",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Boom, snap, clap",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Yo tengo una casita",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Yo tengo un tik",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Aplauso, puño y tapo",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Piojo juancho",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Familia sapo",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Cafe con leche",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "Yo tengo una hormiguita",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+  {
+    "nombre": "En la tienda de mi tio max",
+    "duracion": "",
+    "mision": "",
+    "tipo": "",
+    "objetivo": "",
+    "necesidades": "formacion",
+    "responsables": "Coordinador de Clan",
+    "observaciones": ""
+  },
+
+  {
   }
 ]
