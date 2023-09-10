@@ -1,10 +1,9 @@
 const { ipcRenderer } = require("electron");
 const funciones = require("../modules/funciones.js");
-const actividades_funcs = require("../modules/actividades.js");
 const paths_array = funciones.rutas();
 let actividades_json = funciones.data(paths_array.cronograma);
-console.log(actividades_json);
 const Table = document.querySelector("Table");
+const Excel = document.querySelector("#xlsx");
 if (
   actividades_json != undefined &&
   actividades_json != "[]" &&
@@ -12,7 +11,7 @@ if (
 ) {
   actividades_json.forEach((actividad) => {
     let linea =
-      "<tr> <td>" +
+      "<tr id='actividad' > <td>" +
       actividad.duracion +
       "</td><td>" +
       funciones.formato_string(actividad.nombre) +
@@ -58,4 +57,14 @@ btn_delete_act.forEach((boton) => {
     funciones.write_json(ruta_cronograma, nuevo_cronograma);
     ipcRenderer.send("actividad_eliminada");
   });
+});
+//NOTE: xlsx
+Excel.addEventListener("click", () => {
+  let array_actividades = [];
+  btn_delete_act.forEach((actividad) => {
+    array_actividades.push(funciones.obtener_act(actividad.id));
+  });
+  console.log(array_actividades);
+  funciones.crear_excel(array_actividades);
+  ipcRenderer.send("cronograma_guardado");
 });

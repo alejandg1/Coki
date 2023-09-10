@@ -5,32 +5,67 @@ const paths_array = funciones.rutas();
 let actividades_json = funciones.data(paths_array.json_actividades);
 const Table = document.querySelector("Table");
 const datos_unidad_nombre = funciones.data(paths_array.datos_unidad_nombre);
-if (actividades_json != undefined && actividades_json != "[]") {
-  actividades_json.forEach((actividad) => {
-    if (actividad.unidad == datos_unidad_nombre.unidad) {
-      let linea =
-        "<tr> <td>" +
-        actividad.duracion +
-        "</td><td>" +
-        funciones.formato_string(actividad.nombre) +
-        "</td><td>" +
-        actividad.mision +
-        "</td><td>" +
-        actividad.tipo +
-        "</td><td>" +
-        actividad.objetivo +
-        "</td><td>" +
-        actividad.necesidades +
-        "</td><td><button class='agregar' id=" +
-        funciones.formato_string(actividad.nombre, "reverse") +
-        " >añadir</button></td><td><button class='edit' id=" +
-        funciones.formato_string(actividad.nombre, "reverse") +
-        ">Editar actividad</button></td></tr>";
-      Table.insertAdjacentHTML("beforeend", linea);
-    }
-  });
+const filtro_tipo = document.querySelector("#filtro");
+//NOTE: mostrar actividades segun el tipo de actividad escogido
+if (filtro_tipo.value == "todos") {
+  if (actividades_json != undefined && actividades_json != "[]") {
+    actividades_json.forEach((actividad) => {
+      if (actividad.unidad == datos_unidad_nombre.unidad) {
+        let linea =
+          "<tr> <td>" +
+          actividad.duracion +
+          "</td><td>" +
+          funciones.formato_string(actividad.nombre) +
+          "</td><td>" +
+          actividad.mision +
+          "</td><td>" +
+          actividad.tipo +
+          "</td><td>" +
+          actividad.objetivo +
+          "</td><td>" +
+          actividad.necesidades +
+          "</td><td><button class='agregar' id=" +
+          funciones.formato_string(actividad.nombre, "reverse") +
+          " >añadir</button></td><td><button class='edit' id=" +
+          funciones.formato_string(actividad.nombre, "reverse") +
+          ">Editar actividad</button></td></tr>";
+        Table.insertAdjacentHTML("beforeend", linea);
+      }
+    });
+  } else {
+    Table.insertAdjacentHTML("beforeend", "No existen actividades guardadas");
+  }
 } else {
-  Table.insertAdjacentHTML("beforeend", "No existen actividades guardadas");
+  if (actividades_json != undefined && actividades_json != "[]") {
+    actividades_json.forEach((actividad) => {
+      if (
+        actividad.unidad == datos_unidad_nombre.unidad &&
+        actividad.tipo == filtro_tipo.value
+      ) {
+        let linea =
+          "<tr> <td>" +
+          actividad.duracion +
+          "</td><td>" +
+          funciones.formato_string(actividad.nombre) +
+          "</td><td>" +
+          actividad.mision +
+          "</td><td>" +
+          actividad.tipo +
+          "</td><td>" +
+          actividad.objetivo +
+          "</td><td>" +
+          actividad.necesidades +
+          "</td><td><button class='agregar' id=" +
+          funciones.formato_string(actividad.nombre, "reverse") +
+          " >añadir</button></td><td><button class='edit' id=" +
+          funciones.formato_string(actividad.nombre, "reverse") +
+          ">Editar actividad</button></td></tr>";
+        Table.insertAdjacentHTML("beforeend", linea);
+      }
+    });
+  } else {
+    Table.insertAdjacentHTML("beforeend", "No existen actividades guardadas");
+  }
 }
 const p = document.querySelector("p");
 p.insertAdjacentHTML(
@@ -72,4 +107,12 @@ btn_push_act.forEach((boton) => {
       ipcRenderer.send("agregada_crono");
     }
   });
+});
+//NOTE: filtro actividades
+let datos_d_actividades = funciones.data(paths_array.mision_tipo);
+datos_d_actividades.tipos.forEach((tipo) => {
+  let option = document.createElement("option");
+  option.textContent = tipo;
+  option.value = tipo;
+  filtro_tipo.appendChild(option);
 });
