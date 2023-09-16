@@ -1,3 +1,5 @@
+const funciones = require("./funciones");
+
 function actividad_existe(nombre, actividades) {
   let existe = false;
   actividades.forEach((actividad) => {
@@ -16,8 +18,6 @@ function datos_incompletos(array_act) {
   });
   return dato_vacio;
 }
-function filtrar_acts() {}
-
 module.exports = {
   actividad_existe: actividad_existe,
   datos_incompletos: datos_incompletos,

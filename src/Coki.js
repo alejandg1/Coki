@@ -10,8 +10,9 @@ const {
 const funciones = require("./modules/funciones.js");
 const { setMenu } = require("./modules/menu.js");
 // datos guardados
-const mision_tipo = funciones.data("./data/mision_tipo.json");
-const actividades = funciones.data("./data/actividades.json");
+const mision_tipo = funciones.data("./src/data/mision_tipo.json");
+const actividades = funciones.data("./src/data/actividades.json");
+console.log(actividades)
 app.on("ready", () => {
   let main_window = new BrowserWindow({
     width: 900,
@@ -29,7 +30,7 @@ app.on("ready", () => {
     paths_array.json_actividades,
     actividades
   );
-  funciones.comprobar_json(paths_array.cronograma);
+  funciones.comprobar_json(paths_array.cronograma, []);
   funciones.comprobar_json(paths_array.mision_tipo, mision_tipo);
   if (!json_actividades_exist) {
     // generar ventana
@@ -95,7 +96,8 @@ app.on("ready", () => {
         "la actividad seleccionada ya está en su cronograma"
       );
     });
-    ipcMain.on("actividad_eliminada", () => {
+    ipcMain.on("actividad_eliminada", (event,crono) => {
+      console.log(crono)
       main_window.reload();
     });
     ipcMain.on("cronograma_guardado", () => {

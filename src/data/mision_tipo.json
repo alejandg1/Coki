@@ -1,13 +1,13 @@
 {
-  "tipos": {
-    "Canciones": [],
-    "Dinámica": [],
-    "Juego activo": [],
-    "Juegos de salón": [],
-    "Pionerismo": [],
-    "Mística": [],
-    "Charla": [],
-    "Escultismo": [],
-    "otros": []
-  }
+  "tipos": [
+    "Canciones",
+    "Dinámica",
+    "Juego activo",
+    "Juegos de salón",
+    "Pionerismo",
+    "Mística",
+    "Charla",
+    "Escultismo",
+    "todos"
+  ]
 }

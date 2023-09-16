@@ -6,41 +6,52 @@ let actividades_json = funciones.data(paths_array.json_actividades);
 const Table = document.querySelector("Table");
 const datos_unidad_nombre = funciones.data(paths_array.datos_unidad_nombre);
 const filtro_tipo = document.querySelector("#filtro");
-//NOTE: mostrar actividades segun el tipo de actividad escogido
-if (filtro_tipo.value == "todos") {
-  if (actividades_json != undefined && actividades_json != "[]") {
-    actividades_json.forEach((actividad) => {
-      if (actividad.unidad == datos_unidad_nombre.unidad) {
-        let linea =
-          "<tr> <td>" +
-          actividad.duracion +
-          "</td><td>" +
-          funciones.formato_string(actividad.nombre) +
-          "</td><td>" +
-          actividad.mision +
-          "</td><td>" +
-          actividad.tipo +
-          "</td><td>" +
-          actividad.objetivo +
-          "</td><td>" +
-          actividad.necesidades +
-          "</td><td><button class='agregar' id=" +
-          funciones.formato_string(actividad.nombre, "reverse") +
-          " >añadir</button></td><td><button class='edit' id=" +
-          funciones.formato_string(actividad.nombre, "reverse") +
-          ">Editar actividad</button></td></tr>";
-        Table.insertAdjacentHTML("beforeend", linea);
+
+function agregar_listeners() {
+  const btn_edit = document.querySelectorAll(".edit");
+  btn_edit.forEach((boton) => {
+    boton.addEventListener("click", (event) => {
+      event.preventDefault();
+      let id_element = boton.id;
+      ipcRenderer.send("editar", id_element);
+    });
+  });
+  const btn_push_act = document.querySelectorAll(".agregar");
+  btn_push_act.forEach((boton) => {
+    boton.addEventListener("click", (event) => {
+      event.preventDefault();
+      const ruta_cronograma = funciones.rutas().cronograma;
+      let actividad = funciones.obtener_act(boton.id)
+      let cronograma = (funciones.data(ruta_cronograma))
+      console.log(cronograma)
+      if (cronograma == [] || cronograma == "[]") {
+        cronograma=[]
+        console.log("añadiendo");
+        cronograma.push(actividad);
+        funciones.write_json(ruta_cronograma, cronograma);
+        ipcRenderer.send("agregada_crono");
+      } else {
+        if (actividades_funcs.actividad_existe(actividad.nombre, cronograma)) {
+          ipcRenderer.send("repetida_cronograma", boton.id);
+        } else {
+          console.log("añadiendo");
+          cronograma.push(actividad);
+          funciones.write_json(ruta_cronograma, cronograma);
+          ipcRenderer.send("agregada_crono");
+        }
       }
     });
-  } else {
-    Table.insertAdjacentHTML("beforeend", "No existen actividades guardadas");
+  });
+}
+//NOTE: mostrar actividades segun el tipo de actividad escogido
+filtro_tipo.addEventListener("change", () => {
+  while (Table.rows.length > 1) {
+    Table.deleteRow(1)
   }
-} else {
   if (actividades_json != undefined && actividades_json != "[]") {
-    actividades_json.forEach((actividad) => {
+    JSON.parse(actividades_json).forEach((actividad) => {
       if (
-        actividad.unidad == datos_unidad_nombre.unidad &&
-        actividad.tipo == filtro_tipo.value
+        actividad.tipo == filtro_tipo.value || filtro_tipo.value == "todos"
       ) {
         let linea =
           "<tr> <td>" +
@@ -66,53 +77,23 @@ if (filtro_tipo.value == "todos") {
   } else {
     Table.insertAdjacentHTML("beforeend", "No existen actividades guardadas");
   }
-}
+  agregar_listeners()
+})
 const p = document.querySelector("p");
 p.insertAdjacentHTML(
   "afterend",
   "Tabla de actividades de " + datos_unidad_nombre.nombre
 );
-//NOTE: regresar pagina principal
 const btn = document.querySelector("#return");
 btn.addEventListener("click", (event) => {
   event.preventDefault();
   ipcRenderer.send("return", true);
 });
-//NOTE: editar actividad
-const btn_edit = document.querySelectorAll(".edit");
-btn_edit.forEach((boton) => {
-  boton.addEventListener("click", (event) => {
-    event.preventDefault();
-    let id_element = boton.id;
-    ipcRenderer.send("editar", id_element);
-  });
-});
-//NOTE: añadir al cronograma
-const btn_push_act = document.querySelectorAll(".agregar");
-btn_push_act.forEach((boton) => {
-  boton.addEventListener("click", (event) => {
-    event.preventDefault();
-    const ruta_cronograma = funciones.rutas().cronograma;
-    let actividad = funciones.obtener_act(boton.id);
-    let cronograma = funciones.data(ruta_cronograma);
-    if (cronograma == "[]") {
-      cronograma = [];
-    }
-    if (actividades_funcs.actividad_existe(boton.id, cronograma)) {
-      ipcRenderer.send("repetida_cronograma", boton.id);
-    } else {
-      console.log("añadiendo");
-      cronograma.push(actividad);
-      funciones.write_json(ruta_cronograma, cronograma);
-      ipcRenderer.send("agregada_crono");
-    }
-  });
-});
-//NOTE: filtro actividades
-let datos_d_actividades = funciones.data(paths_array.mision_tipo);
+let datos_d_actividades = JSON.parse(funciones.data(paths_array.mision_tipo))
 datos_d_actividades.tipos.forEach((tipo) => {
   let option = document.createElement("option");
   option.textContent = tipo;
   option.value = tipo;
   filtro_tipo.appendChild(option);
 });
+
