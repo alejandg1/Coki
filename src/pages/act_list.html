@@ -44,37 +44,27 @@
               </div>
             </div>
           </div>
-          <a href="#">Modificar misiones</a>
-          <a href="#">Modificar actividades</a>
+          <a href="#">Editar actividades</a>
           <a href="#">Crear cronograma</a>
         </nav>
       </div>
     </div>
-
     <div class="container-table">
       <div class="titulop"><h2>Actividades</h2></div>
 
-      <div class="select-menu">
-        <div class="select-btn">
-          <span class="sBtn-text">Filtro de actividades</span>
-          <i class="bx bx-chevron-down"></i>
-        </div>
-        <ul class="options">
-          <li class="option">
-            <span class="option-text">Juegos de salón</span>
-          </li>
-          <li class="option">
-            <span class="option-text">Dinámicas</span>
-          </li>
-          <li class="option">
-            <span class="option-text">Canciones</span>
-          </li>
-          <li class="option">
-            <span class="option-text">Otros</span>
-          </li>
-        </ul>
-      </div>
-
+      <label class="form-label mt-4">Filtro</label>
+          <select id="unidad" class="form-select" required="required">
+              <option value=""></option>
+              <option value="">Juegos de salón</option>
+              <option value="">Juegos activos</option>
+              <option value="">Pionerismo</option>
+              <option value="">Escultismo</option>
+              <option value="">Dinámicas</option>
+              <option value="">Canciones</option>
+              <option value="">Mística</option>
+              <option value="">Charla</option>
+              <option value="">Otros</option>
+          </select>
       <p class="lead"></p>
       <table class="table table-hover" id="table">
         <th>Duración</th>
@@ -86,7 +76,6 @@
       </table>
 
       <button id="return" type="button">Regresar</button>
-      <button id="" type="button" onclick>Siguiente</button>
     </div>
     <script src="../modules/act_list.js"></script>
     <script src="../modules/select.js"></script>
