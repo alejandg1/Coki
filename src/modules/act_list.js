@@ -23,10 +23,8 @@ function agregar_listeners() {
       const ruta_cronograma = funciones.rutas().cronograma;
       let actividad = funciones.obtener_act(boton.id)
       let cronograma = (funciones.data(ruta_cronograma))
-      console.log(cronograma)
       if (cronograma == [] || cronograma == "[]") {
         cronograma = []
-        console.log("añadiendo");
         cronograma.push(actividad);
         funciones.write_json(ruta_cronograma, cronograma);
         ipcRenderer.send("agregada_crono");
@@ -34,7 +32,6 @@ function agregar_listeners() {
         if (actividades_funcs.actividad_existe(actividad.nombre, cronograma)) {
           ipcRenderer.send("repetida_cronograma", boton.id);
         } else {
-          console.log("añadiendo");
           cronograma.push(actividad);
           funciones.write_json(ruta_cronograma, cronograma);
           ipcRenderer.send("agregada_crono");
@@ -49,8 +46,8 @@ filtro_tipo.addEventListener("change", () => {
     Table.deleteRow(1)
   }
   if (actividades_json != undefined && actividades_json != "[]") {
-    JSON.parse(actividades_json).forEach((actividad) => {
-      //NOTE: si es que la negra quiere filtrar por unidad agregarlo::
+    (actividades_json).forEach((actividad) => {
+      //NOTE: si es que la negra quiere filtrar por unidad agregarlo:
       // actividad.tipo == datos_unidad_nombre.unidad
       if (
         actividad.tipo == filtro_tipo.value || filtro_tipo.value == "todos"

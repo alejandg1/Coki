@@ -19,7 +19,7 @@ function rutas() {
 }
 
 function directory(dir) {
-  // crear el directorio de la aplicación
+  //NOTE: crear el directorio de la aplicación
   const LBool_extdir = fs.existsSync(dir);
   if (!LBool_extdir) {
     console.log("ruta no existe");
@@ -80,7 +80,7 @@ function write_json(ruta, contenido = {}) {
 
 function obtener_act(id) {
   let path = rutas();
-  let actividades = JSON.parse(datosjson(path.json_actividades));
+  let actividades = (datosjson(path.json_actividades));
   let encontrado = false;
   actividades.forEach((actividad) => {
     if (actividad.nombre == id) {
