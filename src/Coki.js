@@ -1,18 +1,15 @@
 const fs = require("fs");
-const path = require("path");
 const {
   app,
   BrowserWindow,
   dialog,
   ipcMain,
-  ipcRenderer,
 } = require("electron");
 const funciones = require("./modules/funciones.js");
 const { setMenu } = require("./modules/menu.js");
 // datos guardados
 const mision_tipo = funciones.data("./src/data/mision_tipo.json");
 const actividades = funciones.data("./src/data/actividades.json");
-console.log(actividades)
 app.on("ready", () => {
   let main_window = new BrowserWindow({
     width: 900,
@@ -55,19 +52,13 @@ app.on("ready", () => {
     }
     process.exit();
   });
-  //NOTE: por ahora esto no lo uso
-  /* ipcMain.on("new_act", (evento, nueva_actividad) => {
-    let datos_new_act = new actividad(nueva_actividad);
-  }); */
-  // regresar a la pagina principal
   ipcMain.on("return", (evento, data) => {
     main_window.loadFile("./src/pages/cronograma.html");
   });
-  //realizar consulta de las actividades
+  // cronograma
   ipcMain.on("acts_list", (evento, data) => {
     if (data != null) {
       main_window.loadFile("./src/pages/cronograma.html");
-      // editar actividad
     } else {
       dialog.showErrorBox("Falta información", "debe llenar todos los campos");
     }
@@ -77,7 +68,6 @@ app.on("ready", () => {
       });
       main_window.loadFile("./src/pages/act_edit.html");
     });
-    // cancelar edición
     ipcMain.on("cancel_edit", (evento, data) => {
       main_window.loadFile("./src/pages/act_list.html");
     });
@@ -96,8 +86,7 @@ app.on("ready", () => {
         "la actividad seleccionada ya está en su cronograma"
       );
     });
-    ipcMain.on("actividad_eliminada", (event,crono) => {
-      console.log(crono)
+    ipcMain.on("actividad_eliminada", (event, crono) => {
       main_window.reload();
     });
     ipcMain.on("cronograma_guardado", () => {
@@ -109,11 +98,15 @@ app.on("ready", () => {
       });
     });
     ipcMain.on("nueva_actividad", (evento, array_editado) => {
-      console.log("new_act");
       funciones.write_json(paths_array.json_actividades, array_editado);
+      dialog.showMessageBox({
+        type: "info",
+        title: "",
+        message: "actividad creada",
+        buttons: ["ok"]
+      })
     });
     ipcMain.on("cancelar_new_act", (evento) => {
-      console.log("calcelao");
       main_window.loadFile("./src/pages/cronograma.html");
     });
     ipcMain.on("redir_new", () => {

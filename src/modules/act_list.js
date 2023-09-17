@@ -25,7 +25,7 @@ function agregar_listeners() {
       let cronograma = (funciones.data(ruta_cronograma))
       console.log(cronograma)
       if (cronograma == [] || cronograma == "[]") {
-        cronograma=[]
+        cronograma = []
         console.log("añadiendo");
         cronograma.push(actividad);
         funciones.write_json(ruta_cronograma, cronograma);
@@ -43,13 +43,15 @@ function agregar_listeners() {
     });
   });
 }
-//NOTE: mostrar actividades segun el tipo de actividad escogido
+// mostrar actividades segun el tipo de actividad escogido
 filtro_tipo.addEventListener("change", () => {
   while (Table.rows.length > 1) {
     Table.deleteRow(1)
   }
   if (actividades_json != undefined && actividades_json != "[]") {
     JSON.parse(actividades_json).forEach((actividad) => {
+      //NOTE: si es que la negra quiere filtrar por unidad agregarlo::
+      // actividad.tipo == datos_unidad_nombre.unidad
       if (
         actividad.tipo == filtro_tipo.value || filtro_tipo.value == "todos"
       ) {
