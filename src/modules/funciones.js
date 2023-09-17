@@ -19,7 +19,7 @@ function rutas() {
 }
 
 function directory(dir) {
-  //NOTE: crear el directorio de la aplicación
+  // crear el directorio de la aplicación
   const LBool_extdir = fs.existsSync(dir);
   if (!LBool_extdir) {
     console.log("ruta no existe");
@@ -47,15 +47,15 @@ function comprobar_json(ruta, contenido = []) {
   });
 }
 function datosjson(ruta, nombre = "") {
-  //NOTE: obtener datos del json guardado
+  // obtener datos del json guardado
   if (nombre != "") {
     ruta += "/" + nombre + ".json";
   }
   try {
     let jsondata = fs.readFileSync(ruta);
-    // NOTE: comprobar si está vaio el archivo
+    //  comprobar si está vaio el archivo
     if (jsondata != "") {
-      // NOTE: convertir datos a obtejo js
+      // convertir datos a obtejo js
       jsondata = JSON.parse(jsondata)
       return jsondata
     }
