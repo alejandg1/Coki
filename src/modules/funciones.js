@@ -2,8 +2,6 @@ const os = require("os");
 const excel = require("xlsx");
 const fs = require("fs");
 const path = require("path");
-const { systemPreferences } = require("electron");
-const { dir } = require("console");
 
 function rutas() {
   // devolver ruta segun el sistema
@@ -21,7 +19,7 @@ function rutas() {
 }
 
 function directory(dir) {
-  //NOTE: crear el directorio de la aplicación
+  // crear el directorio de la aplicación
   const LBool_extdir = fs.existsSync(dir);
   if (!LBool_extdir) {
     console.log("ruta no existe");
@@ -49,22 +47,22 @@ function comprobar_json(ruta, contenido = []) {
   });
 }
 function datosjson(ruta, nombre = "") {
-  //NOTE: obtener datos del json guardado
+  // obtener datos del json guardado
   if (nombre != "") {
     ruta += "/" + nombre + ".json";
   }
   try {
-    const jsondata = fs.readFileSync(ruta, "utf8");
-    // NOTE: comprobar si está vaio el archivo
+    let jsondata = fs.readFileSync(ruta);
+    //  comprobar si está vaio el archivo
     if (jsondata != "") {
-      // NOTE: convertir datos a obtejo js
-      const data = JSON.parse(jsondata);
-      return data;
+      // convertir datos a obtejo js
+      jsondata = JSON.parse(jsondata)
+      return jsondata
     }
   } catch (error) {
     console.log(
       "Error al obtener datos del cronograma, contacte al equipo de desarrollo {datosjson} " +
-        error
+      error
     );
     return false;
   }
@@ -74,7 +72,7 @@ function write_json(ruta, contenido = {}) {
     if (error) {
       console.log(
         "Se produjo un problema al escribir en el archivo de actividades {write_json}" +
-          error
+        error
       );
     }
   });
@@ -82,8 +80,8 @@ function write_json(ruta, contenido = {}) {
 
 function obtener_act(id) {
   let path = rutas();
-  let actividades = datosjson(path.json_actividades);
-  let encontrado;
+  let actividades = JSON.parse(datosjson(path.json_actividades));
+  let encontrado = false;
   actividades.forEach((actividad) => {
     if (actividad.nombre == id) {
       encontrado = actividad;
@@ -109,7 +107,7 @@ function eliminar_actividad() {
     if (error) {
       console.log(
         "Se produjo un problema al escribir en el archivo de actividades {write_json}" +
-          error
+        error
       );
     }
   });

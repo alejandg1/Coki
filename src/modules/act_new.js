@@ -6,13 +6,14 @@ const {
 } = require("../modules/actividades.js");
 
 const cancel_btn = document.querySelector("#cancelar_act_new");
-cancel_btn.addEventListener("click", () => {
+cancel_btn.addEventListener("click", (event) => {
+  event.preventDefault()
   ipcRenderer.send("cancelar_new_act");
 });
 
 const form = document.querySelector("#form_add");
 let paths_array = rutas();
-let actividades_json = data(paths_array.json_actividades);
+let actividades_json = (data(paths_array.json_actividades))
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   let name_act = document.querySelector("#nombre").value;
@@ -23,14 +24,13 @@ form.addEventListener("submit", (event) => {
 
   let nueva_actividad = {
     nombre: formato_string(name_act, "reverse"),
-    //NOTE: agregar unidad a esto xd
+    //TODO: agregar unidad a esto xd
     unidad: (unidad = ""),
     duracion: time_act,
     necesidades: necesidades_act,
     tipo: tipo_act,
     mision: mision_act,
   };
-  console.log(actividades_json);
   if (actividades_json != undefined && actividades_json != "[]") {
     if (actividad_existe(nueva_actividad.nombre, actividades_json)) {
       ipcRenderer.send("nombre_repetido");
@@ -39,7 +39,6 @@ form.addEventListener("submit", (event) => {
         datos_incompletos([
           nueva_actividad.nombre,
           nueva_actividad.tipo,
-          nueva_actividad.mision,
           nueva_actividad.duracion,
         ])
       ) {
@@ -56,7 +55,6 @@ form.addEventListener("submit", (event) => {
       datos_incompletos([
         nueva_actividad.nombre,
         nueva_actividad.tipo,
-        nueva_actividad.mision,
         nueva_actividad.duracion,
       ])
     ) {
@@ -67,18 +65,19 @@ form.addEventListener("submit", (event) => {
     }
   }
 });
-let datos_d_actividades = data(paths_array.mision_tipo);
+let datos_d_actividades = JSON.parse(data(paths_array.mision_tipo))
 let slt_mision = document.querySelector("#mision");
 let slt_tipo = document.querySelector("#tipo");
 if (slt_tipo != undefined && slt_tipo != []) {
 }
 if (datos_d_actividades != undefined && slt_tipo != []) {
-  datos_d_actividades.misiones.forEach((mision) => {
+  //NOTE: ver si la negra quiere o no las misiones
+  /* datos_d_actividades.misiones.forEach((mision) => {
     let option = document.createElement("option");
     option.textContent = mision;
     option.value = mision;
     slt_mision.appendChild(option);
-  });
+  }); */
   datos_d_actividades.tipos.forEach((tipo) => {
     let option = document.createElement("option");
     option.textContent = tipo;

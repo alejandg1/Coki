@@ -9,7 +9,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Carro Romano",
+    "nombre": "Carro_Romano",
     "duracion": "",
     "tipo": "Juego activo",
     "objetivo": "Trabajo en equipo",
@@ -18,7 +18,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Artículos scouts",
+    "nombre": "Artículos_scouts",
     "duracion": "",
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
@@ -27,7 +27,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Mi asistente",
+    "nombre": "Mi_asistente",
     "duracion": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
@@ -36,7 +36,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Taller de nudos",
+    "nombre": "Taller_de_nudos",
     "duracion": "",
     "tipo": "Pionerismo",
     "objetivo": "Reforzar conocimiento",
@@ -45,7 +45,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Ortan Chiviri",
+    "nombre": "Ortan_Chiviri",
     "duracion": "",
     "tipo": "Canciones",
     "objetivo": "Integración",
@@ -72,7 +72,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Ser útil",
+    "nombre": "Ser_útil",
     "duracion": "",
     "tipo": "Charla",
     "objetivo": "",
@@ -81,7 +81,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "El Carácter",
+    "nombre": "El_Carácter",
     "duracion": "",
     "tipo": "Charla",
     "objetivo": "",
@@ -90,7 +90,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Bondad a los Animales",
+    "nombre": "Bondad_a_los_Animales",
     "duracion": "",
     "tipo": "Charla",
     "objetivo": "",
@@ -117,7 +117,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Promesa Scout",
+    "nombre": "Promesa_Scout",
     "duracion": "",
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
@@ -126,7 +126,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Historia del escultismo 1",
+    "nombre": "Historia_del_escultismo_1",
     "duracion": "",
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
@@ -135,7 +135,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Historia del escultismo 2",
+    "nombre": "Historia_del_escultismo_2",
     "duracion": "",
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
@@ -144,7 +144,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Principios Scouts",
+    "nombre": "Principios_Scouts",
     "duracion": "",
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
@@ -153,7 +153,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Virtudes Scouts",
+    "nombre": "Virtudes_Scouts",
     "duracion": "",
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
@@ -162,7 +162,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Los nudos básicos",
+    "nombre": "Los nudos_básicos",
     "duracion": "",
     "tipo": "Pionerismo",
     "objetivo": "Practicar los nudos",
@@ -171,7 +171,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Flor de lis significado",
+    "nombre": "Flor_de_lis_significado",
     "duracion": "",
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
@@ -180,7 +180,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Tipos de carpas",
+    "nombre": "Tipos_de_carpas",
     "duracion": "",
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
@@ -189,7 +189,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Armado de carpas",
+    "nombre": "Armado_de_carpas",
     "duracion": "",
     "tipo": "Escultismo",
     "objetivo": "Practicar los conocimientos",
@@ -198,7 +198,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Tipos de fogones",
+    "nombre": "Tipos_de_fogones",
     "duracion": "",
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
@@ -207,7 +207,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Armado de fogones",
+    "nombre": "Armado_de_fogones",
     "duracion": "",
     "tipo": "Escultismo",
     "objetivo": "Practicar los conocimientos",
@@ -216,7 +216,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Pan de cazador",
+    "nombre": "Pan_de_cazador",
     "duracion": "",
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
@@ -225,7 +225,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Amarres scouts",
+    "nombre": "Amarres_scouts",
     "duracion": "",
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
@@ -234,7 +234,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Taller de claves o cifrados",
+    "nombre": "Taller_de_claves_o_cifrados",
     "duracion": "",
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
@@ -243,7 +243,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Yo soy scout",
+    "nombre": "Yo_soy_scout",
     "duracion": "",
     "tipo": "Canciones",
     "objetivo": "Integración",
@@ -252,7 +252,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Run run deri dera",
+    "nombre": "Run_run_deri_dera",
     "duracion": "",
     "tipo": "Canciones",
     "objetivo": "Integración",
@@ -261,7 +261,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Santa catalina",
+    "nombre": "Santa_catalina",
     "duracion": "",
     "tipo": "Canciones",
     "objetivo": "Integración",
@@ -270,7 +270,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Cosa vieja",
+    "nombre": "Cosa_vieja",
     "duracion": "",
     "tipo": "Canciones",
     "objetivo": "Integración",
@@ -279,7 +279,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Arant san san",
+    "nombre": "Arant_san_san",
     "duracion": "",
     "tipo": "Canciones",
     "objetivo": "Integración",
@@ -288,7 +288,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Ani kuni",
+    "nombre": "Ani_kuni",
     "duracion": "",
     "tipo": "Canciones",
     "objetivo": "Integración",
@@ -297,7 +297,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Flor de lis",
+    "nombre": "Flor_de_lis",
     "duracion": "",
     "tipo": "Canciones",
     "objetivo": "Integración",
@@ -306,7 +306,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Mi cosito",
+    "nombre": "Mi_cosito",
     "duracion": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
@@ -315,7 +315,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Baile de la ensalada",
+    "nombre": "Baile_de_la_ensalada",
     "duracion": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
@@ -324,7 +324,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Sandia gorda",
+    "nombre": "Sandia_gorda",
     "duracion": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
@@ -333,7 +333,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "El pollito",
+    "nombre": "El_pollito",
     "duracion": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
@@ -342,7 +342,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Unguento de iguana",
+    "nombre": "Unguento_de_iguana",
     "duracion": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
@@ -351,7 +351,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Tia jacinta",
+    "nombre": "Tia_jacinta",
     "duracion": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
@@ -369,7 +369,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Piston piston",
+    "nombre": "Piston_piston",
     "duracion": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
@@ -378,7 +378,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "La familia pato",
+    "nombre": "La_familia_pato",
     "duracion": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
@@ -405,7 +405,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "El alacrán",
+    "nombre": "El_alacrán",
     "duracion": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
@@ -414,7 +414,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Mono Banana",
+    "nombre": "Mono_Banana",
     "duracion": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
@@ -423,7 +423,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "A moler cafe",
+    "nombre": "A_moler_cafe",
     "duracion": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
@@ -432,7 +432,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "En busca de un león",
+    "nombre": "En_busca_de_un_león",
     "duracion": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
@@ -441,7 +441,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Cielo y panpa",
+    "nombre": "Cielo_y_panpa",
     "duracion": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
@@ -450,7 +450,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "El baile del kingkong",
+    "nombre": "El_baile_del_kingkong",
     "duracion": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
@@ -459,7 +459,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Boom, snap, clap",
+    "nombre": "Boom,_snap,_clap",
     "duracion": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
@@ -468,7 +468,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Yo tengo una casita",
+    "nombre": "Yo_tengo_una_casita",
     "duracion": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
@@ -477,7 +477,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Yo tengo un tik",
+    "nombre": "Yo_tengo_un_tik",
     "duracion": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
@@ -486,7 +486,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Aplauso, puño y tapo",
+    "nombre": "Aplauso,_puño_y_tapo",
     "duracion": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
@@ -495,7 +495,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Piojo juancho",
+    "nombre": "Piojo_juancho",
     "duracion": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
@@ -504,7 +504,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Familia sapo",
+    "nombre": "Familia_sapo",
     "duracion": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
@@ -513,7 +513,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Cafe con leche",
+    "nombre": "Cafe_con_leche",
     "duracion": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
@@ -522,7 +522,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "Yo tengo una hormiguita",
+    "nombre": "Yo_tengo_una_hormiguita",
     "duracion": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
@@ -531,7 +531,7 @@
     "observaciones": ""
   },
   {
-    "nombre": "En la tienda de mi tio max",
+    "nombre": "En_la_tienda_de_mi_tio_max",
     "duracion": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
