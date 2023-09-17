@@ -1,3 +1,7 @@
+.detalle{
+    background-color: #f7f7f7;
+    color: #000000;
+}
 
 .flex {
     display: flex;
@@ -60,7 +64,7 @@
     line-height:40px;
 }
 .container .menu label{
-    color: rgb(89, 94, 112);
+    color: rgb(0, 0, 0);
     font-size: 30px;
     cursor: pointer;
     
@@ -94,7 +98,7 @@
 .cont-menu{
     width: 100%;
     max-width: 250px;
-    background: #1c1c1c;
+    background: #121212;
     height: 100vh;
     position: relative;
     transition: all 500ms ease;
