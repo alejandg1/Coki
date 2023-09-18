@@ -71,13 +71,6 @@ let slt_tipo = document.querySelector("#tipo");
 if (slt_tipo != undefined && slt_tipo != []) {
 }
 if (datos_d_actividades != undefined && slt_tipo != []) {
-  //NOTE: ver si la negra quiere o no las misiones
-  /* datos_d_actividades.misiones.forEach((mision) => {
-    let option = document.createElement("option");
-    option.textContent = mision;
-    option.value = mision;
-    slt_mision.appendChild(option);
-  }); */
   datos_d_actividades.tipos.forEach((tipo) => {
     let option = document.createElement("option");
     option.textContent = tipo;

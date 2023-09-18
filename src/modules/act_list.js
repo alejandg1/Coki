@@ -47,10 +47,8 @@ filtro_tipo.addEventListener("change", () => {
   }
   if (actividades_json != undefined && actividades_json != "[]") {
     (actividades_json).forEach((actividad) => {
-      //NOTE: si es que la negra quiere filtrar por unidad agregarlo:
-      // actividad.tipo == datos_unidad_nombre.unidad
-      if (
-        actividad.tipo == filtro_tipo.value || filtro_tipo.value == "todos"
+      if ((actividad.unidad == datos_unidad_nombre.unidad) &&
+        (actividad.tipo == filtro_tipo.value || filtro_tipo.value == "todos")
       ) {
         let linea =
           "<tr> <td>" +
@@ -88,7 +86,7 @@ btn.addEventListener("click", (event) => {
   event.preventDefault();
   ipcRenderer.send("return", true);
 });
-let datos_d_actividades = JSON.parse(funciones.data(paths_array.mision_tipo))
+let datos_d_actividades = funciones.data(paths_array.mision_tipo);
 datos_d_actividades.tipos.forEach((tipo) => {
   let option = document.createElement("option");
   option.textContent = tipo;

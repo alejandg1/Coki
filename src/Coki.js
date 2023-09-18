@@ -7,7 +7,7 @@ const {
 } = require("electron");
 const funciones = require("./modules/funciones.js");
 const { setMenu } = require("./modules/menu.js");
-// datos guardados
+// obtener datos guardados
 const mision_tipo = funciones.data("./src/data/mision_tipo.json");
 const actividades = funciones.data("./src/data/actividades.json");
 app.on("ready", () => {
@@ -40,10 +40,9 @@ app.on("ready", () => {
   }
   setMenu();
   //cerrar toda ventana
+  ///////////////////////// manejo de eventos
   main_window.on("closed", () => {
     app.quit();
-    //NOTE: SI FUNCIONA ELIMINA ESTA LINEA   let paths_array = funciones.rutas();
-    // eliminar archivos temporales
     if (fs.existsSync(paths_array.datos_unidad_nombre)) {
       fs.unlinkSync(paths_array.datos_unidad_nombre);
     }
@@ -52,7 +51,7 @@ app.on("ready", () => {
     }
     process.exit();
   });
-  ipcMain.on("return", (evento, data) => {
+  ipcMain.on("return", (evento) => {
     main_window.loadFile("./src/pages/cronograma.html");
   });
   // cronograma
@@ -68,7 +67,7 @@ app.on("ready", () => {
       });
       main_window.loadFile("./src/pages/act_edit.html");
     });
-    ipcMain.on("cancel_edit", (evento, data) => {
+    ipcMain.on("cancel_edit", (evento) => {
       main_window.loadFile("./src/pages/act_list.html");
     });
     ipcMain.on("datos_incompletos", () => {
@@ -86,7 +85,15 @@ app.on("ready", () => {
         "la actividad seleccionada ya está en su cronograma"
       );
     });
-    ipcMain.on("actividad_eliminada", (event, crono) => {
+    ipcMain.on("editado", (event) => {
+      dialog.showMessageBox({
+        type: "info",
+        title: "",
+        message: "se guardaron los cambios",
+        buttons: ["OK"]
+      })
+    })
+    ipcMain.on("actividad_eliminada", (event) => {
       main_window.reload();
     });
     ipcMain.on("cronograma_guardado", () => {
@@ -124,7 +131,6 @@ app.on("ready", () => {
       });
     });
   });
-
   // si no existen ventanas abiertas crea una
   app.on("activate", () => {
     if (BrowserWindow.getAllWindows().length === 0) createWindow();

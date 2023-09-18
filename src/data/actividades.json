@@ -1,6 +1,7 @@
 [
   {
     "nombre": "FOBI",
+    "unidad": "Clan",
     "duracion": "",
     "tipo": "Mística",
     "objetivo": "Espiritualidad, mistica, instrucciones",
@@ -10,6 +11,7 @@
   },
   {
     "nombre": "Carro_Romano",
+    "unidad": "Clan",
     "duracion": "",
     "tipo": "Juego activo",
     "objetivo": "Trabajo en equipo",
@@ -20,6 +22,7 @@
   {
     "nombre": "Artículos_scouts",
     "duracion": "",
+    "unidad": "",
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Impresiones, papelografo",
@@ -38,6 +41,7 @@
   {
     "nombre": "Taller_de_nudos",
     "duracion": "",
+    "unidad": "",
     "tipo": "Pionerismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Cuerda personal",
@@ -56,6 +60,7 @@
   {
     "nombre": "Honor",
     "duracion": "",
+    "unidad": "",
     "tipo": "Charla",
     "objetivo": "",
     "necesidades": "Espacio cubierto",
@@ -65,6 +70,7 @@
   {
     "nombre": "Lealtad",
     "duracion": "",
+    "unidad": "",
     "tipo": "Charla",
     "objetivo": "",
     "necesidades": "Espacio cubierto",
@@ -74,6 +80,7 @@
   {
     "nombre": "Ser_útil",
     "duracion": "",
+    "unidad": "",
     "tipo": "Charla",
     "objetivo": "",
     "necesidades": "Espacio cubierto",
@@ -83,6 +90,7 @@
   {
     "nombre": "El_Carácter",
     "duracion": "",
+    "unidad": "",
     "tipo": "Charla",
     "objetivo": "",
     "necesidades": "Espacio cubierto",
@@ -92,6 +100,7 @@
   {
     "nombre": "Bondad_a_los_Animales",
     "duracion": "",
+    "unidad": "",
     "tipo": "Charla",
     "objetivo": "",
     "necesidades": "Espacio cubierto",
@@ -101,6 +110,7 @@
   {
     "nombre": "Obediencia",
     "duracion": "",
+    "unidad": "",
     "tipo": "Charla",
     "objetivo": "",
     "necesidades": "Espacio cubierto",
@@ -110,6 +120,7 @@
   {
     "nombre": "Economía",
     "duracion": "",
+    "unidad": "",
     "tipo": "Charla",
     "objetivo": "",
     "necesidades": "Espacio cubierto",
@@ -119,6 +130,7 @@
   {
     "nombre": "Promesa_Scout",
     "duracion": "",
+    "unidad": "",
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Espacio cubierto",
@@ -128,6 +140,7 @@
   {
     "nombre": "Historia_del_escultismo_1",
     "duracion": "",
+    "unidad": "",
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Espacio cubierto",
@@ -137,6 +150,7 @@
   {
     "nombre": "Historia_del_escultismo_2",
     "duracion": "",
+    "unidad": "",
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Espacio cubierto",
@@ -146,6 +160,7 @@
   {
     "nombre": "Principios_Scouts",
     "duracion": "",
+    "unidad": "",
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Espacio cubierto",
@@ -155,6 +170,7 @@
   {
     "nombre": "Virtudes_Scouts",
     "duracion": "",
+    "unidad": "",
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Espacio cubierto",
@@ -164,6 +180,7 @@
   {
     "nombre": "Los nudos_básicos",
     "duracion": "",
+    "unidad": "",
     "tipo": "Pionerismo",
     "objetivo": "Practicar los nudos",
     "necesidades": "Cuerda personal",
@@ -173,6 +190,7 @@
   {
     "nombre": "Flor_de_lis_significado",
     "duracion": "",
+    "unidad": "",
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Impresiones, papelografo",
@@ -182,6 +200,7 @@
   {
     "nombre": "Tipos_de_carpas",
     "duracion": "",
+    "unidad": "",
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Impresiones, papelografo / diversas Carpas, espacio abierto",
@@ -191,6 +210,7 @@
   {
     "nombre": "Armado_de_carpas",
     "duracion": "",
+    "unidad": "",
     "tipo": "Escultismo",
     "objetivo": "Practicar los conocimientos",
     "necesidades": "Diversas carpas, espacio abierto",
@@ -200,6 +220,7 @@
   {
     "nombre": "Tipos_de_fogones",
     "duracion": "",
+    "unidad": "",
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Impresiones, papelografo / Leña, fuego, espacio donde prender fuego",
@@ -209,6 +230,7 @@
   {
     "nombre": "Armado_de_fogones",
     "duracion": "",
+    "unidad": "",
     "tipo": "Escultismo",
     "objetivo": "Practicar los conocimientos",
     "necesidades": "Leña, fuego, espacio donde prender fuego",
@@ -218,6 +240,7 @@
   {
     "nombre": "Pan_de_cazador",
     "duracion": "",
+    "unidad": "",
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Leña, fuego, espacio donde prender fuego, harina, huevo, agua, queso",
@@ -227,6 +250,7 @@
   {
     "nombre": "Amarres_scouts",
     "duracion": "",
+    "unidad": "",
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Cuerda personal, cañas",
@@ -236,6 +260,7 @@
   {
     "nombre": "Taller_de_claves_o_cifrados",
     "duracion": "",
+    "unidad": "",
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Impresiones, papelografo",
@@ -245,6 +270,7 @@
   {
     "nombre": "Yo_soy_scout",
     "duracion": "",
+    "unidad": "",
     "tipo": "Canciones",
     "objetivo": "Integración",
     "necesidades": "Impresiones",
@@ -254,6 +280,7 @@
   {
     "nombre": "Run_run_deri_dera",
     "duracion": "",
+    "unidad": "",
     "tipo": "Canciones",
     "objetivo": "Integración",
     "necesidades": "Impresiones",
@@ -263,6 +290,7 @@
   {
     "nombre": "Santa_catalina",
     "duracion": "",
+    "unidad": "",
     "tipo": "Canciones",
     "objetivo": "Integración",
     "necesidades": "Impresiones",
@@ -272,6 +300,7 @@
   {
     "nombre": "Cosa_vieja",
     "duracion": "",
+    "unidad": "",
     "tipo": "Canciones",
     "objetivo": "Integración",
     "necesidades": "Impresiones",
@@ -281,6 +310,7 @@
   {
     "nombre": "Arant_san_san",
     "duracion": "",
+    "unidad": "",
     "tipo": "Canciones",
     "objetivo": "Integración",
     "necesidades": "Impresiones",
@@ -290,6 +320,7 @@
   {
     "nombre": "Ani_kuni",
     "duracion": "",
+    "unidad": "",
     "tipo": "Canciones",
     "objetivo": "Integración",
     "necesidades": "Impresiones",
@@ -299,6 +330,7 @@
   {
     "nombre": "Flor_de_lis",
     "duracion": "",
+    "unidad": "",
     "tipo": "Canciones",
     "objetivo": "Integración",
     "necesidades": "Impresiones",
@@ -308,6 +340,7 @@
   {
     "nombre": "Mi_cosito",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -317,6 +350,7 @@
   {
     "nombre": "Baile_de_la_ensalada",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -326,6 +360,7 @@
   {
     "nombre": "Sandia_gorda",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -335,6 +370,7 @@
   {
     "nombre": "El_pollito",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -344,6 +380,7 @@
   {
     "nombre": "Unguento_de_iguana",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -353,6 +390,7 @@
   {
     "nombre": "Tia_jacinta",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -362,6 +400,7 @@
   {
     "nombre": "Wantanchu",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -371,6 +410,7 @@
   {
     "nombre": "Piston_piston",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -380,6 +420,7 @@
   {
     "nombre": "La_familia_pato",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -389,6 +430,7 @@
   {
     "nombre": "Merequetengue",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -398,6 +440,7 @@
   {
     "nombre": "Superman",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -407,6 +450,7 @@
   {
     "nombre": "El_alacrán",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -416,6 +460,7 @@
   {
     "nombre": "Mono_Banana",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -425,6 +470,7 @@
   {
     "nombre": "A_moler_cafe",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -434,6 +480,7 @@
   {
     "nombre": "En_busca_de_un_león",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -443,6 +490,7 @@
   {
     "nombre": "Cielo_y_panpa",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -452,6 +500,7 @@
   {
     "nombre": "El_baile_del_kingkong",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -461,6 +510,7 @@
   {
     "nombre": "Boom,_snap,_clap",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -470,6 +520,7 @@
   {
     "nombre": "Yo_tengo_una_casita",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -479,6 +530,7 @@
   {
     "nombre": "Yo_tengo_un_tik",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -488,6 +540,7 @@
   {
     "nombre": "Aplauso,_puño_y_tapo",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -497,6 +550,7 @@
   {
     "nombre": "Piojo_juancho",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -506,6 +560,7 @@
   {
     "nombre": "Familia_sapo",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -515,6 +570,7 @@
   {
     "nombre": "Cafe_con_leche",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -524,6 +580,7 @@
   {
     "nombre": "Yo_tengo_una_hormiguita",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -533,6 +590,7 @@
   {
     "nombre": "En_la_tienda_de_mi_tio_max",
     "duracion": "",
+    "unidad": "",
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
