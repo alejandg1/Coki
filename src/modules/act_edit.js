@@ -2,8 +2,9 @@ const { ipcRenderer } = require("electron");
 const btn_cancel = document.querySelector("#cancelar");
 const btn_acep = document.querySelector("#aceptar");
 const inpt_nombre = document.querySelector("#nombre");
+const inpt_duracion = document.querySelector("#duracion");
 const slct_tipo = document.querySelector("#tipo");
-const { rutas, data, obtener_act, formato_string } = require("../modules/funciones.js");
+const { rutas, data, obtener_act, formato_string, editar_actividad, obtener_indice, write_json } = require("../modules/funciones.js");
 let paths_array = rutas();
 
 btn_cancel.addEventListener("click", (event) => {
@@ -13,16 +14,11 @@ btn_cancel.addEventListener("click", (event) => {
 
 // datos de actividad en los inputs
 let actividad_actual = data(paths_array.actividad_a_editar);
+let actividades_json = data(paths_array.json_actividades);
 let info = obtener_act(actividad_actual.nombre);
 inpt_nombre.value = formato_string(info.nombre);
-inpt_nombre.duracion = info.duracion;
-let datos_d_actividades = JSON.parse(data(paths_array.mision_tipo))
-/* datos_d_actividades.misiones.forEach((mision) => {
-  let option = document.createElement("option");
-  option.textContent = mision;
-  option.value = mision;
-  slct_mision.appendChild(option);
-}); */
+inpt_duracion.value = info.duracion
+let datos_d_actividades = data(paths_array.mision_tipo)
 datos_d_actividades.tipos.forEach((tipo) => {
   let option = document.createElement("option");
   option.textContent = tipo;
@@ -32,6 +28,14 @@ datos_d_actividades.tipos.forEach((tipo) => {
 // escribir lo editado
 btn_acep.addEventListener("click", (event) => {
   event.preventDefault();
-  //TODO: guardar lo editado
   console.log("guardado");
+  let actividad_editada = {
+    nombre: inpt_nombre.value,
+    tipo: slct_tipo.value,
+    duracion: inpt_duracion.value
+  }
+  let indice = obtener_indice(info.nombre, actividades_json)
+  let actividades_editadas = editar_actividad(actividad_editada, indice, actividades_json)
+  write_json(paths_array.json_actividades, actividades_editadas)
+  ipcRenderer.send("editado")
 });

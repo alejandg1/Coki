@@ -1,5 +1,3 @@
-const funciones = require("./funciones");
-
 function actividad_existe(nombre, actividades) {
   let existe = false;
   actividades.forEach((actividad) => {
