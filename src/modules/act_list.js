@@ -1,6 +1,7 @@
 const { ipcRenderer } = require("electron");
 const funciones = require("../modules/funciones.js");
 const actividades_funcs = require("../modules/actividades.js");
+const actividades = require("../modules/actividades.js");
 const paths_array = funciones.rutas();
 let actividades_json = funciones.data(paths_array.json_actividades);
 const Table = document.querySelector("Table");

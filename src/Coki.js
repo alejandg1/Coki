@@ -1,10 +1,5 @@
 const fs = require("fs");
-const {
-  app,
-  BrowserWindow,
-  dialog,
-  ipcMain,
-} = require("electron");
+const { app, BrowserWindow, dialog, ipcMain } = require("electron");
 const funciones = require("./modules/funciones.js");
 const { setMenu } = require("./modules/menu.js");
 // obtener datos guardados
@@ -39,7 +34,6 @@ app.on("ready", () => {
     );
   }
   setMenu();
-  //cerrar toda ventana
   ///////////////////////// manejo de eventos
   main_window.on("closed", () => {
     app.quit();
@@ -51,23 +45,23 @@ app.on("ready", () => {
     }
     process.exit();
   });
-  ipcMain.on("return", (evento) => {
+  ipcMain.on("return", () => {
     main_window.loadFile("./src/pages/cronograma.html");
   });
   // cronograma
-  ipcMain.on("acts_list", (evento, data) => {
+  ipcMain.on("acts_list", (data) => {
     if (data != null) {
       main_window.loadFile("./src/pages/cronograma.html");
     } else {
       dialog.showErrorBox("Falta información", "debe llenar todos los campos");
     }
-    ipcMain.on("editar", (evento, id_elemento) => {
+    ipcMain.on("editar", (id_elemento) => {
       funciones.write_json(paths_array.actividad_a_editar, {
         nombre: id_elemento,
       });
       main_window.loadFile("./src/pages/act_edit.html");
     });
-    ipcMain.on("cancel_edit", (evento) => {
+    ipcMain.on("cancel_edit", () => {
       main_window.loadFile("./src/pages/act_list.html");
     });
     ipcMain.on("datos_incompletos", () => {
@@ -85,15 +79,15 @@ app.on("ready", () => {
         "la actividad seleccionada ya está en su cronograma"
       );
     });
-    ipcMain.on("editado", (event) => {
+    ipcMain.on("editado", () => {
       dialog.showMessageBox({
         type: "info",
         title: "",
         message: "se guardaron los cambios",
-        buttons: ["OK"]
-      })
-    })
-    ipcMain.on("actividad_eliminada", (event) => {
+        buttons: ["OK"],
+      });
+    });
+    ipcMain.on("actividad_eliminada", () => {
       main_window.reload();
     });
     ipcMain.on("cronograma_guardado", () => {
@@ -104,22 +98,22 @@ app.on("ready", () => {
         buttons: ["OK"],
       });
     });
-    ipcMain.on("nueva_actividad", (evento, array_editado) => {
+    ipcMain.on("nueva_actividad", (array_editado) => {
       funciones.write_json(paths_array.json_actividades, array_editado);
       dialog.showMessageBox({
         type: "info",
         title: "",
         message: "actividad creada",
-        buttons: ["ok"]
-      })
+        buttons: ["ok"],
+      });
     });
-    ipcMain.on("cancelar_new_act", (evento) => {
+    ipcMain.on("cancelar_new_act", () => {
       main_window.loadFile("./src/pages/cronograma.html");
     });
     ipcMain.on("redir_new", () => {
       main_window.loadFile("./src/pages/act_new.html");
     });
-    ipcMain.on("agregar", (evento) => {
+    ipcMain.on("agregar", () => {
       main_window.loadFile("./src/pages/act_list.html");
     });
     ipcMain.on("agregada_crono", () => {

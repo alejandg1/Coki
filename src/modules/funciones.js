@@ -2,7 +2,6 @@ const os = require("os");
 const excel = require("xlsx");
 const fs = require("fs");
 const path = require("path");
-const actividades = require("./actividades");
 
 function rutas() {
   // devolver ruta segun el sistema

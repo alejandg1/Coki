@@ -6,6 +6,7 @@ function setMenu() {
       submenu: [{ role: "quit" }],
     },
   ];
+  //TODO: quitar DevTools al pasar a prod
   if (process.env.NODE_ENV !== "production") {
     template.push({
       label: "DevTools",

@@ -18,19 +18,18 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   let name_act = document.querySelector("#nombre").value;
   let time_act = document.querySelector("#time").value;
+  let unidad_act = document.querySelector("#unidad").value;
   let necesidades_act = document.querySelector("#necesidades").value;
-  let mision_act = document.querySelector("#mision").value;
   let tipo_act = document.querySelector("#tipo").value;
 
   let nueva_actividad = {
     nombre: formato_string(name_act, "reverse"),
-    //TODO: agregar unidad a esto xd
-    unidad: (unidad = ""),
+    unidad: unidad_act,
     duracion: time_act,
     necesidades: necesidades_act,
     tipo: tipo_act,
-    mision: mision_act,
   };
+  console.log(nueva_actividad)
   if (actividades_json != undefined && actividades_json != "[]") {
     if (actividad_existe(nueva_actividad.nombre, actividades_json)) {
       ipcRenderer.send("nombre_repetido");
@@ -56,6 +55,7 @@ form.addEventListener("submit", (event) => {
         nueva_actividad.nombre,
         nueva_actividad.tipo,
         nueva_actividad.duracion,
+        nueva_actividad.unidad,
       ])
     ) {
       ipcRenderer.send("datos_incompletos");
@@ -65,7 +65,7 @@ form.addEventListener("submit", (event) => {
     }
   }
 });
-let datos_d_actividades = JSON.parse(data(paths_array.mision_tipo))
+let datos_d_actividades = data(paths_array.mision_tipo)
 let slt_mision = document.querySelector("#mision");
 let slt_tipo = document.querySelector("#tipo");
 if (slt_tipo != undefined && slt_tipo != []) {

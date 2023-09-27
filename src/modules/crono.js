@@ -15,9 +15,7 @@ if (
       "<tr id='actividad' > <td>" +
       actividad.duracion +
       "</td><td>" +
-      funciones.formato_string(actividad.nombre) +
-      "</td><td>" +
-      actividad.mision +
+      funciones.formato_string(actividad.nombre) + "</td><td>" + actividad.mision +
       "</td><td>" +
       actividad.tipo +
       "</td><td>" +
