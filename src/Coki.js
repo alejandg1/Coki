@@ -51,7 +51,7 @@ app.on("ready", () => {
   // cronograma
   ipcMain.on("acts_list", (data) => {
     if (data != null) {
-      main_window.loadFile("./src/pages/cronograma.html");
+      main_window.loadFile("./src/pages/act_list.html");
     } else {
       dialog.showErrorBox("Falta información", "debe llenar todos los campos");
     }
