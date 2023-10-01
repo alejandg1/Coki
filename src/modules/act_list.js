@@ -41,6 +41,7 @@ function agregar_listeners() {
   });
 }
 // mostrar actividades segun el tipo de actividad escogido
+console.log(actividades_json)
 filtro_tipo.addEventListener("change", () => {
   while (Table.rows.length > 1) {
     Table.deleteRow(1)
