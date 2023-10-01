@@ -32,6 +32,7 @@ form.addEventListener("submit", (event) => {
     tipo: tipo_act,
   };
   console.log(nueva_actividad)
+  console.log(actividades_json)
   if (actividades_json != undefined && actividades_json != "[]") {
     if (actividad_existe(nueva_actividad.nombre, actividades_json)) {
       ipcRenderer.send("nombre_repetido");
@@ -62,14 +63,14 @@ form.addEventListener("submit", (event) => {
     ) {
       ipcRenderer.send("datos_incompletos");
     } else {
-      actividades_json.push(nueva_actividad);
+      actividades_json.append(nueva_actividad);
       ipcRenderer.send("nueva_actividad", actividades_json);
     }
   }
 });
 let datos_d_actividades = data(paths_array.mision_tipo)
 let slt_tipo = document.querySelector("#tipo");
-let slt_objetivo = document.querySelector("#objetivo");
+//let slt_objetivo = document.querySelector("#objetivo");
 if (slt_tipo != undefined && slt_tipo != []) {
 }
 if (datos_d_actividades != undefined && slt_tipo != []) {
@@ -80,12 +81,12 @@ if (datos_d_actividades != undefined && slt_tipo != []) {
     slt_tipo.appendChild(option);
   });
   //NOTE: por si se convierte en select los objetivos
-  datos_d_actividades.objetivos.forEach((objetivo) => {
-    let option = document.createElement("option");
-    option.textContent = objetivo;
-    option.value = objetivo;
-    slt_objetivo.appendChild(option);
-  });
+  // datos_d_actividades.objetivos.forEach((objetivo) => {
+  //   let option = document.createElement("option");
+  //   option.textContent = objetivo;
+  //   option.value = objetivo;
+  //   slt_objetivo.appendChild(option);
+  // });
 } else {
   let option = document.createElement("option");
   option.textContent = "no existen opciones";
