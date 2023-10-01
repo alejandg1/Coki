@@ -3,7 +3,8 @@
     margin: 10px 0 10px 0;
 }
 #filtro{
-  font-style: bold;
+    background-color: #fff;
+    color: #000000;
 }
 .select-menu .select-btn{
     display: flex;
@@ -19,7 +20,7 @@
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 .select-btn i{
-    font-size: 25px;
+    font-size: 35px;
     transition: 0.3s;
 }
 .select-menu.active .select-btn i{
@@ -54,6 +55,6 @@
     margin-right: 12px;
 }
 .option .option-text{
-    font-size: 18px;
-    color: #333;
+    font-size: 20px;
+    color: #000000;
 }
