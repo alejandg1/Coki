@@ -1,7 +1,6 @@
 const { ipcRenderer } = require("electron");
 const funciones = require("../modules/funciones.js");
 const actividades_funcs = require("../modules/actividades.js");
-const actividades = require("../modules/actividades.js");
 const paths_array = funciones.rutas();
 let actividades_json = funciones.data(paths_array.json_actividades);
 const Table = document.querySelector("Table");
@@ -48,7 +47,8 @@ filtro_tipo.addEventListener("change", () => {
   }
   if (actividades_json != undefined && actividades_json != "[]") {
     (actividades_json).forEach((actividad) => {
-      if ((actividad.unidad == datos_unidad_nombre.unidad) &&
+      if ((actividad.unidad.includes(datos_unidad_nombre.unidad)
+      ) &&
         (actividad.tipo == filtro_tipo.value || filtro_tipo.value == "todos")
       ) {
         let linea =
@@ -56,8 +56,6 @@ filtro_tipo.addEventListener("change", () => {
           actividad.duracion +
           "</td><td>" +
           funciones.formato_string(actividad.nombre) +
-          "</td><td>" +
-          actividad.mision +
           "</td><td>" +
           actividad.tipo +
           "</td><td>" +
@@ -77,6 +75,13 @@ filtro_tipo.addEventListener("change", () => {
   }
   agregar_listeners()
 })
+//NOTE: ver si es q esto se queda pq repite funcionalidad
+const crono_btn = document.querySelector("#verCrono")
+crono_btn.addEventListener("click", (event) => {
+  event.preventDefault();
+  ipcRenderer.send("return")
+})
+
 const p = document.querySelector("p");
 p.insertAdjacentHTML(
   "afterend",
@@ -85,7 +90,7 @@ p.insertAdjacentHTML(
 const btn = document.querySelector("#return");
 btn.addEventListener("click", (event) => {
   event.preventDefault();
-  ipcRenderer.send("return", true);
+  ipcRenderer.send("return_init");
 });
 let datos_d_actividades = funciones.data(paths_array.mision_tipo);
 datos_d_actividades.tipos.forEach((tipo) => {

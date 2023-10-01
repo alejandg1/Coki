@@ -2,6 +2,9 @@
     width: 300px;
     margin: 10px 0 10px 0;
 }
+#filtro{
+  font-style: bold;
+}
 .select-menu .select-btn{
     display: flex;
     height: 55px;

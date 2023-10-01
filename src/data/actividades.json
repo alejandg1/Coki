@@ -2,7 +2,12 @@
   {
     "duracion": "5 minutos",
     "nombre": "FOBI",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Mística",
     "objetivo": "Espiritualidad, mistica, instrucciones",
     "necesidades": "Bandera, lugar de reunión",
@@ -11,7 +16,10 @@
   {
     "duracion": "15 minutos",
     "nombre": "Carro_Romano",
-    "unidad": ["Clan","Tropa"],
+    "unidad": [
+      "Clan",
+      "Tropa"
+    ],
     "tipo": "Juego activo",
     "objetivo": "Trabajo en equipo",
     "necesidades": "Espacio abierto, cañas",
@@ -20,7 +28,12 @@
   {
     "duracion": "15 minutos",
     "nombre": "Artículos_scouts",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Impresiones, papelografo",
@@ -29,7 +42,10 @@
   {
     "duracion": "5 minutos",
     "nombre": "Mi_asistente",
-    "unidad": ["Clan","Tropa"],
+    "unidad": [
+      "Clan",
+      "Tropa"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -38,7 +54,12 @@
   {
     "duracion": "15 minutos",
     "nombre": "Taller_de_nudos",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Pionerismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Cuerda personal",
@@ -47,7 +68,10 @@
   {
     "duracion": "10 minutos",
     "nombre": "Ortan_Chiviri",
-    "unidad": ["Clan","Tropa"],
+    "unidad": [
+      "Clan",
+      "Tropa"
+    ],
     "tipo": "Canciones",
     "objetivo": "Integración",
     "necesidades": "Impresiones",
@@ -56,7 +80,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Honor",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Charla",
     "objetivo": "",
     "necesidades": "Espacio cubierto",
@@ -65,7 +94,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Lealtad",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Charla",
     "objetivo": "",
     "necesidades": "Espacio cubierto",
@@ -74,7 +108,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Ser_útil",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Charla",
     "objetivo": "",
     "necesidades": "Espacio cubierto",
@@ -83,7 +122,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "El_Carácter",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Charla",
     "objetivo": "",
     "necesidades": "Espacio cubierto",
@@ -92,7 +136,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Bondad_a_los_Animales",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Charla",
     "objetivo": "",
     "necesidades": "Espacio cubierto",
@@ -101,7 +150,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Obediencia",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Charla",
     "objetivo": "",
     "necesidades": "Espacio cubierto",
@@ -110,7 +164,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Economía",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Charla",
     "objetivo": "",
     "necesidades": "Espacio cubierto",
@@ -119,7 +178,12 @@
   {
     "duracion": "15 minutos",
     "nombre": "Promesa_Scout",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Espacio cubierto",
@@ -128,7 +192,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Historia_del_escultismo",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Espacio cubierto",
@@ -137,7 +206,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Principios_Scouts",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Espacio cubierto",
@@ -146,7 +220,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Virtudes_Scouts",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Espacio cubierto",
@@ -155,7 +234,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Los_nudos_básicos",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Pionerismo",
     "objetivo": "Practicar los nudos",
     "necesidades": "Cuerda personal",
@@ -164,7 +248,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Flor_de_lis_significado",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Impresiones, papelografo",
@@ -173,7 +262,10 @@
   {
     "duracion": "10 minutos",
     "nombre": "Tipos_de_carpas",
-    "unidad": ["Clan", "Tropa"],
+    "unidad": [
+      "Clan",
+      "Tropa"
+    ],
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Impresiones, papelografo / diversas Carpas, espacio abierto",
@@ -182,7 +274,10 @@
   {
     "duracion": "20 minutos",
     "nombre": "Armado_de_carpas",
-    "unidad": ["Clan", "Tropa"],
+    "unidad": [
+      "Clan",
+      "Tropa"
+    ],
     "tipo": "Escultismo",
     "objetivo": "Practicar los conocimientos",
     "necesidades": "Diversas carpas, espacio abierto",
@@ -191,7 +286,10 @@
   {
     "duracion": "10 minutos",
     "nombre": "Tipos_de_fogones",
-    "unidad": ["Clan", "Tropa"],
+    "unidad": [
+      "Clan",
+      "Tropa"
+    ],
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Impresiones, papelografo / Leña, fuego, espacio donde prender fuego",
@@ -200,7 +298,10 @@
   {
     "duracion": "20 minutos",
     "nombre": "Armado_de_fogones",
-    "unidad": ["Clan", "Tropa"],
+    "unidad": [
+      "Clan",
+      "Tropa"
+    ],
     "tipo": "Escultismo",
     "objetivo": "Practicar los conocimientos",
     "necesidades": "Leña, fuego, espacio donde prender fuego",
@@ -209,7 +310,10 @@
   {
     "duracion": "20 minutos",
     "nombre": "Pan_de_cazador",
-    "unidad": ["Clan", "Tropa"],
+    "unidad": [
+      "Clan",
+      "Tropa"
+    ],
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Leña, fuego, espacio donde prender fuego, harina, huevo, agua, queso",
@@ -218,7 +322,10 @@
   {
     "duracion": "20 minutos",
     "nombre": "Amarres_scouts",
-    "unidad": ["Clan", "Tropa"],
+    "unidad": [
+      "Clan",
+      "Tropa"
+    ],
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Cuerda personal, cañas",
@@ -227,7 +334,10 @@
   {
     "duracion": "15 minutos",
     "nombre": "Taller_de_claves",
-    "unidad": ["Clan", "Tropa"],
+    "unidad": [
+      "Clan",
+      "Tropa"
+    ],
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Impresiones, papelografo",
@@ -236,7 +346,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Yo_soy_scout",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Canciones",
     "objetivo": "Integración",
     "necesidades": "Impresiones",
@@ -245,7 +360,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Run_run_deri_dera",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Canciones",
     "objetivo": "Integración",
     "necesidades": "Impresiones",
@@ -254,7 +374,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Santa_catalina",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Canciones",
     "objetivo": "Integración",
     "necesidades": "Impresiones",
@@ -263,7 +388,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Cosa_vieja",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Canciones",
     "objetivo": "Integración",
     "necesidades": "Impresiones",
@@ -272,7 +402,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Ani_kuni",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Canciones",
     "objetivo": "Integración",
     "necesidades": "Impresiones",
@@ -281,7 +416,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Flor_de_lis",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Canciones",
     "objetivo": "Integración",
     "necesidades": "Impresiones",
@@ -290,7 +430,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Mi_cosito",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -299,7 +444,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Baile_de_la_ensalada",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -308,7 +458,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Sandia_gorda",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -317,7 +472,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "El_pollito",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -326,7 +486,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Unguento_de_iguana",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -335,7 +500,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Tia_jacinta",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -344,7 +514,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Wantanchu",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -353,7 +528,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Piston_piston",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -362,7 +542,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "La_familia_pato",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -371,7 +556,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Merequetengue",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -380,7 +570,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Superman",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -389,7 +584,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "El_alacrán",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -398,7 +598,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Mono_Banana",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -407,7 +612,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "A_moler_cafe",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -416,7 +626,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "En_busca_de_un_león",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -425,7 +640,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Cielo_y_panpa",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -434,7 +654,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "El_baile_del_kingkong",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -443,7 +668,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Boom,_snap,_clap",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -452,7 +682,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Yo_tengo_una_casita",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -461,7 +696,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Yo_tengo_un_tik",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -470,7 +710,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Aplauso,_puño_y_tapo",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -479,7 +724,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Piojo_juancho",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -488,7 +738,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Familia_sapo",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -497,7 +752,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Cafe_con_leche",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -506,7 +766,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "Yo_tengo_una_hormiguita",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
@@ -515,7 +780,12 @@
   {
     "duracion": "10 minutos",
     "nombre": "En_la_tienda_de_mi_tio_max",
-    "unidad": ["Clan", "Tropa", "Manada", "Familia"],
+    "unidad": [
+      "Clan",
+      "Tropa",
+      "Manada",
+      "Familia"
+    ],
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",

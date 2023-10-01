@@ -21,10 +21,12 @@ form.addEventListener("submit", (event) => {
   let unidad_act = document.querySelector("#unidad").value;
   let necesidades_act = document.querySelector("#necesidades").value;
   let tipo_act = document.querySelector("#tipo").value;
+  let objetivo_act = document.querySelector("#objetivo").value;
 
   let nueva_actividad = {
     nombre: formato_string(name_act, "reverse"),
     unidad: unidad_act,
+    objetivo: objetivo_act,
     duracion: time_act,
     necesidades: necesidades_act,
     tipo: tipo_act,
@@ -66,8 +68,8 @@ form.addEventListener("submit", (event) => {
   }
 });
 let datos_d_actividades = data(paths_array.mision_tipo)
-let slt_mision = document.querySelector("#mision");
 let slt_tipo = document.querySelector("#tipo");
+let slt_objetivo = document.querySelector("#objetivo");
 if (slt_tipo != undefined && slt_tipo != []) {
 }
 if (datos_d_actividades != undefined && slt_tipo != []) {
@@ -77,10 +79,16 @@ if (datos_d_actividades != undefined && slt_tipo != []) {
     option.value = tipo;
     slt_tipo.appendChild(option);
   });
+  //NOTE: por si se convierte en select los objetivos
+  datos_d_actividades.objetivos.forEach((objetivo) => {
+    let option = document.createElement("option");
+    option.textContent = objetivo;
+    option.value = objetivo;
+    slt_objetivo.appendChild(option);
+  });
 } else {
   let option = document.createElement("option");
   option.textContent = "no existen opciones";
   option.value = "";
   slt_tipo.appendChild(option);
-  slt_mision.appendChild(option);
 }

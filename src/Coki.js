@@ -48,6 +48,9 @@ app.on("ready", () => {
   ipcMain.on("return", () => {
     main_window.loadFile("./src/pages/cronograma.html");
   });
+  ipcMain.on("return_init", () => {
+    main_window.loadFile("./index.html");
+  });
   // cronograma
   ipcMain.on("acts_list", (data) => {
     if (data != null) {
