@@ -9,20 +9,23 @@
       type=""
       href="https://bootswatch.com/5/morph/bootstrap.min.css"
     />
+    <link rel="stylesheet" type="" href="../../index.css" />
+    <link rel="stylesheet" type="" href="../css/act_list.css" />
   </head>
-  <body>
-    <h3>Cronograma</h3>
-    <table class="table table-hover" id="table">
-      <th>Duración</th>
-      <th>Nombre</th>
-      <th>Misión</th>
-      <th>Tipo</th>
-      <th>Objetivo</th>
-      <th>Necesidades</th>
-    </table>
-    <button id="list_act" type="button">añadir actividades</button>
-    <button id="xlsx" type="button">generar XLSX</button>
-    <button id="new_act" type="button">crear actividad</button>
+  <body class="detalle">
+    <h1 class="tituloDiv" class="text">Cronograma</h1>
+    <div>
+      <table class="table table-dark"  id="table">
+        <th>Duración</th>
+        <th>Nombre</th>
+        <th>Misión</th>
+        <th>Tipo</th>
+        <th>Objetivo</th>
+        <th>Necesidades</th>
+      </table>
+    </div>
+    <button id="list_act" type="button">Añadir actividades</button>
+    <button id="xlsx" type="button">Generar XLSX</button>
     <script src="../modules/crono.js"></script>
   </body>
 </html>
