@@ -41,7 +41,6 @@ function agregar_listeners() {
   });
 }
 // mostrar actividades segun el tipo de actividad escogido
-console.log(actividades_json)
 filtro_tipo.addEventListener("change", () => {
   while (Table.rows.length > 1) {
     Table.deleteRow(1)
@@ -81,6 +80,12 @@ const crono_btn = document.querySelector("#verCrono")
 crono_btn.addEventListener("click", (event) => {
   event.preventDefault();
   ipcRenderer.send("return")
+})
+
+const crear_excel = document.querySelector("#crearCrono")
+crear_excel.addEventListener("click", (event) => {
+  event.preventDefault();
+  funciones.crear_excel();
 })
 
 const p = document.querySelector("p");

@@ -30,38 +30,25 @@ if (
 } else {
   Table.insertAdjacentHTML("beforeend", "No existen actividades guardadas");
 }
-// agregar actividades
+
 const btn_list = document.querySelector("#list_act");
 btn_list.addEventListener("click", (event) => {
   event.preventDefault();
   ipcRenderer.send("agregar");
-});
-// remover activida
-const btn_new_act = document.querySelector("#new_act");
-btn_new_act.addEventListener("click", (event) => {
-  event.preventDefault();
-  console.log("creando..");
-  ipcRenderer.send("redir_new");
 });
 
 const btn_delete_act = document.querySelectorAll(".quitar");
 btn_delete_act.forEach((boton) => {
   boton.addEventListener("click", (event) => {
     event.preventDefault();
-    const ruta_cronograma = funciones.rutas().cronograma;
+    const ruta_cronograma = paths_array.cronograma
     let cronograma = funciones.data(ruta_cronograma);
     let nuevo_cronograma = cronograma.filter((actividad) => actividad.nombre != boton.id);
     funciones.write_json(ruta_cronograma, nuevo_cronograma);
     ipcRenderer.send("actividad_eliminada", nuevo_cronograma);
   });
 });
-// xlsx
+
 Excel.addEventListener("click", () => {
-  let array_actividades = [];
-  btn_delete_act.forEach((actividad) => {
-    array_actividades.push(funciones.obtener_act(actividad.id));
-  });
-  console.log(array_actividades);
-  funciones.crear_excel(array_actividades);
-  ipcRenderer.send("cronograma_guardado");
+  funciones.crear_excel();
 });

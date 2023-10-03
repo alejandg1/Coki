@@ -94,7 +94,9 @@ function formato_string(palabra, modo) {
 
   return nueva_palabra;
 }
-function xlsx(array) {
+function xlsx() {
+  const ruta_cronograma = rutas()
+  let array_actividades = datosjson(ruta_cronograma.cronograma);
   let nombre_descargas = "Downloads";
   if (navigator.language.includes("es")) {
     nombre_descargas = "Descargas";
@@ -105,9 +107,10 @@ function xlsx(array) {
     "Cronograma.xlsx"
   );
   const workbook = excel.utils.book_new();
-  const hoja = excel.utils.json_to_sheet(array);
+  const hoja = excel.utils.json_to_sheet(array_actividades);
   excel.utils.book_append_sheet(workbook, hoja, "cronograma");
   excel.writeFile(workbook, dir_descargas);
+  ipcRenderer.send("cronograma_guardado");
 }
 
 function editar_actividad(actividad_editada, indice, actividades) {
