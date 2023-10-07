@@ -102,7 +102,6 @@ app.on("ready", () => {
       });
     });
     ipcMain.on("nueva_actividad", (event, array_editado) => {
-      console.log(array_editado)
       funciones.write_json(paths_array.json_actividades, array_editado);
       dialog.showMessageBox({
         type: "info",

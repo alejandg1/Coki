@@ -4,7 +4,7 @@ const paths_array = funciones.rutas();
 let actividades_json = (funciones.data(paths_array.cronograma))
 const Table = document.querySelector("Table");
 const Excel = document.querySelector("#xlsx");
-console.log(actividades_json)
+const btn_new_act = document.querySelector("#new_act");
 if (
   actividades_json != undefined &&
   actividades_json != "[]" &&
@@ -48,7 +48,10 @@ btn_delete_act.forEach((boton) => {
     ipcRenderer.send("actividad_eliminada", nuevo_cronograma);
   });
 });
-
+btn_new_act.addEventListener("click", (event) => {
+  event.preventDefault();
+  ipcRenderer.send("redir_new");
+});
 Excel.addEventListener("click", () => {
   funciones.crear_excel();
 });
