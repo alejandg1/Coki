@@ -31,8 +31,6 @@ form.addEventListener("submit", (event) => {
     necesidades: necesidades_act,
     tipo: tipo_act,
   };
-  console.log(nueva_actividad)
-  console.log(actividades_json)
   if (actividades_json != undefined && actividades_json != "[]") {
     if (actividad_existe(nueva_actividad.nombre, actividades_json)) {
       ipcRenderer.send("nombre_repetido");
