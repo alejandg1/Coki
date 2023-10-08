@@ -17,19 +17,40 @@
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="" href="../../index.css" />
+    <link rel="stylesheet" type="" href="../css/act_list.css" />
+    <link rel="stylesheet" type="" href="../css/select.css" />
   </head>
-  <body>
-    <h1>editar</h1>
-    <label for="duracion">duracion de la actividad (en minutos)</label>
-    <input type="number" id="duracion" name="duracion" />
-    <label for="nombre">nombre de la actividad</label>
-    <input type="text" id="nombre" name="nombre" />
-    <label for="tipo">tipo de la actividad</label>
-    <select id="tipo" name="tipo">
-      <option value=""></option>
-    </select>
-    <button id="cancelar" type="button">Regresar</button>
-    <button id="aceptar" type="button">Aceptar</button>
+  <body class="detalle">
+    <div class="container-table">
+      <div class="tituloDiv" ><h1 class="text">Editar actividad</h1></div>
+      <label for="duracion">Duración de la actividad (en minutos)</label>
+      <input type="number" id="duracion" name="duracion" />
+      <hr>
+      <label for="nombre">Nombre de la actividad</label>
+      <input type="text" id="nombre" name="nombre" />
+      <hr>
+      <label for="objetivo">Objetivo de la actividad</label>
+          <input type="text" name="objetivo" id="objetivo">
+      <hr>
+      <label for="necesidades">Necesidades de la actividad</label>
+          <input type="text" name="necesidades" id="necesidades" value="" />
+      <hr>
+      <label for="tipo" class="form-label mt-4">Tipo de actividad</label>
+      <select name="tipo" id="tipo">
+        <option value="">Juegos de salón</option>
+        <option value="">Juego activo</option>
+        <option value="">Pionerismo</option>
+        <option value="">Escultismo</option>
+        <option value="">Dinámicas</option>
+        <option value="">Canciones</option>
+        <option value="">Charla</option>
+      </select>
+      <hr>
+      <button id="cancelar" type="button">Regresar</button>
+      <button id="aceptar" type="button">Aceptar</button>
+    </div>
     <script src="../modules/act_edit.js"></script>
   </body>
 </html>
