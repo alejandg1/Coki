@@ -118,6 +118,8 @@ function editar_actividad(actividad_editada, indice, actividades) {
   actividades[indice].nombre = actividad_editada.nombre
   actividades[indice].duracion = actividad_editada.duracion
   actividades[indice].tipo = actividad_editada.tipo
+  actividades[indice].objetivo = actividad_editada.objetivo
+  actividades[indice].necesidades = actividad_editada.necesidades
   return actividades
 }
 

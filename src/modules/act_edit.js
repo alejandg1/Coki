@@ -3,6 +3,8 @@ const btn_cancel = document.querySelector("#cancelar");
 const btn_acep = document.querySelector("#aceptar");
 const inpt_nombre = document.querySelector("#nombre");
 const inpt_duracion = document.querySelector("#duracion");
+const inpt_objetivo = document.querySelector("#objetivo");
+const inpt_necesidades = document.querySelector("#necesidades");
 const slct_tipo = document.querySelector("#tipo");
 const { rutas, data, formato_string, editar_actividad, obtener_indice, write_json } = require("../modules/funciones.js");
 let paths_array = rutas();
@@ -15,8 +17,11 @@ btn_cancel.addEventListener("click", (event) => {
 // datos de actividad en los inputs
 let actividad_actual = data(paths_array.actividad_a_editar);
 let actividades_json = data(paths_array.json_actividades);
+//dar valores a los inputs
 inpt_nombre.value = formato_string(actividad_actual.nombre, "");
 inpt_duracion.value = actividad_actual.duracion
+inpt_objetivo.value = actividad_actual.objetivo
+inpt_necesidades.value = actividad_actual.necesidades
 let datos_d_actividades = data(paths_array.mision_tipo)
 datos_d_actividades.tipos.forEach((tipo) => {
   let option = document.createElement("option");
@@ -30,7 +35,9 @@ btn_acep.addEventListener("click", (event) => {
   let actividad_editada = {
     nombre: formato_string(inpt_nombre.value, "reverse"),
     tipo: slct_tipo.value,
-    duracion: inpt_duracion.value
+    duracion: inpt_duracion.value,
+    objetivo: inpt_objetivo.value,
+    necesidades: inpt_necesidades.value
   }
   let indice = obtener_indice(actividad_actual.nombre, actividades_json)
   let actividades_editadas = editar_actividad(actividad_editada, indice, actividades_json)
