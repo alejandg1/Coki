@@ -58,9 +58,14 @@ app.on("ready", () => {
     } else {
       dialog.showErrorBox("Falta información", "debe llenar todos los campos");
     }
-    ipcMain.on("editar", (id_elemento) => {
+    //NOTE: eliminar 
+    ipcMain.on("imprimir", (event, dato) => {
+      console.log(dato)
+    })
+    ipcMain.on("editar", (event, elemento) => {
       funciones.write_json(paths_array.actividad_a_editar, {
-        nombre: id_elemento,
+        nombre: elemento.nombre,
+        duracion: elemento.duracion,
       });
       main_window.loadFile("./src/pages/act_edit.html");
     });
@@ -89,6 +94,7 @@ app.on("ready", () => {
         message: "se guardaron los cambios",
         buttons: ["OK"],
       });
+      main_window.loadFile("./src/pages/act_list.html");
     });
     ipcMain.on("actividad_eliminada", () => {
       main_window.reload();

@@ -1,4 +1,4 @@
-const { ipcRenderer } = require("electron");
+const { ipcRenderer, ipcMain } = require("electron");
 const funciones = require("../modules/funciones.js");
 const actividades_funcs = require("../modules/actividades.js");
 const paths_array = funciones.rutas();
@@ -12,8 +12,9 @@ function agregar_listeners() {
   btn_edit.forEach((boton) => {
     boton.addEventListener("click", (event) => {
       event.preventDefault();
+      let duracion = funciones.obtener_act(funciones.formato_string(boton.id, "reverse"))
       let id_element = boton.id;
-      ipcRenderer.send("editar", id_element);
+      ipcRenderer.send("editar", { "nombre": id_element, "duracion": duracion });
     });
   });
   const btn_push_act = document.querySelectorAll(".agregar");
@@ -54,7 +55,7 @@ filtro_tipo.addEventListener("change", () => {
         let linea =
           "<tr> <td>" +
           actividad.duracion +
-          "</td><td>" +
+          " min </td><td>" +
           funciones.formato_string(actividad.nombre) +
           "</td><td>" +
           actividad.tipo +

@@ -15,9 +15,8 @@ btn_cancel.addEventListener("click", (event) => {
 // datos de actividad en los inputs
 let actividad_actual = data(paths_array.actividad_a_editar);
 let actividades_json = data(paths_array.json_actividades);
-let info = obtener_act(actividad_actual.nombre);
-inpt_nombre.value = formato_string(info.nombre);
-inpt_duracion.value = info.duracion
+inpt_nombre.value = formato_string(actividad_actual.nombre, "");
+inpt_duracion.value = actividad_actual.duracion
 let datos_d_actividades = data(paths_array.mision_tipo)
 datos_d_actividades.tipos.forEach((tipo) => {
   let option = document.createElement("option");
@@ -28,13 +27,12 @@ datos_d_actividades.tipos.forEach((tipo) => {
 // escribir lo editado
 btn_acep.addEventListener("click", (event) => {
   event.preventDefault();
-  console.log("guardado");
   let actividad_editada = {
-    nombre: inpt_nombre.value,
+    nombre: formato_string(inpt_nombre.value, "reverse"),
     tipo: slct_tipo.value,
     duracion: inpt_duracion.value
   }
-  let indice = obtener_indice(info.nombre, actividades_json)
+  let indice = obtener_indice(actividad_actual.nombre, actividades_json)
   let actividades_editadas = editar_actividad(actividad_editada, indice, actividades_json)
   write_json(paths_array.json_actividades, actividades_editadas)
   ipcRenderer.send("editado")
