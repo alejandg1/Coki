@@ -2,6 +2,7 @@ const os = require("os");
 const excel = require("xlsx");
 const fs = require("fs");
 const path = require("path");
+const { stringify } = require("querystring");
 
 function rutas() {
   // devolver ruta segun el sistema
@@ -73,10 +74,11 @@ function write_json(ruta, contenido = []) {
 function obtener_act(id) {
   let path = rutas();
   let actividades = (datosjson(path.json_actividades));
-  let encontrado = false;
+  let encontrado = 0;
+  console.log(id)
   actividades.forEach((actividad) => {
     if (actividad.nombre == id) {
-      encontrado = actividad;
+      encontrado = actividad.duracion;
     }
   });
   return encontrado;
