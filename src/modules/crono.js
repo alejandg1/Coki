@@ -24,7 +24,7 @@ if (
       actividad.necesidades +
       "</td><td><button class='quitar' id=" +
       funciones.formato_string(actividad.nombre, "reverse") +
-      ">quitar actividad</button></td></tr>";
+      ">Remove</button></td></tr>";
     Table.insertAdjacentHTML("beforeend", linea);
   });
 } else {

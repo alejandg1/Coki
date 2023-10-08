@@ -1,6 +1,6 @@
 [
   {
-    "duracion": "5 minutos",
+    "duracion": 5,
     "nombre": "FOBI",
     "unidad": [
       "Clan",
@@ -14,7 +14,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "15 minutos",
+    "duracion": 15,
     "nombre": "Carro_Romano",
     "unidad": [
       "Clan",
@@ -26,7 +26,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "15 minutos",
+    "duracion": 15,
     "nombre": "Artículos_scouts",
     "unidad": [
       "Clan",
@@ -40,7 +40,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "5 minutos",
+    "duracion": 5,
     "nombre": "Mi_asistente",
     "unidad": [
       "Clan",
@@ -52,7 +52,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "15 minutos",
+    "duracion": 15,
     "nombre": "Taller_de_nudos",
     "unidad": [
       "Clan",
@@ -66,7 +66,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Ortan_Chiviri",
     "unidad": [
       "Clan",
@@ -78,7 +78,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Honor",
     "unidad": [
       "Clan",
@@ -92,7 +92,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Lealtad",
     "unidad": [
       "Clan",
@@ -106,7 +106,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Ser_útil",
     "unidad": [
       "Clan",
@@ -120,7 +120,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "El_Carácter",
     "unidad": [
       "Clan",
@@ -134,7 +134,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Bondad_a_los_Animales",
     "unidad": [
       "Clan",
@@ -148,7 +148,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Obediencia",
     "unidad": [
       "Clan",
@@ -162,7 +162,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Economía",
     "unidad": [
       "Clan",
@@ -176,7 +176,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "15 minutos",
+    "duracion": 15,
     "nombre": "Promesa_Scout",
     "unidad": [
       "Clan",
@@ -190,7 +190,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Historia_del_escultismo",
     "unidad": [
       "Clan",
@@ -204,7 +204,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Principios_Scouts",
     "unidad": [
       "Clan",
@@ -218,7 +218,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Virtudes_Scouts",
     "unidad": [
       "Clan",
@@ -232,7 +232,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Los_nudos_básicos",
     "unidad": [
       "Clan",
@@ -240,13 +240,13 @@
       "Manada",
       "Familia"
     ],
-    "tipo": "Pionerismo",
+    "tipo": 10,
     "objetivo": "Practicar los nudos",
     "necesidades": "Cuerda personal",
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Flor_de_lis_significado",
     "unidad": [
       "Clan",
@@ -260,7 +260,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Tipos_de_carpas",
     "unidad": [
       "Clan",
@@ -272,7 +272,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "20 minutos",
+    "duracion": 20,
     "nombre": "Armado_de_carpas",
     "unidad": [
       "Clan",
@@ -284,7 +284,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Tipos_de_fogones",
     "unidad": [
       "Clan",
@@ -296,7 +296,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "20 minutos",
+    "duracion": 20,
     "nombre": "Armado_de_fogones",
     "unidad": [
       "Clan",
@@ -308,7 +308,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "20 minutos",
+    "duracion": 20,
     "nombre": "Pan_de_cazador",
     "unidad": [
       "Clan",
@@ -320,7 +320,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "20 minutos",
+    "duracion": 20,
     "nombre": "Amarres_scouts",
     "unidad": [
       "Clan",
@@ -332,7 +332,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "15 minutos",
+    "duracion": 15,
     "nombre": "Taller_de_claves",
     "unidad": [
       "Clan",
@@ -344,7 +344,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Yo_soy_scout",
     "unidad": [
       "Clan",
@@ -358,7 +358,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Run_run_deri_dera",
     "unidad": [
       "Clan",
@@ -372,7 +372,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Santa_catalina",
     "unidad": [
       "Clan",
@@ -386,7 +386,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Cosa_vieja",
     "unidad": [
       "Clan",
@@ -400,7 +400,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Ani_kuni",
     "unidad": [
       "Clan",
@@ -414,7 +414,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Flor_de_lis",
     "unidad": [
       "Clan",
@@ -428,7 +428,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Mi_cosito",
     "unidad": [
       "Clan",
@@ -442,7 +442,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Baile_de_la_ensalada",
     "unidad": [
       "Clan",
@@ -456,7 +456,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Sandia_gorda",
     "unidad": [
       "Clan",
@@ -470,7 +470,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "El_pollito",
     "unidad": [
       "Clan",
@@ -484,7 +484,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Unguento_de_iguana",
     "unidad": [
       "Clan",
@@ -498,7 +498,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Tia_jacinta",
     "unidad": [
       "Clan",
@@ -512,7 +512,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Wantanchu",
     "unidad": [
       "Clan",
@@ -526,7 +526,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Piston_piston",
     "unidad": [
       "Clan",
@@ -540,7 +540,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "La_familia_pato",
     "unidad": [
       "Clan",
@@ -554,7 +554,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Merequetengue",
     "unidad": [
       "Clan",
@@ -568,7 +568,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Superman",
     "unidad": [
       "Clan",
@@ -582,7 +582,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "El_alacrán",
     "unidad": [
       "Clan",
@@ -596,7 +596,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Mono_Banana",
     "unidad": [
       "Clan",
@@ -610,7 +610,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "A_moler_cafe",
     "unidad": [
       "Clan",
@@ -624,7 +624,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "En_busca_de_un_león",
     "unidad": [
       "Clan",
@@ -638,7 +638,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Cielo_y_panpa",
     "unidad": [
       "Clan",
@@ -652,7 +652,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "El_baile_del_kingkong",
     "unidad": [
       "Clan",
@@ -666,7 +666,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Boom,_snap,_clap",
     "unidad": [
       "Clan",
@@ -680,7 +680,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Yo_tengo_una_casita",
     "unidad": [
       "Clan",
@@ -694,7 +694,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Yo_tengo_un_tik",
     "unidad": [
       "Clan",
@@ -708,7 +708,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Aplauso,_puño_y_tapo",
     "unidad": [
       "Clan",
@@ -722,7 +722,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Piojo_juancho",
     "unidad": [
       "Clan",
@@ -736,7 +736,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Familia_sapo",
     "unidad": [
       "Clan",
@@ -750,7 +750,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Cafe_con_leche",
     "unidad": [
       "Clan",
@@ -764,7 +764,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "Yo_tengo_una_hormiguita",
     "unidad": [
       "Clan",
@@ -778,7 +778,7 @@
     "observaciones": ""
   },
   {
-    "duracion": "10 minutos",
+    "duracion": 10,
     "nombre": "En_la_tienda_de_mi_tio_max",
     "unidad": [
       "Clan",

@@ -14,7 +14,7 @@ function agregar_listeners() {
       event.preventDefault();
       let duracion = funciones.obtener_act(funciones.formato_string(boton.id, "reverse"))
       let id_element = boton.id;
-      ipcRenderer.send("editar", { "nombre": id_element, "duracion": duracion });
+      ipcRenderer.send("editar", { "nombre": id_element, "duracion": duracion + "min" });
     });
   });
   const btn_push_act = document.querySelectorAll(".agregar");
@@ -65,9 +65,9 @@ filtro_tipo.addEventListener("change", () => {
           actividad.necesidades +
           "</td><td><button class='agregar' id=" +
           funciones.formato_string(actividad.nombre, "reverse") +
-          " >añadir</button></td><td><button class='edit' id=" +
+          " >Add</button></td><td><button class='edit' id=" +
           funciones.formato_string(actividad.nombre, "reverse") +
-          ">Editar actividad</button></td></tr>";
+          ">Edit</button></td></tr>";
         Table.insertAdjacentHTML("beforeend", linea);
       }
     });
