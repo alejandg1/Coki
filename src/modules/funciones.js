@@ -75,10 +75,9 @@ function obtener_act(id) {
   let path = rutas();
   let actividades = (datosjson(path.json_actividades));
   let encontrado = 0;
-  console.log(id)
   actividades.forEach((actividad) => {
     if (actividad.nombre == id) {
-      encontrado = actividad.duracion;
+      encontrado = actividad;
     }
   });
   return encontrado;

@@ -4,7 +4,7 @@ const btn_acep = document.querySelector("#aceptar");
 const inpt_nombre = document.querySelector("#nombre");
 const inpt_duracion = document.querySelector("#duracion");
 const slct_tipo = document.querySelector("#tipo");
-const { rutas, data, obtener_act, formato_string, editar_actividad, obtener_indice, write_json } = require("../modules/funciones.js");
+const { rutas, data, formato_string, editar_actividad, obtener_indice, write_json } = require("../modules/funciones.js");
 let paths_array = rutas();
 
 btn_cancel.addEventListener("click", (event) => {
