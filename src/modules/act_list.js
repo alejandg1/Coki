@@ -16,6 +16,32 @@ function agregar_listeners() {
       ipcRenderer.send("editar", actividad);
     });
   });
+  const btn_desc = document.querySelectorAll(".desc");
+  btn_desc.forEach((boton) => {
+    boton.addEventListener("click", (event) => {
+      event.preventDefault();
+      const id = boton.id
+      let data = funciones.obtener_act(id)
+      let desc_div = document.createElement("div")
+      let parag = document.createElement("p")
+      desc_div.id = id
+      desc_div.style.display = "block"
+      desc_div.style.zIndex = 999
+      desc_div.style.height = 20
+      desc_div.style.width = 20
+      desc_div.blur(() => {
+        desc_div.style.display = "none"
+      })
+
+      console.log(data)
+      parag.innerHTML = data.descipcion
+      desc_div.appendChild(parag)
+      const div_padre = document.querySelector(".container-table")
+      div_padre.appendChild(desc_div)
+
+      //NOTE: mostrar Descripción
+    });
+  });
   const btn_push_act = document.querySelectorAll(".agregar");
   btn_push_act.forEach((boton) => {
     boton.addEventListener("click", (event) => {
@@ -66,7 +92,9 @@ filtro_tipo.addEventListener("change", () => {
           funciones.formato_string(actividad.nombre, "reverse") +
           " >Add</button></td><td><button class='edit' id=" +
           funciones.formato_string(actividad.nombre, "reverse") +
-          ">Edit</button></td></tr>";
+          ">Edit</button></td><td><button class='desc' id=" +
+          funciones.formato_string(actividad.nombre, "reverse") +
+          ">Descripción</button></td></tr>";
         Table.insertAdjacentHTML("beforeend", linea);
       }
     });
