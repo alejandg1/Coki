@@ -11,7 +11,8 @@
     "tipo": "Mística",
     "objetivo": "Espiritualidad, mistica, instrucciones",
     "necesidades": "Bandera, lugar de reunión",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 15,
@@ -23,7 +24,8 @@
     "tipo": "Juego activo",
     "objetivo": "Trabajo en equipo",
     "necesidades": "Espacio abierto, cañas",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 15,
@@ -37,7 +39,8 @@
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Impresiones, papelografo",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 5,
@@ -49,7 +52,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 15,
@@ -63,7 +67,8 @@
     "tipo": "Pionerismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Cuerda personal",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -75,7 +80,8 @@
     "tipo": "Canciones",
     "objetivo": "Integración",
     "necesidades": "Impresiones",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -89,7 +95,8 @@
     "tipo": "Charla",
     "objetivo": "",
     "necesidades": "Espacio cubierto",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -103,7 +110,8 @@
     "tipo": "Charla",
     "objetivo": "",
     "necesidades": "Espacio cubierto",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -117,7 +125,8 @@
     "tipo": "Charla",
     "objetivo": "",
     "necesidades": "Espacio cubierto",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -131,7 +140,8 @@
     "tipo": "Charla",
     "objetivo": "",
     "necesidades": "Espacio cubierto",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -145,7 +155,8 @@
     "tipo": "Charla",
     "objetivo": "",
     "necesidades": "Espacio cubierto",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -159,7 +170,8 @@
     "tipo": "Charla",
     "objetivo": "",
     "necesidades": "Espacio cubierto",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -173,7 +185,8 @@
     "tipo": "Charla",
     "objetivo": "",
     "necesidades": "Espacio cubierto",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 15,
@@ -187,7 +200,8 @@
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Espacio cubierto",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -201,7 +215,8 @@
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Espacio cubierto",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -215,7 +230,8 @@
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Espacio cubierto",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -229,7 +245,8 @@
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Espacio cubierto",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -243,7 +260,8 @@
     "tipo": 10,
     "objetivo": "Practicar los nudos",
     "necesidades": "Cuerda personal",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -257,7 +275,8 @@
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Impresiones, papelografo",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -269,7 +288,8 @@
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Impresiones, papelografo / diversas Carpas, espacio abierto",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 20,
@@ -281,7 +301,8 @@
     "tipo": "Escultismo",
     "objetivo": "Practicar los conocimientos",
     "necesidades": "Diversas carpas, espacio abierto",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -293,7 +314,8 @@
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Impresiones, papelografo / Leña, fuego, espacio donde prender fuego",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 20,
@@ -305,7 +327,8 @@
     "tipo": "Escultismo",
     "objetivo": "Practicar los conocimientos",
     "necesidades": "Leña, fuego, espacio donde prender fuego",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 20,
@@ -317,7 +340,8 @@
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Leña, fuego, espacio donde prender fuego, harina, huevo, agua, queso",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 20,
@@ -329,7 +353,8 @@
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Cuerda personal, cañas",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 15,
@@ -341,7 +366,8 @@
     "tipo": "Escultismo",
     "objetivo": "Reforzar conocimiento",
     "necesidades": "Impresiones, papelografo",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -355,7 +381,8 @@
     "tipo": "Canciones",
     "objetivo": "Integración",
     "necesidades": "Impresiones",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -369,7 +396,8 @@
     "tipo": "Canciones",
     "objetivo": "Integración",
     "necesidades": "Impresiones",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -383,7 +411,8 @@
     "tipo": "Canciones",
     "objetivo": "Integración",
     "necesidades": "Impresiones",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -397,7 +426,8 @@
     "tipo": "Canciones",
     "objetivo": "Integración",
     "necesidades": "Impresiones",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -411,7 +441,8 @@
     "tipo": "Canciones",
     "objetivo": "Integración",
     "necesidades": "Impresiones",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -425,7 +456,8 @@
     "tipo": "Canciones",
     "objetivo": "Integración",
     "necesidades": "Impresiones",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -439,7 +471,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -453,7 +486,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -467,7 +501,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -481,7 +516,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -495,7 +531,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -509,7 +546,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -523,7 +561,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -537,7 +576,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -551,7 +591,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -565,7 +606,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -579,7 +621,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -593,7 +636,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -607,7 +651,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -621,7 +666,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -635,7 +681,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -649,7 +696,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -663,7 +711,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -677,7 +726,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -691,7 +741,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -705,7 +756,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -719,7 +771,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -733,7 +786,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -747,7 +801,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -761,7 +816,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -775,7 +831,8 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   },
   {
     "duracion": 10,
@@ -789,6 +846,7 @@
     "tipo": "Dinámica",
     "objetivo": "Integración",
     "necesidades": "Formación",
-    "observaciones": ""
+    "observaciones": "",
+    "descipcion": "a"
   }
 ]
