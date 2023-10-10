@@ -37,7 +37,6 @@ table td:first-child, table th:first-child {
 .nav_image img {
     height: 35px;
     width: 35px;
-    border-radius: 50%;
     object-fit: cover;
 }
 
@@ -48,7 +47,6 @@ table td:first-child, table th:first-child {
     font-size: 30px;
     color: #ffffff;
     font-weight: 500px;
-    transition: all 0.3s ease;
 }
 .sidebar.close .logo_name,
 .sidebar.close #lock-icon,
