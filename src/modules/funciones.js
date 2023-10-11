@@ -2,9 +2,7 @@ const os = require("os");
 const excel = require("xlsx");
 const fs = require("fs");
 const path = require("path");
-const { stringify } = require("querystring");
 const { ipcRenderer } = require("electron");
-const { contentTracing } = require("electron");
 
 function rutas() {
   // devolver ruta segun el sistema
@@ -108,9 +106,10 @@ function xlsx() {
   ) {
     const workbook = excel.utils.book_new();
     const hoja = excel.utils.json_to_sheet(array_actividades);
+    let ruta = path.join(os.homedir(), nombre_descargas)
     excel.utils.book_append_sheet(workbook, hoja, "cronograma");
     excel.writeFileSync(workbook, dir_descargas);
-    ipcRenderer.send("cronograma_guardado");
+    ipcRenderer.send("cronograma_guardado", ruta);
   } else {
     ipcRenderer.send("cronograma_vacio");
   }

@@ -1,4 +1,7 @@
 const fs = require("fs");
+const path = require("path")
+const os = require("os")
+const child = require("child_process")
 const { app, BrowserWindow, dialog, ipcMain } = require("electron");
 const funciones = require("./modules/funciones.js");
 const { setMenu } = require("./modules/menu.js");
@@ -102,14 +105,21 @@ app.on("ready", () => {
     ipcMain.on("actividad_eliminada", () => {
       main_window.reload();
     });
-    ipcMain.on("cronograma_guardado", () => {
+    ipcMain.on("cronograma_guardado", (event, ruta_descarga) => {
       dialog.showMessageBox({
         type: "info",
         title: "",
         message:
-          "El cronograma ha sido guardado en su carpeta 'Cronogramas' dentro de su carpeta de usuario ",
+          "El cronograma ha sido guardado",
         buttons: ["OK"],
       });
+      child.exec(("open " + ruta_descarga), (error, stdout, stderr) => {
+        if (error) {
+          console.log(error.message);
+          return;
+        }
+        console.log(stdout);
+      })
     });
     ipcMain.on("nueva_actividad", (event, array_editado) => {
       funciones.write_json(paths_array.json_actividades, array_editado);
