@@ -21,6 +21,7 @@
     <link rel="stylesheet" type="" href="../../index.css" />
     <link rel="stylesheet" type="" href="../css/act_list.css" />
     <link rel="stylesheet" type="" href="../css/select.css" />
+    <link rel="stylesheet" type="" href="../css/act.css" />
   </head>
   <body class="detalle">
     <div class="container-table">
@@ -31,18 +32,38 @@
       <label for="nombre">Nombre de la actividad</label>
       <input type="text" id="nombre" name="nombre" />
       <hr>
+      <label for="unidad" class="form-label mt-4" >Unidad</label>
+      <div>
+        <select id="unidad">
+          <option value="Clan">Clan</option>
+          <option value="Tropa">Tropa</option>
+          <option value="Manada">Manada</option>
+          <option value="Familia">Familia</option>
+        </select>
+      </div>
+      <hr>
+      <label for="tipo" class="form-label mt-4">Tipo de actividad</label>
+      <div>
+        <select name="tipo" id="tipo">
+          <option value="">Juegos de salón</option>
+          <option value="">Juego activo</option>
+          <option value="">Pionerismo</option>
+          <option value="">Escultismo</option>
+          <option value="">Dinámicas</option>
+          <option value="">Canciones</option>
+          <option value="">Charla</option>
+        </select>
+      </div>
+      <hr>
       <label for="objetivo">Objetivo de la actividad</label>
           <input type="text" name="objetivo" id="objetivo">
       <hr>
       <label for="necesidades">Necesidades de la actividad</label>
           <input type="text" name="necesidades" id="necesidades" value="" />
       <hr>
-      <label for="tipo" class="form-label mt-4">Tipo de actividad</label>
-      <select name="tipo" id="tipo">
-      </select>
-      <hr>
       <button id="cancelar" type="button">Regresar</button>
       <button id="aceptar" type="button">Aceptar</button>
+      <hr>
     </div>
     <script src="../modules/act_edit.js"></script>
   </body>

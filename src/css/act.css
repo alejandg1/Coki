@@ -1,0 +1,20 @@
+input {
+    width: 100%; /* Hace que el input sea tan ancho como su contenedor */
+    padding: 12px 20px; /* Añade algo de padding */
+    margin: 8px 0; /* Añade algo de margen */
+    box-sizing: border-box; /* Asegura que el padding y el ancho se mantengan dentro del tamaño total del input */
+    border: 3px solid #ccc; /* Añade un borde */
+    border-radius: 4px; /* Añade bordes redondeados */
+    color: black; /* Cambia el color de la letra a negro */
+    background-color: #f7f7f7;
+}
+
+select {
+    width: 422px;
+    padding: 12px 20px; 
+    margin: 8px 0; /* Añade algo de margen */
+    box-sizing: border-box; /* Asegura que el padding y el ancho se mantengan dentro del tamaño total del select */
+    border: 3px solid #ccc; /* Añade un borde */
+    border-radius: 4px; /* Añade bordes redondeados */
+    background-color: #f7f7f7; /* Cambia el color de fondo a un gris claro */
+}

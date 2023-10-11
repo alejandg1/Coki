@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="" href="../../index.css" />
     <link rel="stylesheet" type="" href="../css/act_list.css" />
     <link rel="stylesheet" type="" href="../css/select.css" />
+    <link rel="stylesheet" type="" href="../css/act.css" />
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self'"
@@ -22,7 +23,7 @@
       content="default-src 'self'; script-src 'self'"
     />
   </head>
-  <title>Coki</title>
+  <title>ActioMeta</title>
   <script defer scr="../modules/calls.js"></script>
   <body class="detalle">
     <div class="tituloDiv"><h1 class="text">Nueva actividad</h1></div>
@@ -30,36 +31,42 @@
       <form id="form_add" class="p-4">
         <div id="time_div" class="form-group">
           <h3 class="text">Ingrese la información de la nueva actividad</h3>
-          <label for="inicio" class="form-label mt-4">tiempo de duración de la actividad</label>
-          <input type="number" name="time" id="time" class="form-control" />
+          <label for="inicio" class="form-label mt-4">Duración de la actividad (minutos)</label>
+          <input type="number" name="time" id="time"/>
         </div>
         <div id="nombre_div" class="form-group">
           <label for="nombre" class="form-label mt-4"
-            >nombre de la nueva actividad</label>
-          <input type="text" name="nombre" id="nombre" class="form-control"/>
-        </div>
-        <div id="unidad_div" class="form-group">
-          <label for="unidad" class="form-label mt-4" >unidad</label>
-          <select id="unidad">
-            <option value="Clan">Clan</option>
-            <option value="Tropa">Tropa</option>
-            <option value="Manada">Manada</option>
-            <option value="Familia">Familia</option>
-          </select>
-        </div>
-        <div id="tipo_div">
-          <label for="tipo" class="form-label mt-4">Tipo de actividad</label>
-          <select name="tipo" id="tipo">
-            <option value="">Juegos de salón</option>
-            <option value="">Juego activo</option>
-            <option value="">Pionerismo</option>
-            <option value="">Escultismo</option>
-            <option value="">Dinámicas</option>
-            <option value="">Canciones</option>
-            <option value="">Charla</option>
-          </select>
+            >Nombre de la nueva actividad</label>
+          <input type="text" name="nombre" id="nombre"/>
         </div>
         <hr />
+        <div id="unidad_div" class="form-group">
+          <label for="unidad" class="form-label mt-4" >Unidad</label>
+          <div>
+            <select id="unidad">
+              <option value="Clan">Clan</option>
+              <option value="Tropa">Tropa</option>
+              <option value="Manada">Manada</option>
+              <option value="Familia">Familia</option>
+            </select>
+          </div>
+        </div>
+        <hr>
+        <div id="tipo_div">
+          <label for="tipo" class="form-label mt-4">Tipo de actividad</label>
+          <div>
+            <select name="tipo" id="tipo">
+              <option value="">Juegos de salón</option>
+              <option value="">Juego activo</option>
+              <option value="">Pionerismo</option>
+              <option value="">Escultismo</option>
+              <option value="">Dinámicas</option>
+              <option value="">Canciones</option>
+              <option value="">Charla</option>
+            </select>
+          </div>
+        </div>
+        <hr>
         <div id="Objetivo_div">
           <label for="objetivo">Objetivo de la actividad</label>
           <input type="text" name="objetivo" id="objetivo">
@@ -69,10 +76,12 @@
           <label for="necesidades">Necesidades de la actividad</label>
           <input type="text" name="necesidades" id="necesidades" value="" />
         </div>
-        <hr />
-        <button id="addact">guardar</button>
+        <hr>
+
+        <button id="addact">Guardar</button>
         <button id="cancelar_act_new" type="button">Regresar
         </button>
+        <hr>
       </form>
     </div>
     <script src="../modules/act_new.js"></script>

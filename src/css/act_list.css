@@ -1,3 +1,13 @@
+select {
+    width: 100%;
+    padding: 12px 20px; 
+    margin: 8px 0; /* Añade algo de margen */
+    box-sizing: border-box; /* Asegura que el padding y el ancho se mantengan dentro del tamaño total del select */
+    border: 3px solid #ccc; /* Añade un borde */
+    border-radius: 4px; /* Añade bordes redondeados */
+    background-color: #e7e7e7; /* Cambia el color de fondo a un gris claro */
+}
+
 body {
     font-family: 'Nunito', sans-serif;
 }
