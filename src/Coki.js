@@ -1,6 +1,4 @@
 const fs = require("fs");
-const path = require("path")
-const os = require("os")
 const child = require("child_process")
 const { app, BrowserWindow, dialog, ipcMain } = require("electron");
 const funciones = require("./modules/funciones.js");
