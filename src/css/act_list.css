@@ -35,18 +35,22 @@ table td:first-child, table th:first-child {
     justify-content: center;
 }
 .nav_image img {
-    height: 35px;
-    width: 35px;
+    height: 90px;
+    width: 90px;
     object-fit: cover;
 }
 
 .logo_items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 8px;
 }
 .logo_name {
-    font-size: 30px;
+    font-size: 40px;
     color: #ffffff;
     font-weight: 500px;
+    text-align: center;
 }
 .sidebar.close .logo_name,
 .sidebar.close #lock-icon,
@@ -58,7 +62,6 @@ table td:first-child, table th:first-child {
 .exit .menu{
     width: 100%;
     max-width: 1200px;
-    margin-top: 60px;
     float: left;
     line-height:40px;
 }
