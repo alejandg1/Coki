@@ -58,10 +58,10 @@ app.on("ready", () => {
     } else {
       dialog.showErrorBox("Falta información", "debe llenar todos los campos");
     }
-    //NOTE: eliminar 
+    //NOTE: eliminar
     ipcMain.on("imprimir", (event, dato) => {
-      console.log(dato)
-    })
+      console.log(dato);
+    });
     ipcMain.on("editar", (event, elemento) => {
       funciones.write_json(paths_array.actividad_a_editar, elemento);
       main_window.loadFile("./src/pages/act_edit.html");
@@ -76,6 +76,12 @@ app.on("ready", () => {
       dialog.showErrorBox(
         "error",
         "la actividad ingresada tiene nombre repetido"
+      );
+    });
+    ipcMain.on("cronograma_vacio", () => {
+      dialog.showErrorBox(
+        "error",
+        "no puede guardar un cronograma vacío, agregue actividades"
       );
     });
     ipcMain.on("repetida_cronograma", () => {
@@ -100,7 +106,8 @@ app.on("ready", () => {
       dialog.showMessageBox({
         type: "info",
         title: "",
-        message: "El cronograma ha sido guardado en su carpeta de descargas",
+        message:
+          "El cronograma ha sido guardado en su carpeta 'Cronogramas' dentro de su carpeta de usuario ",
         buttons: ["OK"],
       });
     });
