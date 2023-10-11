@@ -1,10 +1,12 @@
 const { ipcRenderer } = require("electron");
-const { data, rutas, formato_string } = require("../modules/funciones.js");
+const { add_checkboxes, data, rutas, formato_string } = require("../modules/funciones.js");
 const {
   datos_incompletos,
   actividad_existe,
 } = require("../modules/actividades.js");
 
+const div_boxes = document.querySelector("#checkboxes")
+add_checkboxes(div_boxes)
 const cancel_btn = document.querySelector("#cancelar_act_new");
 cancel_btn.addEventListener("click", (event) => {
   event.preventDefault()
@@ -18,14 +20,20 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   let name_act = document.querySelector("#nombre").value;
   let time_act = document.querySelector("#time").value;
-  let unidad_act = document.querySelector("#unidad").value;
+  //  let unidad_act = document.querySelector("#unidad").value;
   let necesidades_act = document.querySelector("#necesidades").value;
   let tipo_act = document.querySelector("#tipo").value;
   let objetivo_act = document.querySelector("#objetivo").value;
-
+  let boxes = document.querySelectorAll(".unidades")
+  let unidades = []
+  boxes.forEach((box) => {
+    if (box.checked) {
+      unidades.push(box.value)
+    }
+  })
   let nueva_actividad = {
     nombre: formato_string(name_act, "reverse"),
-    unidad: unidad_act,
+    unidad: unidades,
     objetivo: objetivo_act,
     duracion: time_act,
     necesidades: necesidades_act,
@@ -45,7 +53,7 @@ form.addEventListener("submit", (event) => {
         ipcRenderer.send("datos_incompletos");
       } else {
         actividades_json.push(nueva_actividad);
-
+        console.log(nueva_actividad)
         ipcRenderer.send("nueva_actividad", actividades_json);
       }
     }
@@ -68,7 +76,6 @@ form.addEventListener("submit", (event) => {
 });
 let datos_d_actividades = data(paths_array.mision_tipo)
 let slt_tipo = document.querySelector("#tipo");
-//let slt_objetivo = document.querySelector("#objetivo");
 if (slt_tipo != undefined && slt_tipo != []) {
 }
 if (datos_d_actividades != undefined && slt_tipo != []) {
@@ -78,13 +85,6 @@ if (datos_d_actividades != undefined && slt_tipo != []) {
     option.value = tipo;
     slt_tipo.appendChild(option);
   });
-  //NOTE: por si se convierte en select los objetivos
-  // datos_d_actividades.objetivos.forEach((objetivo) => {
-  //   let option = document.createElement("option");
-  //   option.textContent = objetivo;
-  //   option.value = objetivo;
-  //   slt_objetivo.appendChild(option);
-  // });
 } else {
   let option = document.createElement("option");
   option.textContent = "no existen opciones";

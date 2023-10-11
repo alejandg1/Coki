@@ -122,6 +122,7 @@ function editar_actividad(actividad_editada, indice, actividades) {
   actividades[indice].tipo = actividad_editada.tipo;
   actividades[indice].objetivo = actividad_editada.objetivo;
   actividades[indice].necesidades = actividad_editada.necesidades;
+  actividades[indice].unidad = actividad_editada.unidad;
   return actividades;
 }
 
@@ -136,7 +137,25 @@ function obtener_indice(nombre, actividades) {
   });
   return ret;
 }
+
+function add_checkboxes(padre, activos = []) {
+  const unidades = ["Clan", "Familia", "Tropa", "Manada"]
+  unidades.forEach(unidad => {
+    let option = document.createElement("input")
+    let label = document.createElement("label")
+    label.textContent = unidad
+    option.type = "checkbox"
+    option.className = "unidades"
+    option.value = unidad
+    if (activos.includes(unidad)) {
+      option.checked = true
+    }
+    label.appendChild(option)
+    padre.appendChild(label)
+  });
+}
 module.exports = {
+  add_checkboxes: add_checkboxes,
   obtener_indice: obtener_indice,
   editar_actividad: editar_actividad,
   comprobar_json: comprobar_json,
