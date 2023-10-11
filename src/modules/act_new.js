@@ -20,7 +20,6 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   let name_act = document.querySelector("#nombre").value;
   let time_act = document.querySelector("#time").value;
-  //  let unidad_act = document.querySelector("#unidad").value;
   let necesidades_act = document.querySelector("#necesidades").value;
   let tipo_act = document.querySelector("#tipo").value;
   let objetivo_act = document.querySelector("#objetivo").value;
