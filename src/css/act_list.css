@@ -1,3 +1,80 @@
+.boton-lapiz {
+    background-color: black;
+    border-radius: 50%;
+    border: none;
+    padding: 10px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.boton-lapiz svg {
+    fill: white;
+}
+.boton-lapiz:hover {
+    background-color: #555;
+}
+
+.boton-agregar {
+    background-color: black;
+    border-radius: 50%;
+    border: none;
+    padding: 10px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.boton-agregar svg {
+    fill: white;
+}
+.boton-agregar:hover {
+    background-color: #555;
+}
+
+
+.boton-descripcion {
+    background-color: black;
+    border-radius: 50%;
+    border: none;
+    padding: 10px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.boton-descripcion svg {
+    fill: white;
+}
+.boton-descripcion:hover {
+    background-color: #555;
+}
+
+
+
+.boton-quitar {
+    background-color: black;
+    border-radius: 50%;
+    border: none;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.boton-quitar svg {
+    fill: white;
+}
+.boton-quitar:hover {
+    background-color: #555;
+}
+
+
+
 select {
     width: 100%;
     padding: 12px 20px; 
@@ -24,6 +101,10 @@ table td:first-child, table th:first-child {
     text-align: center; /* Centra el texto */
 }
 
+table td:nth-child(6), table td:nth-child(7), table td:nth-child(8),
+table th:nth-child(6), table th:nth-child(7), table th:nth-child(8) {
+    border: none;
+}
 
 .detalle{
     background-color: #121212;
