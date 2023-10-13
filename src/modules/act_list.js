@@ -101,7 +101,7 @@ let svgButtonDesc = `<button id="${funciones.formato_string(actividad.nombre,"re
       }
     });
   } else {
-    Table.insertAdjacentHTML("be<foreend", "No existen actividades guardadas");
+    Table.insertAdjacentHTML("beforeend", "No existen actividades guardadas");
   }
   agregar_listeners()
 })
