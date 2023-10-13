@@ -14,18 +14,23 @@
   </head>
   <body class="detalle">
     <div class="tituloDiv"><h1 class="text">Cronograma</h1></div>
+    <hr>
+    
     <div class="container-table">
-      <table class="table table-dark" id="table">
-        <th>Duración</th>
-        <th>Nombre</th>
-        <th>Misión</th>
-        <th>Tipo</th>
-        <th>Objetivo</th>
-        <th>Necesidades</th>
-      </table>
+      <div class="table-responsive">
+        <table class="table-dark" id="table">
+          <th>Duración</th>
+          <th>Nombre</th>
+          <th>Tipo</th>
+          <th>Objetivo</th>
+          <th>Necesidades</th>
+        </table>
+      </div>
+      <hr>
       <button id="new_act" type="button">Crear actividad</button>
       <button id="list_act" type="button">Añadir actividades</button>
       <button id="xlsx" type="button">Generar XLSX</button>
+      <hr>
     </div>
     <script src="../modules/crono.js"></script>
   </body>
