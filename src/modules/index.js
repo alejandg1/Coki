@@ -16,4 +16,8 @@ form.addEventListener("submit", (event) => {
   let paths_array = funciones.rutas();
   funciones.write_json(paths_array.datos_unidad_nombre, datos_unidad_nombre);
   ipcRenderer.send("acts_list", datos_unidad_nombre);
+
+
+  nombre.value = "";
+  unidad.value = "";
 });
