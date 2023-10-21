@@ -8,6 +8,7 @@ const datos_unidad_nombre = funciones.data(paths_array.datos_unidad_nombre);
 const filtro_tipo = document.querySelector("#filtro");
 
 function agregar_listeners() {
+
   const btn_edit = document.querySelectorAll(".boton_lapiz");
   btn_edit.forEach((boton) => {
     boton.addEventListener("click", (event) => {
@@ -43,6 +44,7 @@ function agregar_listeners() {
     });
   });
   const btn_push_act = document.querySelectorAll(".boton_agregar");
+  
   btn_push_act.forEach((boton) => {
     boton.addEventListener("click", (event) => {
       event.preventDefault();
@@ -125,6 +127,7 @@ btn.addEventListener("click", (event) => {
   event.preventDefault();
   ipcRenderer.send("return_init");
 });
+
 let datos_d_actividades = funciones.data(paths_array.mision_tipo);
 datos_d_actividades.tipos.forEach((tipo) => {
   let option = document.createElement("option");
