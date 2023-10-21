@@ -1,4 +1,4 @@
-const { ipcRenderer, ipcMain } = require("electron");
+const { ipcRenderer } = require("electron");
 const funciones = require("../modules/funciones.js");
 const actividades_funcs = require("../modules/actividades.js");
 const paths_array = funciones.rutas();
@@ -17,34 +17,7 @@ function agregar_listeners() {
       ipcRenderer.send("editar", actividad);
     });
   });
-  const btn_desc = document.querySelectorAll(".boton_descripcion");
-  btn_desc.forEach((boton) => {
-    boton.addEventListener("click", (event) => {
-      event.preventDefault();
-      const id = boton.id
-      let data = funciones.obtener_act(id)
-      let desc_div = document.createElement("div")
-      let parag = document.createElement("p")
-      desc_div.id = id
-      desc_div.style.display = "block"
-      desc_div.style.zIndex = 999
-      desc_div.style.height = 20
-      desc_div.style.width = 20
-      desc_div.blur(() => {
-        desc_div.style.display = "none"
-      })
-
-      console.log(data)
-      parag.innerHTML = data.descipcion
-      desc_div.appendChild(parag)
-      const div_padre = document.querySelector(".container-table")
-      div_padre.appendChild(desc_div)
-
-      //NOTE: mostrar Descripción
-    });
-  });
   const btn_push_act = document.querySelectorAll(".boton_agregar");
-  
   btn_push_act.forEach((boton) => {
     boton.addEventListener("click", (event) => {
       event.preventDefault();
@@ -83,7 +56,6 @@ filtro_tipo.addEventListener("change", () => {
 
         let svgButtonAdd = `<button id ="${funciones.formato_string(actividad.nombre, "reverse")}" class='boton_agregar'> <img src="../../images/agregar.png"></img>   </button>`;
 
-        let svgButtonDesc = `<button id="${funciones.formato_string(actividad.nombre, "reverse")}" class='boton_descripcion'> <img src="../../images/meticuloso.png"></img> </button>`;
         let linea =
           "<tr> <td>" +
           actividad.duracion +
@@ -95,7 +67,7 @@ filtro_tipo.addEventListener("change", () => {
           actividad.objetivo +
           "</td><td>" +
           actividad.necesidades +
-          "</td><td>" + svgButtonAdd + "</td><td>" + svgButton + "</td><td>" + svgButtonDesc + "</td></tr>";
+          "</td><td>" + svgButtonAdd + "</td><td>" + svgButton + "</td></tr>";
         Table.insertAdjacentHTML("beforeend", linea);
       }
     });

@@ -7,6 +7,7 @@ const { setMenu } = require("./modules/menu.js");
 const mision_tipo = funciones.data("./src/data/mision_tipo.json");
 const actividades = funciones.data("./src/data/actividades.json");
 let main_window
+let paths_array = funciones.rutas();
 app.on("ready", () => {
   main_window = new BrowserWindow({
     width: 900,
@@ -18,7 +19,6 @@ app.on("ready", () => {
       contextIsolation: false,
     },
   });
-  let paths_array = funciones.rutas();
   // crear la carpeta coki
   funciones.dir(paths_array.carpeta_coki);
   const json_actividades_exist = funciones.comprobar_json(
