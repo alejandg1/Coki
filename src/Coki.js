@@ -10,6 +10,7 @@ app.on("ready", () => {
   let main_window = new BrowserWindow({
     width: 900,
     height: 700,
+    icon:__dirname+"../images/logo.png",
     title: "Coki",
     webPreferences: {
       nodeIntegration: true,

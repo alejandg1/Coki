@@ -1,6 +1,6 @@
 {
-  "name": "coki",
-  "productName": "coki",
+  "name": "Actiometa",
+  "productName": "Actiometa",
   "version": "1.0.0",
   "description": "scout app",
   "main": "./src/Coki.js",
