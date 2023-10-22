@@ -5,16 +5,6 @@ module.exports = {
   rebuildConfig: {},
   makers: [
     {
-      name: '@electron-forge/maker-wix',
-      config: {
-        language: 1033,
-        name: "ActioMeta",
-        manufacturer: 'Mikandro',
-        exe: "ActioMeta",
-        icon: "./images/logo.ico"
-      }
-    },
-    {
       name: "@electron-forge/maker-zip",
     },
     {

@@ -12,7 +12,7 @@ app.on("ready", () => {
   main_window = new BrowserWindow({
     width: 900,
     height: 700,
-    icon: __dirname + "../images/logo.png",
+    icon: "./images/logo.png",
     title: "Coki",
     webPreferences: {
       nodeIntegration: true,
