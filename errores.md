@@ -1,4 +1,0 @@
-- pensar en la posibilidad de un nuevo modulo flotante
-- agregar al json la descripción de las actividades
-- mover el logo
-- hay un bug
