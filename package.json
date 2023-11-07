@@ -25,6 +25,7 @@
     "@electron-forge/maker-dmg": "^6.4.2",
     "@electron-forge/maker-wix": "^6.4.2",
     "electron-squirrel-startup": "^1.0.0",
+    "wix": "^0.1.1",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {

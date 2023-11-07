@@ -9,6 +9,13 @@ module.exports = {
       config: {},
     },
     {
+      name: '@electron-forge/maker-wix',
+      config: {
+        language: 1033,
+        manufacturer: ['Milca Toledo', 'Alejandro Gómez']
+      }
+    },
+    {
       name: '@electron-forge/maker-zip',
       platforms: ['darwin'],
     },
