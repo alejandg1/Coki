@@ -8,24 +8,37 @@ const datos_unidad_nombre = funciones.data(paths_array.datos_unidad_nombre);
 const filtro_tipo = document.querySelector("#filtro");
 
 function agregar_listeners() {
-
   const btn_edit = document.querySelectorAll(".boton_lapiz");
   btn_edit.forEach((boton) => {
     boton.addEventListener("click", (event) => {
       event.preventDefault();
-      let actividad = funciones.obtener_act(funciones.formato_string(boton.id, "reverse"))
+      let actividad = funciones.obtener_act(
+        funciones.formato_string(boton.id, "reverse")
+      );
       ipcRenderer.send("editar", actividad);
     });
   });
+
+  const btn_delete = document.querySelectorAll(".boton_eliminar");
+  btn_delete.forEach((boton) => {
+    boton.addEventListener("click", (event) => {
+      event.preventDefault();
+      let actividad = funciones.obtener_act(
+        funciones.formato_string(boton.id, "reverse")
+      );
+      ipcRenderer.send("delete", actividad);
+    });
+  });
+
   const btn_push_act = document.querySelectorAll(".boton_agregar");
   btn_push_act.forEach((boton) => {
     boton.addEventListener("click", (event) => {
       event.preventDefault();
       const ruta_cronograma = funciones.rutas().cronograma;
-      let actividad = funciones.obtener_act(boton.id)
-      let cronograma = (funciones.data(ruta_cronograma))
+      let actividad = funciones.obtener_act(boton.id);
+      let cronograma = funciones.data(ruta_cronograma);
       if (cronograma == [] || cronograma == "[]") {
-        cronograma = []
+        cronograma = [];
         cronograma.push(actividad);
         funciones.write_json(ruta_cronograma, cronograma);
         ipcRenderer.send("agregada_crono");
@@ -44,17 +57,28 @@ function agregar_listeners() {
 // mostrar actividades segun el tipo de actividad escogido
 filtro_tipo.addEventListener("change", () => {
   while (Table.rows.length > 1) {
-    Table.deleteRow(1)
+    Table.deleteRow(1);
   }
   if (actividades_json != undefined && actividades_json != "[]") {
-    (actividades_json).forEach((actividad) => {
-      if ((actividad.unidad.includes(datos_unidad_nombre.unidad)
-      ) &&
+    actividades_json.forEach((actividad) => {
+      if (
+        actividad.unidad.includes(datos_unidad_nombre.unidad) &&
         (actividad.tipo == filtro_tipo.value || filtro_tipo.value == "todos")
       ) {
-        let svgButton = `<button id="${funciones.formato_string(actividad.nombre, "reverse")}" class='boton_lapiz'> <img src="../../images/editar.png"></img>  </button>`;
+        let svgButton = `<button id="${funciones.formato_string(
+          actividad.nombre,
+          "reverse"
+        )}" class='boton_lapiz'> <img src="../../images/editar.png"></img>  </button>`;
 
-        let svgButtonAdd = `<button id ="${funciones.formato_string(actividad.nombre, "reverse")}" class='boton_agregar'> <img src="../../images/agregar.png"></img>   </button>`;
+        let svgButtonAdd = `<button id ="${funciones.formato_string(
+          actividad.nombre,
+          "reverse"
+        )}" class='boton_agregar'> <img src="../../images/agregar.png"></img>   </button>`;
+
+        let svgButtondel = `<button id ="${funciones.formato_string(
+          actividad.nombre,
+          "reverse"
+        )}" class='boton_eliminar'> <img src="../../images/borrar.png"></img>   </button>`;
 
         let linea =
           "<tr> <td>" +
@@ -67,27 +91,33 @@ filtro_tipo.addEventListener("change", () => {
           actividad.objetivo +
           "</td><td>" +
           actividad.necesidades +
-          "</td><td>" + svgButtonAdd + "</td><td>" + svgButton + "</td></tr>";
+          "</td><td>" +
+          svgButtonAdd +
+          "</td><td>" +
+          svgButton +
+          "</td><td>" +
+          svgButtondel +
+          "</td></tr>";
         Table.insertAdjacentHTML("beforeend", linea);
       }
     });
   } else {
     Table.insertAdjacentHTML("beforeend", "No existen actividades guardadas");
   }
-  agregar_listeners()
-})
+  agregar_listeners();
+});
 //NOTE: ver si es q esto se queda pq repite funcionalidad
-const crono_btn = document.querySelector("#verCrono")
+const crono_btn = document.querySelector("#verCrono");
 crono_btn.addEventListener("click", (event) => {
   event.preventDefault();
-  ipcRenderer.send("return")
-})
+  ipcRenderer.send("return");
+});
 
-const crear_excel = document.querySelector("#crearCrono")
+const crear_excel = document.querySelector("#crearCrono");
 crear_excel.addEventListener("click", (event) => {
   event.preventDefault();
   funciones.crear_excel();
-})
+});
 
 const p = document.querySelector("p");
 p.insertAdjacentHTML(
@@ -107,4 +137,3 @@ datos_d_actividades.tipos.forEach((tipo) => {
   option.value = tipo;
   filtro_tipo.appendChild(option);
 });
-

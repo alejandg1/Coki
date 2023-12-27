@@ -71,6 +71,10 @@ ipcMain.on("editar", (event, elemento) => {
   funciones.write_json(paths_array.actividad_a_editar, elemento);
   main_window.loadFile("./src/pages/act_edit.html");
 });
+ipcMain.on("delete", (event, elemento) => {
+  funciones.eliminar(paths_array.json_actividades, elemento);
+  main_window.loadFile("./src/pages/act_list.html");
+});
 ipcMain.on("cancel_edit", () => {
   main_window.loadFile("./src/pages/act_list.html");
 });
