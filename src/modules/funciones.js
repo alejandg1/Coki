@@ -64,6 +64,11 @@ function write_json(ruta, contenido = []) {
     }
   });
 }
+function delete_json(ruta,elm_delete){
+  let elementos = datosjson(ruta)
+  let new_content = elementos.filter((elemento)=> elemento.nombre != elm_delete.nombre)
+  write_json(ruta,new_content)
+}
 
 function obtener_act(id) {
   let path = rutas();
@@ -165,4 +170,6 @@ module.exports = {
   obtener_act: obtener_act,
   formato_string: formato_string,
   crear_excel: xlsx,
+  eliminar:delete_json
+
 };

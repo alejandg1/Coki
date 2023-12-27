@@ -59,6 +59,17 @@ img{
     align-items: center;
     justify-content: center;
 }
+.boton_eliminar{
+    background-color: black;
+    border-radius: 20%;
+    border: none;
+    padding: 10px;
+    width: 75px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .boton_return{
     background-color: black;
     border-radius: 20%;
